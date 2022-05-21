@@ -1,1 +1,1 @@
-"# Franchise-Hub" 
+# Franchise-Hub
