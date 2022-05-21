@@ -1,0 +1,3 @@
+[submodule "Franchise-Hub-Server"]
+	path = Franchise-Hub-Server
+	url = https://github.com/Meowlancing/Franchise-Hub-Server
