@@ -1,0 +1,56 @@
+#header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+}
+
+.topbar {
+  background-color: #f5f5f5;
+}
+.top-nav span {
+  position: relative;
+  top: -0.8vh;
+}
+.navlinks {
+  color: var(--nav-text);
+  font-size: 13px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navlinks:hover {
+  color: var(--nav-text);
+}
+.language {
+  margin-right: 15px;
+  width: 15px;
+}
+.language-dropdown {
+  border: none;
+}
+select#language-changer {
+  height: 27px !important;
+  padding: 3px !important;
+  font-size: 13px !important;
+}
+.header-btm{
+    margin: 10px 15px;
+    text-align: center;
+}
+.logo{
+    position: relative;
+    left: 8vh;
+}
+.search{
+    margin-right: 15px;
+}
+.login-main-section{
+    display: flex;
+}
+.links{
+    color: var(--nav-text);
+}
+.links:hover{
+    color: var(--nav-text);
+}
