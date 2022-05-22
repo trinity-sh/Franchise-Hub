@@ -1,0 +1,74 @@
+#hero-section {
+  margin-top: 95px;
+  background-image: url("https://www.franchiseindia.com/newhomepage/assets/img/banner_bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  padding: 140px 0;
+}
+#hero-section::before {
+  margin: 0 80px;
+}
+.lnkblk {
+  width: 300px;
+  float: right;
+  position: relative;
+  top: -91px;
+}
+
+.lnkblk img {
+  width: 100%;
+}
+#hero-section h1 {
+  color: #fff;
+  /* margin-top: -114px; */
+}
+#hero-section h1 span {
+  color: #ffff00;
+}
+#hero-section h2 {
+  margin: 5px 0 30px;
+  font-size: 25px;
+  font-weight: 300;
+  color: #fff;
+  z-index: 8;
+  text-shadow: 2px 2px 8px #4c482f;
+}
+
+.nav-tabs > .tabs {
+  color: rgb(255, 255, 255);
+  cursor: default;
+}
+.hero-search-main {
+  list-style: none;
+  margin-bottom: 0px;
+  padding-inline-start: 0px;
+  text-align: center;
+  display: flex;
+}
+ul.hero-search-main li {
+  display: inline-block;
+}
+ul.hero-search-main li select {
+  width: 336px !important;
+  padding: 10px 20px;
+  margin-right: 3px;
+  border: none;
+}
+ul.hero-search-main li select:focus {
+   outline: none;
+  }
+.tab-content .tab-pane.active {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+ul.hero-search-main li button {
+  width: 50px;
+  font-size: 16px;
+  line-height: 1;
+  height: 44px !important;
+  background-color: red;
+  border: none;
+  color: #fff;
+}

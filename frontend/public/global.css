@@ -1,3 +1,6 @@
 body{
     --nav-text: #101010;
 }
+body{
+    overflow-x: hidden;
+}
