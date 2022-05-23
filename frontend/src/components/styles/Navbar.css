@@ -8,10 +8,11 @@
 
 .topbar {
   background-color: #f5f5f5;
+  width: 100vw;
 }
 .top-nav span {
   position: relative;
-  top: -0.8vh;
+  top: -0vh;
 }
 .navlinks {
   color: var(--nav-text);
@@ -53,4 +54,27 @@ select#language-changer {
 }
 .links:hover{
     color: var(--nav-text);
+}
+
+/*media query*/
+
+/*mobile phones*/
+@media (max-width:425px) {
+  .topbar{
+    height: 14vh;
+    width: 100vw;
+  }
+  .top-nav{
+    margin: 0 0 0 -1rem;
+  }
+  #Language{
+    margin: 4rem 0 0 -4rem;
+  }
+}
+
+/*tablets & desktop(1024px)*/
+@media (max-width:1025px) {
+  .topbar{
+    width: 100vw;
+  }
 }

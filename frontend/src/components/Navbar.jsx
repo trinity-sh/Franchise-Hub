@@ -19,7 +19,7 @@ function NavbarComponent() {
         <Container fluid>
           <Row>
             <Col md="12">
-              <div className="p-30 d-flex justify-content-between">
+              <div className="p-30 d-flex justify-content-between" id="topNav">
                 <div className="p-2">
                   <Navbar className="top-nav">
                     <Nav.Link
@@ -51,7 +51,7 @@ function NavbarComponent() {
                   </Navbar>
                 </div>
 
-                <div className="p-2 ml-auto">
+                <div className="p-2 ml-auto" id="Language">
                   <InputGroup className="input-group-custom">
                     <img
                       className="language"
