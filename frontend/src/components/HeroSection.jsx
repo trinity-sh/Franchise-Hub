@@ -9,9 +9,7 @@ function HeroSection() {
     <section class="hero-section" id="hero-section">
       <Container>
         <div className="lnkblk">
-          <a href="https://www.remax.in/" target="_blank" class="setpat">
-            <img src="https://www.franchiseindia.com/newhomepage/assets/img/remax-logo.png" />
-          </a>
+          <img src="https://www.franchiseindia.com/newhomepage/assets/img/remax-logo.png" />
         </div>
         <Row className="md-12">
           <div className="md-12">
@@ -25,16 +23,6 @@ function HeroSection() {
           <Col class="md-12" id="heroBar">
             <div class="hero-search" id="hero-search">
               <Nav className="nav-tabs">
-                <Nav.Link
-                  className="tabs"
-                  href="#categories1"
-                  aria-controls="categories1"
-                  role="tab"
-                  data-toggle="tab"
-                >
-                  Categories
-                </Nav.Link>
-
                 <Nav.Link
                   className="tabs"
                   href="#location1"
@@ -148,10 +136,7 @@ function HeroSection() {
                         </select>
                       </li>
                       <li class="p-0 m-0">
-                        <button
-                          type="submit"
-                          class="search-btn"
-                        >
+                        <button type="submit" class="search-btn">
                           <FontAwesomeIcon icon={faSearch} className="icon" />
                         </button>
                       </li>

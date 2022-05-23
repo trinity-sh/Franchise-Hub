@@ -75,14 +75,13 @@ select#language-changer {
   }
   
   #bottomBarOptions{
-    left: -167vw;
-    margin-left: -2rem;
+    left: -49vw;
     margin-top: 5rem;
     position: relative;
+    margin-right: 34rem;
 }
   .logo{
-    top: 1.5rem;
-    left:-29vw;
+    left:6vw;
   }
   #hero-section{
     margin-top: 195px;

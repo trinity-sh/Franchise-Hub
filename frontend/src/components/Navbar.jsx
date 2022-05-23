@@ -24,15 +24,6 @@ function NavbarComponent() {
                   <Navbar className="top-nav">
                     <Nav.Link
                       className="navlinks"
-                      href="https://www.businessex.com/"
-                      target="_blank"
-                    >
-                      Sell your Business
-                    </Nav.Link>
-                    <span>|</span>
-
-                    <Nav.Link
-                      className="navlinks"
                       href="#"
                       target="_blank"
                       data-toggle="modal"
@@ -87,8 +78,8 @@ function NavbarComponent() {
         <Container fluid>
           <Row>
             <Col className="md-12">
-              <div class="d-flex p-30 justify-content-between" id="bottomBar">
-                <div class="p-2">
+              <div class="d-flex p-30 justify-content-between">
+                {/* <div class="p-2">
                   <div id="sidebarCollapse" className="menu-bar">
                     <img
                       src="https://www.franchiseindia.com/newhomepage/assets/img/menu-icon.svg"
@@ -96,19 +87,19 @@ function NavbarComponent() {
                     />
                     <span>Menu</span>
                   </div>
-                </div>
+                </div> */}
 
                 <div class="logo">
                   {" "}
                   <a href="https://www.franchiseindia.com">
                     <img
-                        className="logo"
+                      className="logo"
                       src="https://www.franchiseindia.com/newhomepage/assets/img/Logo.svg"
                       alt="Franchiseindia Logo"
                     />
                   </a>
                 </div>
-
+                <br/>
                 <div class="d-flex" id="bottomBarOptions">
                   <span class="search" id="search">
                     <div
@@ -131,7 +122,7 @@ function NavbarComponent() {
 
                   <Nav className="login-main-section">
                     <Nav.Link
-                    className="links"
+                      className="links"
                       href="#"
                       data-toggle="modal"
                       data-target="#login-pnl"
@@ -139,9 +130,11 @@ function NavbarComponent() {
                     >
                       Register
                     </Nav.Link>
-                    <span style={{position:"relative", top:"0.9vh"}}>/</span>
+                    <span style={{ position: "relative", top: "0.9vh" }}>
+                      /
+                    </span>
                     <Nav.Link
-                     className="links"
+                      className="links"
                       href="#"
                       data-toggle="modal"
                       data-target="#login-pnl"
