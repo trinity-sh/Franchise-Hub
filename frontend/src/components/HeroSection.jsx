@@ -22,7 +22,7 @@ function HeroSection() {
             </h1>
             <h2>World's highest visited franchise website network</h2>
           </div>
-          <Col class="md-12">
+          <Col class="md-12" id="heroBar">
             <div class="hero-search" id="hero-search">
               <Nav className="nav-tabs">
                 <Nav.Link

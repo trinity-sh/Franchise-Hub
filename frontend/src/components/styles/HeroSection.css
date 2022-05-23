@@ -72,3 +72,13 @@ ul.hero-search-main li button {
   border: none;
   color: #fff;
 }
+
+
+/*media query*/
+
+/*mobiles*/
+@media (max-width:425px) {
+  #heroBar {
+    width: 100vw;
+  }
+}

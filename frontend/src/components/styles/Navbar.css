@@ -55,6 +55,9 @@ select#language-changer {
 .links:hover{
     color: var(--nav-text);
 }
+/* #bottomBar{
+  width: 100vw;
+} */
 
 /*media query*/
 
@@ -70,8 +73,21 @@ select#language-changer {
   #Language{
     margin: 4rem 0 0 -4rem;
   }
+  
+  #bottomBarOptions{
+    left: -167vw;
+    margin-left: -2rem;
+    margin-top: 5rem;
+    position: relative;
 }
-
+  .logo{
+    top: 1.5rem;
+    left:-29vw;
+  }
+  #hero-section{
+    margin-top: 195px;
+  }
+}
 /*tablets & desktop(1024px)*/
 @media (max-width:1025px) {
   .topbar{

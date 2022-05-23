@@ -87,7 +87,7 @@ function NavbarComponent() {
         <Container fluid>
           <Row>
             <Col className="md-12">
-              <div class="d-flex p-30 justify-content-between">
+              <div class="d-flex p-30 justify-content-between" id="bottomBar">
                 <div class="p-2">
                   <div id="sidebarCollapse" className="menu-bar">
                     <img
@@ -109,7 +109,7 @@ function NavbarComponent() {
                   </a>
                 </div>
 
-                <div class="d-flex">
+                <div class="d-flex" id="bottomBarOptions">
                   <span class="search" id="search">
                     <div
                       class="p-2"
