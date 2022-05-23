@@ -51,7 +51,7 @@ ul.hero-search-main li {
   display: inline-block;
 }
 ul.hero-search-main li select {
-  width: 336px !important;
+  width: 336px;
   padding: 10px 20px;
   margin-right: 3px;
   border: none;
@@ -80,5 +80,11 @@ ul.hero-search-main li button {
 @media (max-width:425px) {
   #heroBar {
     width: 100vw;
+  }
+  .hero-search-main{
+    flex-direction: column;
+  }
+  ul.hero-search-main li select{
+    width: 300px;
   }
 }
