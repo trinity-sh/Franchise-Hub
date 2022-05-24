@@ -72,7 +72,9 @@ ul.hero-search-main li button {
   border: none;
   color: #fff;
 }
-
+#searchbtn{
+  color: transparent;
+}
 
 /*media query*/
 
@@ -86,5 +88,11 @@ ul.hero-search-main li button {
   }
   ul.hero-search-main li select{
     width: 300px;
+  }
+  ul.hero-search-main li button{
+    color: transparent;
+  }
+  #searchbtn{
+    color: #fff;
   }
 }
