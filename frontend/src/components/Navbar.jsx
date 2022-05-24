@@ -1,5 +1,5 @@
 import React from "react";
-
+import Logo from "../Assets/logo.png"
 // Styles
 import {
   Row,
@@ -20,7 +20,7 @@ function NavbarComponent() {
           <Row>
             <Col md="12">
               <div className="p-30 d-flex justify-content-between" id="topNav">
-                <div className="p-2">
+                <div>
                   <Navbar className="top-nav">
                     <Nav.Link
                       className="navlinks"
@@ -50,7 +50,7 @@ function NavbarComponent() {
                       alt="language-icon"
                     />
 
-                    <Form.Group className="sm">
+                    <Form.Group className="sm lang">
                       <select
                         type="text"
                         className="language-dropdown"
@@ -78,7 +78,7 @@ function NavbarComponent() {
         <Container fluid>
           <Row>
             <Col className="md-12">
-              <div class="d-flex p-30 justify-content-between">
+              <div class="bottom-nav">
                 {/* <div class="p-2">
                   <div id="sidebarCollapse" className="menu-bar">
                     <img
@@ -91,11 +91,11 @@ function NavbarComponent() {
 
                 <div class="logo">
                   {" "}
-                  <a href="https://www.franchiseindia.com">
+                  <a href="#">
                     <img
                       className="logo"
-                      src="https://www.franchiseindia.com/newhomepage/assets/img/Logo.svg"
-                      alt="Franchiseindia Logo"
+                      src={Logo}
+                      alt="FranchiseHub Logo"
                     />
                   </a>
                 </div>
@@ -103,7 +103,7 @@ function NavbarComponent() {
                 <div class="d-flex" id="bottomBarOptions">
                   <span class="search" id="search">
                     <div
-                      class="p-2"
+                      class="p-2 icon"
                       data-toggle="modal"
                       data-target="#search-main"
                     >
@@ -116,11 +116,12 @@ function NavbarComponent() {
                   </span>
 
                   <img
+                  className="login"
                     src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
                     alt="Login"
                   />
 
-                  <Nav className="login-main-section">
+                  <div className="login-main-section">
                     <Nav.Link
                       className="links"
                       href="#"
@@ -142,7 +143,7 @@ function NavbarComponent() {
                     >
                       Login
                     </Nav.Link>
-                  </Nav>
+                  </div>
                 </div>
               </div>
             </Col>
