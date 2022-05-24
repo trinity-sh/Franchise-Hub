@@ -1,0 +1,9 @@
+.franchise {
+  margin: 20px 0;
+}
+.franchise span {
+  font-size: 13px;
+}
+.franchise .industry {
+  color: #828282;
+}
