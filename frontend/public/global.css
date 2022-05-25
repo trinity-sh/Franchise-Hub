@@ -1,6 +1,11 @@
 body{
     --nav-text: #101010;
+    --bg-color: #f1f1f1;
 }
 body{
     overflow-x: hidden;
+    
+}
+#root{
+    background-color: var(--bg-color);
 }
