@@ -82,11 +82,17 @@ select#language-changer {
 .input-group-custom{
   margin-left: 74vw;
 }
-@media (max-width:425px) {
+/* @media (max-width:425px) {
   .input-group-custom{
     margin-left: 65vw;
   }
   .navlinks{
     margin-top: 1rem;
+  }
+} */
+
+@media (max-width:425px) {
+  #header{
+    display: none;
   }
 }
