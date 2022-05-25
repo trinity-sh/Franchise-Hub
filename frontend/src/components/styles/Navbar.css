@@ -79,37 +79,14 @@ select#language-changer {
   width: 100vw;
 } */
 
-/*media query*/
-
-/*mobile phones*/
-@media (max-width: 425px) {
-  .topbar {
-    height: 14vh;
-    width: 100vw;
-  }
-  .top-nav {
-    margin: 0 0 0 -1rem;
-  }
-  #Language {
-    margin: 4rem 0 0 -4rem;
-  }
-
-  #bottomBarOptions {
-    left: -49vw;
-    margin-top: 5rem;
-    position: relative;
-    margin-right: 34rem;
-  }
-  .logo {
-    left: 6vw;
-  }
-  #hero-section {
-    margin-top: 195px;
-  }
+.input-group-custom{
+  margin-left: 74vw;
 }
-/*tablets & desktop(1024px)*/
-@media (max-width: 1025px) {
-  .topbar {
-    width: 100vw;
+@media (max-width:425px) {
+  .input-group-custom{
+    margin-left: 65vw;
+  }
+  .navlinks{
+    margin-top: 1rem;
   }
 }

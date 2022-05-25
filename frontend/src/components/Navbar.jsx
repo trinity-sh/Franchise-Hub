@@ -20,15 +20,58 @@ function NavbarComponent() {
         <Container>
           <Navbar.Toggle aria-controls='responsive-navbar-nav' />
           <Navbar.Collapse id='responsive-navbar-nav'>
-            <Nav>
-              <NavLink>Kichu ekta</NavLink>
-              <NavLink>Emni</NavLink>
-              <NavLink>Jai hok</NavLink>
-            </Nav>
+                <Nav>
+                <Nav.Link
+                      className="navlinks"
+                      href="#"
+                      target="_blank"
+                      data-toggle="modal"
+                      data-target="#expandFranchisenew"
+                    >
+                      Expand Your Franchise
+                    </Nav.Link>
+                    <span>|</span>
+                    <Nav.Link
+                      className="navlinks"
+                      href="https://www.franchiseindia.com/advertise-with-us-payment"
+                      target="_blank"
+                    >
+                      Advertise
+                    </Nav.Link>
+                    <InputGroup className="input-group-custom">
+                    <img
+                      className="language"
+                      src="https://www.franchiseindia.com/newhomepage/assets/img/language-icon.svg"
+                      alt="language-icon"
+                    />
+
+                    <Form.Group className="sm lang">
+                      <select
+                        type="text"
+                        className="language-dropdown"
+                        id="language-changer"
+                      >
+                        <option
+                          value="https://www.franchiseindia.com"
+                          selected=""
+                        >
+                          EN - English
+                        </option>
+                        <option value="https://www.franchiseindia.com/hi">
+                          HI - Hindi
+                        </option>
+                      </select>
+                    </Form.Group>
+                  </InputGroup>
+                  <br/>
+                    </Nav>
+                    
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+ 
+                  
+      </>
     // <header class="header" id="header">
     //   <div class="topbar">
     //     <Container fluid>
@@ -166,6 +209,7 @@ function NavbarComponent() {
     //     </Container>
     //   </div>
     // </header>
+    
   );
 }
 
