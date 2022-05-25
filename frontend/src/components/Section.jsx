@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 const FranchiseSection = styled.div`
-    margin-top: 30px;
+    margin: 30px 0 80px;
     h2{
         color: #333333;
         font-size: 30px;
@@ -21,7 +21,7 @@ const FranchiseSection = styled.div`
 function Section() {
   return (
     <FranchiseSection>
-      <h2>Tranding Franchise</h2>
+      <h2>Trending Franchise</h2>
       <hr/>
       <Franchise />
     </FranchiseSection>
