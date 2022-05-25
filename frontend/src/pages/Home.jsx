@@ -3,6 +3,7 @@ import CardSection from "../components/CardSection";
 import CarouselSection from "../components/Carousel";
 import HeroSection from "../components/HeroSection";
 import NavbarComponent from "../components/Navbar";
+import NewsLetter from "../components/NewsLetter";
 import Section from "../components/Section";
 import Testimonial from "../components/Testimonial";
 
@@ -16,7 +17,9 @@ function Home() {
         <Section />
         <CarouselSection />
         <Testimonial />
+       
       </div>
+      <NewsLetter />
     </div>
   );
 }
