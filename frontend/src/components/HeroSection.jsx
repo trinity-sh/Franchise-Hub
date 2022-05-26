@@ -137,7 +137,7 @@ function HeroSection() {
                       </li>
                       <li class="p-0 m-0">
                         <button type="submit" class="search-btn"> <span id="searchbtn">SEARCH</span>
-                          <FontAwesomeIcon icon={faSearch} className="icon" />
+                          <FontAwesomeIcon icon={faSearch} className="search-icon" />
                         </button>
                       </li>
                     </ul>
