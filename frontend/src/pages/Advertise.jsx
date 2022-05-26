@@ -4,14 +4,15 @@ import NewsLetter from '../components/NewsLetter'
 
 function Advertise() {
   return (
+  
     <div>
       <NavbarComponent />
       <div>
         
       </div>
       <NewsLetter />
-    </div>
-  )
+      </div>
+  );
 }
 
-export default Advertise
+export default Advertise;
