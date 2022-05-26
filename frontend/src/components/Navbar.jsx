@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../Assets/logo.png";
 // Styles
 import {
@@ -11,8 +11,18 @@ import {
   Form,
 } from "react-bootstrap";
 import "./styles/Navbar.css";
+import Popup from "../sub-components/Popup";
 
 function NavbarComponent() {
+
+  const [click, setClick] = useState(false);
+ 
+
+
+  function handleClick(){
+    setClick(!click);
+  }
+
   return (
     <>
     <header class="header" id="header">
@@ -34,7 +44,7 @@ function NavbarComponent() {
                     </Nav.Link>
 
                     <Nav.Link className="navlinks"
-                      href="https://www.franchiseindia.com/advertise-with-us-payment"
+                      href="/advertise-with-us-payment"
                       target="_blank"
                     >
                       Advertise
@@ -129,8 +139,12 @@ function NavbarComponent() {
                       data-toggle="modal"
                       data-target="#login-pnl"
                       id="mobilereg"
+                      onClick={handleClick}
                     >
                       Register
+                      {
+                        click && <Popup setClick={setClick} />
+                      }
                     </Nav.Link>
                     <span style={{ position: "relative", top: "0.9vh" }}>
                       /
