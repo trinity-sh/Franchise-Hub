@@ -15,7 +15,7 @@ function Home() {
   return (
     <div>
       <NavbarComponent />
-      <RespNav />
+      {/* <RespNav /> */}
       <HeroSection />
       <div className="content" style={{ margin: "0 100px"}}>
         <CardSection />
