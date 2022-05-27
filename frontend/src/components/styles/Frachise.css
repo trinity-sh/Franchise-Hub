@@ -10,3 +10,11 @@
 .button{
   width: 100%;
 }
+a{
+  color: #f01;
+  text-decoration: none;
+}
+a:hover{
+  color: #eee;
+  text-decoration: none;
+}

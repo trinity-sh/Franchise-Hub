@@ -9,7 +9,10 @@ function Popup(setClick) {
 
   const [user, setUser] = useState("");
 
-  function handleForm(e) {}
+  function handleForm(e) {
+    const user = e.target.name;
+    // console.log(name);
+  }
   return (
     <Modal show={show} onHide={handleClose} animation={false}>
       <Modal.Header closeButton>
@@ -28,7 +31,9 @@ function Popup(setClick) {
           </Row>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{}</Modal.Body>
+      <Modal.Body>{
+        
+      }</Modal.Body>
       <Modal.Footer className="modal-footer">
         <span>Why should I register? </span>
         <br />
