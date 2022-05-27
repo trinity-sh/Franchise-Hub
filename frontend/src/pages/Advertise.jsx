@@ -9,8 +9,8 @@ function Advertise() {
       <NavbarComponent />
       <div class="pricblk">
         <div className="container">
-          <h1>More Visibility, More Business</h1>
-          <div class="ctxt">
+          <h1 className="heading">More Visibility, More Business</h1>
+          <div className="ctxt">
             Choose the perfect plan for you, 100% satisfaction guaranteed
           </div>
           <div className="priclist">

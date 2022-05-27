@@ -1,7 +1,83 @@
 .pricblk{
-    height: 150vh;
+    height: 110vh;
+    margin-top: 200px;
     background-color: #999;
 }
 .container{
     margin-top: 8rem;
+}
+.heading{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.ctxt{
+    color: #171717;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+}
+.priclist{
+    margin: 30px 0 0 0;
+    padding: 0;
+    text-align: center;
+}
+.priclistinner{
+    border-radius: 4px;
+    width: 23.5%;
+    display: inline-block;
+    text-align: left;
+    height: 550px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    vertical-align: top;
+    margin: 0 7px;
+}
+.pritxtn {
+    margin: 25px 0 35px;
+    text-align: center;
+    color: #303030;
+    font-size: 15px;
+    font-weight: 600;
+}
+ul .listp{
+    padding: 0;
+    margin: 40px 0 0 25px;
+}
+ul .listp li{
+    color: #303030;
+    font-size: 16px;
+    line-height: 18px;
+    list-style-type: none; 
+    list-style: square;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.btncir{
+    background: #fff;
+    border: 1px solid #ED1C24;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ED1C24;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px 15px;
+    display: block;
+    margin: 0 auto 20px;
+    width: 110px;
+}
+.rinr.cent {
+    text-align: center;
+}
+li ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
 }
