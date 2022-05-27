@@ -40,7 +40,7 @@ function Franchise() {
             </Row>
           </Card.Text>
           <Button variant="outline-danger" className="button">
-            Know More
+            <a href="./brands/:" target="_blank">Know More</a>
           </Button>
         </Card.Body>
       </Card>
