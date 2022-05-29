@@ -64,3 +64,10 @@
         display: none;
     }
 }
+@media only screen and (max-width:768px)
+{
+    .card{
+        width: 93vw;
+        margin-left: -5rem;
+    }
+}

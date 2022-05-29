@@ -50,6 +50,7 @@
   text-align: center;
   display: flex;
 }
+
 ul.hero-search-main li {
   display: inline-block;
 }
@@ -92,7 +93,6 @@ ul.hero-search-main li button {
     display: block;
   }
   .hero-search-main{
-    flex-direction: column;
     margin-top: 10px;
   }
   ul.hero-search-main li select{
@@ -114,5 +114,11 @@ ul.hero-search-main li button {
   .search-icon{
     display: none;
 
+  }
+}
+@media (max-width:768px){
+  .hero-search-main{
+    flex-direction: column;
+    padding-top: 1rem;
   }
 }
