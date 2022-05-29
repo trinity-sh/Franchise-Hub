@@ -58,3 +58,9 @@
 .icon-section-main img{
     width: 70%;
 }
+
+@media only screen and (max-width: 426px) {
+    .card-section{
+        display: none;
+    }
+}

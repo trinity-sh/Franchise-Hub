@@ -16,6 +16,9 @@ const FranchiseSection = styled.div`
         height: 2px;
         margin-bottom: 50px;
     }
+    @media only screen and (max-width: 426px){
+      margin-top: 145px;
+    }
 `
 
 function Section() {

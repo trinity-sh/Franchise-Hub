@@ -85,6 +85,9 @@ ul.hero-search-main li button {
   #heroBar {
     width: 100vw;
   }
+  .hero{
+    display: block;
+  }
   .hero-search-main{
     flex-direction: column;
   }

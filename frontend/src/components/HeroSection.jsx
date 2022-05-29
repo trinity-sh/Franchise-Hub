@@ -11,7 +11,7 @@ function HeroSection() {
         <div className="lnkblk">
           <img src="https://www.franchiseindia.com/newhomepage/assets/img/remax-logo.png" />
         </div>
-        <Row className="md-12">
+        <Row className="md-12 hero">
           <div className="md-12">
             <h1>
               Search from
