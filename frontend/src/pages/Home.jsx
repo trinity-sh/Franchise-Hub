@@ -6,6 +6,7 @@ import NavbarComponent from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
 import Section from "../components/Section";
 import Testimonial from "../components/Testimonial";
+import "./styles/Home.css"
 //  fa3466622d8703e0705063c9f2e13b89acc47297
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
     <div>
       <NavbarComponent />
       <HeroSection />
-      <div className="content" style={{ margin: "0 100px"}}>
+      <div className="content">
         <CardSection />
         <Section />
         <CarouselSection />

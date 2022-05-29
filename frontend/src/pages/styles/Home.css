@@ -1,0 +1,9 @@
+.content {
+  margin: 0 100px;
+}
+
+@media (max-width: 425px) {
+  .content {
+    margin: 0 20px;
+  }
+}

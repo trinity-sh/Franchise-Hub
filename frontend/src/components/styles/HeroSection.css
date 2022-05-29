@@ -10,6 +10,9 @@
 #hero-section::before {
   margin: 0 80px;
 }
+.title{
+  display: inline-block;
+}
 .lnkblk {
   width: 300px;
   float: right;
@@ -90,6 +93,7 @@ ul.hero-search-main li button {
   }
   .hero-search-main{
     flex-direction: column;
+    margin-top: 10px;
   }
   ul.hero-search-main li select{
     width: 300px;
@@ -98,6 +102,9 @@ ul.hero-search-main li button {
     width: 100px;
     height: 35px;
     text-align: center;
+  }
+  .search-btn{
+    margin-top: 10px;
   }
   #searchbtn{
     display: block;

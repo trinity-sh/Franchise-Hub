@@ -13,9 +13,9 @@ function HeroSection() {
         </div>
         <Row className="md-12 hero">
           <div className="md-12">
-            <h1>
+            <h1 className="title">
               Search from
-              <span>10000+ Business </span>
+              <span> 10000+ Business </span>
               options
             </h1>
             <h2>World's highest visited franchise website network</h2>
