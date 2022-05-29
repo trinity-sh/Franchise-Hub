@@ -59,15 +59,15 @@
     width: 70%;
 }
 
+@media only screen and (max-width:768px)
+{
+    .card-section{
+        width: 93vw;
+        margin-left: -5rem;
+    }
+}
 @media only screen and (max-width: 426px) {
     .card-section{
         display: none;
-    }
-}
-@media only screen and (max-width:768px)
-{
-    .card{
-        width: 93vw;
-        margin-left: -5rem;
     }
 }
