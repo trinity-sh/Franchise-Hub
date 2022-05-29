@@ -89,7 +89,7 @@ select#language-changer {
 }
 
 .input-group-custom {
-  margin-left: 74vw;
+  margin-left: 55vw;
 }
 /* @media (max-width:425px) {
   .input-group-custom{
@@ -103,6 +103,12 @@ select#language-changer {
 @media (max-width: 425px) {
   #header {
     display: none;
+  }
+  .navbar-nav{
+    background-color: #fff;
+    margin-left: -12px;
+    width: 100vw;
+    padding-left: 15px;
   }
 }
 @media (min-width: 426px) {
