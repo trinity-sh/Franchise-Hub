@@ -33,8 +33,8 @@ const Newsletter = styled.div`
   ul.newsletter-social li {
     margin-right: 10px;
   }
-  @media only screen and (max-width: 399px){
-    .newsletter{
+  @media only screen and (max-width: 399px) {
+    .newsletter {
       flex-direction: column;
     }
   }
@@ -92,7 +92,11 @@ function NewsLetter() {
                         />
                       </li>
                       <li>
-                        <Button variant="danger" id="button-addon2" className="mt-2">
+                        <Button
+                          variant="danger"
+                          id="button-addon2"
+                          className="mt-2"
+                        >
                           SignUp
                         </Button>
                       </li>
@@ -210,7 +214,10 @@ function NewsLetter() {
         </Container>
       </About>
 
-      <Footer>CopyRight@{date.getFullYear()} Franchise Hub</Footer>
+      <Footer>
+        © {date.getFullYear()} All Right Reserved by Franchishub - Design and
+        Develop by Prachar More
+      </Footer>
     </>
   );
 }
