@@ -33,6 +33,11 @@ const Newsletter = styled.div`
   ul.newsletter-social li {
     margin-right: 10px;
   }
+  @media only screen and (max-width: 399px){
+    .newsletter{
+      flex-direction: column;
+    }
+  }
 `;
 
 const About = styled.div`
@@ -87,7 +92,7 @@ function NewsLetter() {
                         />
                       </li>
                       <li>
-                        <Button variant="danger" id="button-addon2">
+                        <Button variant="danger" id="button-addon2" className="mt-2">
                           SignUp
                         </Button>
                       </li>

@@ -1,6 +1,9 @@
 .franchise {
   margin: 20px 0;
 }
+.custom-card{
+  width: 24rem;
+}
 .franchise span {
   font-size: 13px;
 }
@@ -17,4 +20,10 @@ a{
 a:hover{
   color: #eee;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 399px){
+  .custom-card{
+    width: 18rem;
+  }
 }

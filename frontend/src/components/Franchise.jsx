@@ -5,7 +5,7 @@ import "./styles/Frachise.css";
 function Franchise() {
   return (
     <div className="franchise">
-      <Card style={{ width: "18rem" }}>
+      <Card className="custom-card">
         <Card.Body>
           <Card.Img
             variant="top"
