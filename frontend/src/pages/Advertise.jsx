@@ -2,6 +2,9 @@ import React from "react";
 import NavbarComponent from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
 import "../components/styles/Advertisement.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faRupee, faRupeeSign } from "@fortawesome/free-solid-svg-icons";
+
 
 function Advertise() {
   return (
@@ -32,7 +35,7 @@ function Advertise() {
                 />
                 <div className="ftyblk">
                   <div class="rinr cent">
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">0</span>
                     <span class="pf2"></span>
                   </div>
@@ -79,7 +82,7 @@ function Advertise() {
                       />
                       <label for="ritema7"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">9,999</span>
                     <span class="pf2">/1 Month</span>
                   </div>
@@ -93,7 +96,7 @@ function Advertise() {
                       />
                       <label for="ritema8"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">29,997 </span>
                     <span class="pf2">
                       <del class="dll"> 58,500</del> /3 Months
@@ -109,7 +112,7 @@ function Advertise() {
                       />
                       <label for="ritema8"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">59,994 </span>
                     <span class="pf2">
                       <del class="dll"> 1,17,000</del> /6 Months
@@ -125,7 +128,7 @@ function Advertise() {
                       />
                       <label for="ritema9"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">1,19,988</span>
                     <span class="pf2">
                       <del class="dll"> 2,34,000</del> /1 Year
@@ -168,7 +171,7 @@ function Advertise() {
                       />
                       <label for="ritema"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">19,999</span>
                     <span class="pf2">/ 1 Month</span>
                   </div>
@@ -182,7 +185,7 @@ function Advertise() {
                       />
                       <label for="ritema2"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">59,997</span>
                     <span class="pf2">
                       {" "}
@@ -199,7 +202,7 @@ function Advertise() {
                       />
                       <label for="ritema2"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">1,19,994</span>
                     <span class="pf2">
                       {" "}
@@ -217,7 +220,7 @@ function Advertise() {
                       />
                       <label for="ritema3"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">2,39,988</span>
                     <span class="pf2">
                       {" "}
@@ -261,7 +264,7 @@ function Advertise() {
                       />
                       <label for="ritema4"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">39,999</span>
                     <span class="pf2">/ 1 Month</span>
                   </div>
@@ -275,7 +278,7 @@ function Advertise() {
                       />
                       <label for="ritema5"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">1,19,997</span>
                     <span class="pf2">
                       {" "}
@@ -292,7 +295,7 @@ function Advertise() {
                       />
                       <label for="ritema5"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">2,39,994</span>
                     <span class="pf2">
                       {" "}
@@ -310,7 +313,7 @@ function Advertise() {
                       />
                       <label for="ritema6"></label>
                     </div>
-                    <i class="fas fa-rupee-sign"></i>
+                    <FontAwesomeIcon icon={faRupeeSign} className="Rupee" />
                     <span class="pf1">4,79,988</span>
                     <span class="pf2">
                       {" "}
@@ -328,6 +331,88 @@ function Advertise() {
                 <li>Visibility & Reach - 100%</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div className="feblkcontainer">
+        <div className="Container">
+          <div className="feblk_body">
+          <div class="feblk_head"> Know What’s Included with Each Plan </div>
+                        <ul class="priceplan">
+                            <li>
+                                <div class="reghead tleft">Get Priority over other business listings under</div>
+                                <div class="iconblk htset tleft">Get Instant Update over Phone, Email and SMS</div>
+
+                                <div class="iconblk htset tleft">Make your business discoverable with detailed business information</div>
+                                <div class="iconblk htset tleft">Add your brand images to Increase your visibility and business enquiries</div>
+                                <div class="iconblk htset tleft">Boost on Search by Category, Location & Investment</div>
+                                <div class="iconblk htset tleft">Showcase your logo with company listing</div>
+                                <div class="iconblk htset tleft">Get access to “My Account” dashboard to track views and responses instantly</div>
+                                <div class="iconblk htset tleft">Thousands of Investors Can View Your Profile</div>
+                                <div class="iconblk htset tleft">Local, National And International Exposure</div>
+                                <div class="iconblk htset tleft">Generating more and better business inquiries</div>
+                                <div class="iconblk htset tleft">Visibility & Reach</div>
+
+                            </li>
+
+
+                            <li>
+                                <div class="reghead">Listing Pages</div>
+                                <div class="iconblk htset">  </div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset">  </div>
+                                <div class="iconblk htset">  </div>
+                                <div class="iconblk htset">  </div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue">Only Premium Investors</div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset">  </div>
+                                <div class="iconblk htset">  </div>
+
+                            </li>
+                            <li>
+                                <div class="reghead">Sub -Sub Category</div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue">40%</div></div>
+                            </li>
+                            <li>
+                                <div class="reghead">Sub and Sub -Sub Category</div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue">75%</div></div>
+                            </li>
+
+                            <li>
+                                <div class="reghead">Master, Sub and Sub -Sub Category</div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"><div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div> </div>
+                                <div class="iconblk htset"> <div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue"><FontAwesomeIcon icon={faCheck} className="check" /></div></div>
+                                <div class="iconblk htset"> <div class="pvalue">100%</div></div>
+                            </li>
+                        </ul>
           </div>
         </div>
       </div>

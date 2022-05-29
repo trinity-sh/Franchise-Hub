@@ -1,7 +1,7 @@
 .pricblk{
-    height: 110vh;
+    height: 100vh;
     margin-top: 200px;
-    background-color: #999;
+    background-color: #f1f1f1;;
 }
 .container{
     margin-top: 8rem;
@@ -80,4 +80,92 @@ li ::marker {
     text-indent: 0px !important;
     text-align: start !important;
     text-align-last: start !important;
+}
+.check{
+    color: #67e071;
+}
+.Container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1200px;
+}
+.feblk_body {
+    border: 1px solid #dfdfdf;
+    background: #fff;
+    padding: 50px 0 0 0;
+    margin-bottom: 50px;
+}
+.feblk_head {
+    text-transform: capitalize;
+    font-size: 26px;
+    line-height: 22px;
+    color: #000;
+    font-weight: 600;
+    margin: 0px 0 30px 0;
+    cursor: pointer;
+    text-align: center;
+}
+ul.priceplan {
+    border: 0px solid #dfdfdf;
+    margin: 15px 0 0px;
+    padding: 0px;
+    text-align: left;
+    background: #fff;
+    overflow: hidden;
+}
+ul.priceplan li:first-child {
+    width: 32%;
+}
+ul.priceplan li {
+    float: left;
+    width: 17.11%;
+    vertical-align: top;
+    margin-left: -1px;
+    list-style: none;
+}
+.reghead.tleft {
+    text-align: left;
+}
+.reghead {
+    padding: 10px 7px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+    height: 60px;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.htset.tleft {
+    text-align: left;
+}
+.htset.tleft {
+    text-align: left;
+}
+.iconblk {
+    text-align: center;
+}
+
+.htset {
+    padding: 10px 10px;
+    display: table;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    height: 55px;
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+}
+.htset.tleft {
+    text-align: left;
+}
+.iconblk {
+    text-align: center;
+}
+ul.priceplan li .htset:nth-child(2n) {
+    background: #f7f7f7;
 }
