@@ -1,18 +1,18 @@
 /* .bdy-spc {
     min-height: 100vh;
 }
-.row {
+.Brandrow {
     margin: 0 15px;
 }
-.container{
+.Brandcontainer{
     margin: 10rem auto 0 auto;
     padding: 0 15px;
 }
-.landing .tab-content {
+.Brandlanding .tab-content {
     clear: both;
     float: left;
 }
-.landing .tab-content .lft-pnl {
+.Brandlanding .tab-content .lft-pnl {
     float: left;
     width: 73%;
     min-width: 820px;
@@ -68,7 +68,7 @@
     padding-right: 10px;
     margin: 11px 0 20px;
 }
-.landing .tab-content .lft-pnl .tab-section .tab-sec-topics.mx-height p strong {
+.Brandlanding .tab-content .lft-pnl .tab-section .tab-sec-topics.mx-height p strong {
     color: #333;
 }
 strong{
@@ -115,7 +115,7 @@ strong{
     font-weight: 400;
     cursor: pointer;
 }
-label {
+.Brandlabel {
     display: inline-block;
     max-width: 100%;
     margin-bottom: 5px;
@@ -136,7 +136,7 @@ label {
     padding: 8px 25px;
     font-family: 'Open Sans Light',serif;
 }
-.btn {
+.Brandbtn {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -158,7 +158,7 @@ label {
     border: 1px solid transparent;
     border-radius: 4px;
 }
-.landing .share-rat-pnl .rate-action {
+.Brandlanding .share-rat-pnl .rate-action {
     background-color: #f3f3f3;
     padding: 10px 35px;
     clear: both;

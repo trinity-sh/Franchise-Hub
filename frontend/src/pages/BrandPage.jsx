@@ -9,9 +9,9 @@ function BrandPage() {
   return (
     <>
       <Navbar />
-      <div className="row bdy-spc landing">
-        <div className="container">
-          <div className="row">
+      <div className="Brandrow bdy-spc Brandlanding">
+        <div className="Brandcontainer">
+          <div className="Brandrow">
             <div className="col-xs-12 col-sm-12 col-md-12">
               <div className="tab-content" id="bdy-height">
                 <div className="left-pnl">
@@ -190,7 +190,7 @@ function BrandPage() {
                     </div>
                   </div>
                 </div>
-                <div className="tab-section frmwider">
+                {/* <div className="tab-section frmwider">
                   <form
                     method="post"
                     id="wider-insta-form"
@@ -295,9 +295,9 @@ function BrandPage() {
                                 className="form-control blur"
                                 placeholder="Enter Mobile"
                               ></input>
-                              {/* <span class="vrfy" onclick="editMobileWider()" id="edit-mobile-wider" style="display:none">edit</span>
+                               <span class="vrfy" onclick="editMobileWider()" id="edit-mobile-wider" style="display:none">edit</span>
                             <span class="vrfy" onclick="validateMobileWider()" id="validate-mobile-contact" style="display:none">VERIFY</span>
-                            <span id="success-mobile-wider" class="showhideright" style="display:none"><i class="fa fa-check fa-lg" aria-hidden="true"></i></span> */}
+                            <span id="success-mobile-wider" class="showhideright" style="display:none"><i class="fa fa-check fa-lg" aria-hidden="true"></i></span> 
                             </div>
                           </div>
                           <div className="col-xs-12 col-sm-6 col-md-6">
@@ -323,7 +323,7 @@ function BrandPage() {
                                 maxlength="4"
                                 placeholder="Enter OTP"
                               ></input>
-                              {/* <span class="vrfy" id="verify_button_wider" style={{display:"block"}} onClick="verifyWiderOTP()">VERIFY</span> */}
+                               <span class="vrfy" id="verify_button_wider" style={{display:"block"}} onClick="verifyWiderOTP()">VERIFY</span> 
                             </div>
                             <div
                               style={{ display: "none" }}
@@ -371,7 +371,7 @@ function BrandPage() {
                           <div className="col-xs-12 col-sm-6 col-md-6">
                             <div className="form-group txt-center">
                               <div className="checkbox">
-                                <label>
+                                <label className="Brandlabel">
                                   <input
                                     type="checkbox"
                                     name="newsletter_sub"
@@ -385,7 +385,7 @@ function BrandPage() {
                           <div className="col-xs-12 col-sm-6 col-md-6">
                             <div className="form-group txt-center">
                               <div className="checkbox">
-                                <label>
+                                <label className="Brandlabel">
                                   <input
                                     type="checkbox"
                                     name="is_termsagree2"
@@ -410,14 +410,14 @@ function BrandPage() {
                     <div className="modal-footer txt-center">
                       <input
                         type="submit"
-                        className="btn btn-default btn-red"
+                        className="Brandbtn btn-default btn-red"
                         id="wider-submit-button"
                         value="Submit Request"
                         style={{ float: "none" }}
                       ></input>
                     </div>
                   </form>
-                </div>
+                </div> */}
                 <div className="rht-pnl">
                   <div className="share-rat-pnl">
                     <div className="rat-info">
