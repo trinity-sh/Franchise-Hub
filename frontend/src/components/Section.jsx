@@ -21,10 +21,10 @@ const FranchiseSection = styled.div`
     }
 `
 
-function Section() {
+function Section(props) {
   return (
     <FranchiseSection>
-      <h2>Trending Franchise</h2>
+      <h2>{props.heading}</h2>
       <hr/>
       <Franchise />
     </FranchiseSection>

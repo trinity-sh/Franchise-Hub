@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 import "./styles/Frachise.css";
 
-function Franchise() {
+function Franchise(props) {
   return (
     <div className="franchise">
       <Card className="custom-card">

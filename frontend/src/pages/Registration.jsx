@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row , Container, Button} from "react-bootstrap";
+import { Col, Row , Container, Button, Form} from "react-bootstrap";
 import NavbarComponent from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
 import "./styles/Registration.css";
@@ -20,6 +20,14 @@ function Registration() {
                 <Col xs="2" className="items ">Payments</Col>
             </Row>
         </Container>
+        <div>
+          <Form>
+            <Form.Group>
+            <h2>Personal Details</h2>
+              <Form.Label>Hi</Form.Label>
+            </Form.Group>
+          </Form>
+        </div>
       </div>
       <NavbarComponent />
       <NewsLetter />
