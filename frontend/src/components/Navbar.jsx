@@ -171,7 +171,7 @@ function NavbarComponent() {
             <Nav>
               <Nav.Link
                 className="navlinks"
-                href="#"
+                href="/franchisor/registration/step/:id"
                 target="_blank"
                 data-toggle="modal"
                 data-target="#expandFranchisenew"
@@ -181,7 +181,7 @@ function NavbarComponent() {
               <span>|</span>
               <Nav.Link
                 className="navlinks"
-                href="https://www.franchiseindia.com/advertise-with-us-payment"
+                href="/advertise-with-us-payment"
                 target="_blank"
               >
                 Advertise
@@ -238,22 +238,12 @@ function NavbarComponent() {
 
               <Nav.Link
                 className="links"
-                href="#"
+                href="/franchisor/registration/step/:id"
                 data-toggle="modal"
                 data-target="#login-pnl"
                 id="mobilereg"
               >
                 Register
-              </Nav.Link>
-              <span style={{ position: "relative", top: "0.9vh" }}>/</span>
-              <Nav.Link
-                className="links"
-                href="#"
-                data-toggle="modal"
-                data-target="#login-pnl"
-                id="loginselect"
-              >
-                Login
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -20,14 +20,6 @@ function Registration() {
                 <Col xs="2" className="items ">Payments</Col>
             </Row>
         </Container>
-        <div>
-          <Form>
-            <Form.Group>
-            <h2>Personal Details</h2>
-              <Form.Label>Hi</Form.Label>
-            </Form.Group>
-          </Form>
-        </div>
       </div>
       <NavbarComponent />
       <NewsLetter />
