@@ -1,4 +1,4 @@
-.bdy-spc {
+/* .bdy-spc {
     min-height: 100vh;
 }
 .row {
@@ -140,7 +140,7 @@ label {
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
-    margin-left: 38vw;
+    
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857143;
@@ -183,4 +183,4 @@ label {
     .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
     float: left;
 }
-}
+} */
