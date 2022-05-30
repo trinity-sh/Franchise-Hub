@@ -1,4 +1,146 @@
-.Brand{
-    height: 200vh;
-    background-color: #f1f1f1;
+.bdy-spc{
+    min-height: 100vh;
+}
+.row{
+    margin:0 -15px;
+}
+.container{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 10rem auto 0 auto;
+}
+.col-md-12{
+    width: 100%;
+}
+.landing .tab-content {
+    clear: both;
+    float: left;
+}
+.landing .tab-content .lft-pnl {
+    float: left;
+    width: 73%;
+    min-width: 820px;
+    padding-bottom: 40px;
+}
+.business-infonoimg {
+    color: #333;
+    padding: 10px 0;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #f3f3f3;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+}
+.business-infonoimg ul {
+    list-style: none;
+}
+.business-infonoimg ul li {
+    float: left;
+    width: 33.33333333%;
+    border-right: 1px solid #dfdfdf;
+    text-align: center;
+    font-family: 'Open Sans Regular',serif;
+    font-size: 16px;
+}
+.business-infonoimg ul li:last-child {
+    border-right: none;
+}
+.landing .tab-content .lft-pnl .tab-section {
+    clear: both;
+    width: 100%;
+    float: left;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 18px 20px 0;
+    margin-top: 20px;
+    background: #fff;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-ttl, .landing .tab-content .lft-pnl .tab-section h2.tab-sec-ttl, .landing .tab-content .lft-pnl .tab-section h3.tab-sec-ttl {
+    border-bottom: 1px solid #dbdbdb;
+    font-family: 'Open Sans Light',serif;
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 7px;
+    text-transform: uppercase;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics.mx-height {
+    min-height: 100px;
+    overflow: auto;
+    max-height: 500px;
+    padding-right: 10px;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .tab-sec-topics-desc {
+    font-family: 'Open Sans Light',serif;
+    clear: both;
+    font-size: 14px;
+    line-height: 22px;
+}
+p {
+    margin: 0 0 10px;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics.mx-height p strong {
+    color: #333;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics {
+    margin: 11px 0 20px;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .tab-sec-topics-ttl {
+    font-family: 'Open Sans Bold',serif;
+    clear: both;
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .keypoints {
+    font-family: 'Open Sans Regular',serif;
+    font-size: 13px;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .keypoints p {
+    padding-top: 5px;
+    margin-bottom: 0;
+}
+.pull-right {
+    float: right!important;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .section {
+    border: 1px solid #dbdbdb;
+    min-height: 170px;
+    border-radius: 4px;
+    margin-top: 10px;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.landing .tab-content .lft-pnl .tab-section .tab-sec-topics .section .ttl {
+    background-color: #f3f3f3;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+.landing .tab-content .expansion {
+    padding: 0 10px;
+}
+
+@media (min-width: 1200px){
+.container {
+    width: 1230px;
+    }
+}
+@media (min-width: 1200px){
+.container {
+    width: 1170px;
+}
+}
+@media (min-width: 992px){
+.container {
+    width: 970px;
+}
+}
+@media (min-width: 768px){
+.container {
+    width: 750px;
+}
 }
