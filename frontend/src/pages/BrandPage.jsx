@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
-import "../components/styles/Brandpage.css";
+import "./styles/Brandpage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -507,7 +507,7 @@ function BrandPage() {
           </div>
         </div>
       </div>
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </>
   );
 }
