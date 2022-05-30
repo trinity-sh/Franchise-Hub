@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarComponent from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
-import "../components/styles/Advertisement.css";
+import "./styles/Advertisement.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faRupee, faRupeeSign } from "@fortawesome/free-solid-svg-icons";
 
