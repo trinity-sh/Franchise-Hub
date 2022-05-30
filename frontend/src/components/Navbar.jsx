@@ -32,7 +32,7 @@ function NavbarComponent() {
                     <Nav class="top-nav">
                       <Nav.Link
                         className="navlinks"
-                        href="#"
+                        href="/franchisor/registration/step/:id"
                         target="_blank"
                         data-toggle="modal"
                         data-target="#expandFranchisenew"

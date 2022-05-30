@@ -14,7 +14,7 @@ function Popup(setClick) {
           <Row>
             <Col>
               <Button variant="dark" name="register">
-                <a className="popup-anchor" href="/franchisor/registration/step/:id">Register</a>
+                <a className="popup-anchor" href="/franchisor/registration/step/:id" target="_blank">Register</a>
               </Button>
             </Col>
           </Row>
