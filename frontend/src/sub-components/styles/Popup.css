@@ -5,3 +5,9 @@
     text-align: left;
     justify-content: left;
 }
+.popup-anchor{
+    color: #eee;
+}
+.popup-anchor:hover{
+    color: #eee;
+}

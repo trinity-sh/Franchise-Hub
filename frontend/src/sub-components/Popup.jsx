@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Button, Col, Modal, Row } from "react-bootstrap";
+import { Button, Col, Form, InputGroup, Modal, Row } from "react-bootstrap";
 import "./styles/Popup.css";
 
 function Popup(setClick) {
@@ -7,33 +7,39 @@ function Popup(setClick) {
 
   const handleClose = () => setShow(false);
 
-  const [user, setUser] = useState("");
-
-  function handleForm(e) {
-    const user = e.target.name;
-    // console.log(name);
-  }
   return (
     <Modal show={show} onHide={handleClose} animation={false}>
       <Modal.Header closeButton>
         <Modal.Title>
           <Row>
             <Col>
-              <Button variant="dark" name="login" onClick={handleForm}>
-                Login
-              </Button>
-            </Col>
-            <Col>
-              <Button variant="dark" name="register" onClick={handleForm}>
-                Register
+              <Button variant="dark" name="register">
+                <a className="popup-anchor" href="/franchisor/registration/step/:id">Register</a>
               </Button>
             </Col>
           </Row>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>{
-        
-      }</Modal.Body>
+      <Modal.Body>
+      <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>UserName:</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="name@example.com"
+                autoFocus
+              />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Password:</Form.Label>
+              <Form.Control type="password" />
+            </Form.Group>
+            <Button variant="danger">Submit</Button>
+          </Form>
+      </Modal.Body>
       <Modal.Footer className="modal-footer">
         <span>Why should I register? </span>
         <br />
