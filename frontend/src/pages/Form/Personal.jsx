@@ -34,7 +34,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.firstName}
+                    defaultValue={values.email}
                     type="email"
                     placeholder="Enter your UserId"
                     onChange={handleFormData("email")}
@@ -58,7 +58,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.firstName}
+                    defaultValue={values.password}
                     type="password"
                     placeholder="Enter your password"
                     onChange={handleFormData("password")}
@@ -82,7 +82,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.firstName}
+                    defaultValue={values.mobile}
                     type="text"
                     placeholder="Enter your mobile number"
                     onChange={handleFormData("mobile")}

@@ -13,6 +13,18 @@ function Registration() {
     email: "",
     password: "",
     mobile: "",
+    brandName: "",
+    companyName: "",
+    ownerName: "",
+    ownerEmail: "",
+    ownerMobile: "",
+    address: "",
+    country: "",
+    state: "",
+    city: "",
+    pincode: "",
+    website: "",
+    
   });
 
   // function for going to next step by increasing step state by 1
