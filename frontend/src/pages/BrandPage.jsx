@@ -9,6 +9,43 @@ function BrandPage() {
   return (
     <>
       <Navbar />
+      {/* <div className="row Landing" id="landfix">
+        <div className="LandingContainer">
+          <div className="LandingRow">
+            <div className="normal">
+              <div className="col-xs-12 col-sm-3 col-md-2 mdy-width pad-top">
+                <div class="brand-logo"><img src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/franchisor/scentials_1.jpg" alt="Scentials"/></div>
+              </div>
+              <div className="col-xs-12 col-sm-10 col-md-10 mdy-width">
+                <div className="Row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="sub-ttl">Beauty Salons</div>
+                            <h1 class="ttl">Scentials</h1>
+                </div>
+                <div className="col-xs-12 col-sm-12 col-md-12">
+                  <div className="tab-panel">
+                    <div className="lft-pnl">
+                      <ul className="tabScroll">
+                        <li><a href="#business_tab">Business</a></li>
+                        <li><a href="#investmentnew_tab">Investment</a></li>
+                        <li><a href="#property_tab">Property</a></li>
+                        <li><a href="#training_tab">Training</a></li>
+                        <li><a href="#others_tab">Agreement<span class="hidemobileTerm">&amp; Term Details</span></a></li>
+                      </ul>
+                    </div>
+                    <div className="rht-pnl">
+                      <ul>
+                        <li><a className="active" href="#" data-toggle="modal" data-target="#modalGetFree" id="seo_contact_btn">View Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
       <div className="Brandrow bdy-spc Brandlanding">
         <div className="Brandcontainer">
           <div className="Brandrow">
