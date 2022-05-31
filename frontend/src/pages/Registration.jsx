@@ -23,7 +23,7 @@ function Registration() {
     state: "",
     city: "",
     pincode: "",
-    website: "",
+    industry: "",
     
   });
 
