@@ -25,7 +25,6 @@ function Registration() {
     city: "",
     pincode: "",
     industry: "",
-    
   });
 
   // function for going to next step by increasing step state by 1
@@ -83,7 +82,12 @@ function Registration() {
       return (
         <div className="App">
           <Container>
-          <Property values={formData} />
+            <Property
+              nextStep={nextStep}
+              prevStep={prevStep}
+              handleFormData={handleInputData}
+              values={formData}
+            />
           </Container>
         </div>
       );
@@ -91,18 +95,28 @@ function Registration() {
       return (
         <div className="App">
           <Container>
-          <Agreements values={formData} />
+            <Agreements
+              nextStep={nextStep}
+              prevStep={prevStep}
+              handleFormData={handleInputData}
+              values={formData}
+            />
           </Container>
         </div>
       );
-      case 5:
-        return (
-          <div className="App">
-            <Container>
-            <Payments values={formData} />
-            </Container>
-          </div>
-        );
+    case 5:
+      return (
+        <div className="App">
+          <Container>
+            <Payments
+              nextStep={nextStep}
+              prevStep={prevStep}
+              handleFormData={handleInputData}
+              values={formData}
+            />
+          </Container>
+        </div>
+      );
 
     // default case to show nothing
     default:

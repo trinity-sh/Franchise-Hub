@@ -354,11 +354,11 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
             
 
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <Button variant="primary" onClick={prevStep}>
+              <Button variant="outline-danger" onClick={prevStep}>
                 Previous
               </Button>
 
-              <Button variant="primary" type="submit">
+              <Button variant="outline-danger" type="submit" onClick={nextStep}>
                 Next
               </Button>
             </div>
