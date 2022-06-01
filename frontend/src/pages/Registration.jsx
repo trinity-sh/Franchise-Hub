@@ -25,6 +25,10 @@ function Registration() {
     city: "",
     pincode: "",
     industry: "",
+    picture: "",
+    video:"",
+    gst:"",
+
   });
 
   // function for going to next step by increasing step state by 1

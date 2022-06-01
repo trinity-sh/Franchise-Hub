@@ -7,7 +7,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function BrandPage() {
   return (
-    <>
+    <div>
       <Navbar />
       {/* <div className="row Landing" id="landfix">
         <div className="LandingContainer">
@@ -545,7 +545,7 @@ function BrandPage() {
         </div>
       </div>
       {/* <NewsLetter /> */}
-    </>
+    </div>
   );
 }
 
