@@ -8,7 +8,7 @@ import {
   faRupee,
   faRupeeSign,
 } from "@fortawesome/free-solid-svg-icons";
-import { Card, Row, Col, Form, Button } from "react-bootstrap";
+import {Row, Col, Form, Button } from "react-bootstrap";
 
 function Advertise() {
   return (
@@ -21,42 +21,118 @@ function Advertise() {
             Choose the perfect plan for you, 100% satisfaction guaranteed
           </div>
 
-          <Row>
+          <Row className="mt-4">
             <Col xs="12" lg="3" className="mt-4">
-              <Card style={{ justifyContent: "center", alignItems: "center", textAlign:"center" }}>
-                <Card.Body>
-                  <h4>Free Listing</h4>
-                  <Form.Group>
-                    <span>Rs 0</span>
-                    <br />
-                    <br />
-                    <Button variant="outline-danger">
-                      <a href="/franchisor/registration/step/:id">Try Now</a>
-                    </Button>
-                  </Form.Group>
-                </Card.Body>
-              </Card>
+              <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Free</h4>
+                  </div>
+                  <div class="card-body" style={{ height: "350px" }}>
+                    <h1 class="card-title pricing-card-title">
+                      Rs 0 <small class="text-muted">/ mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>
+                        Get Priority over other business listings under - List
+                        Page
+                      </li>
+                      <br />
+                      <li>Get Maximum 5 Leads in a month</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-block btn-outline-danger"
+                    >
+                      Try Now
+                    </button>
+                  </div>
+                </div>
+              </div>
             </Col>
             <Col xs="12" lg="3" className="mt-4">
-              <Card>
-                <Card.Body>
-                  <h4>Super Saver</h4>
-                </Card.Body>
-              </Card>
+              <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Super Saver</h4>
+                  </div>
+                  <div class="card-body" style={{ height: "350px" }}>
+                    <h1 class="card-title pricing-card-title">
+                      Rs 9999 <small class="text-muted">/ mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>
+                        Get Priority over other business listings under - Sub -
+                        Sub Category
+                      </li>
+                      <br />
+                      <li>Visibility & Reach - 40%</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-block btn-outline-danger"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
             </Col>
             <Col xs="12" lg="3" className="mt-4">
-              <Card>
-                <Card.Body>
-                  <h4>Sub Category</h4>
-                </Card.Body>
-              </Card>
+              <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Sub Category</h4>
+                  </div>
+                  <div class="card-body" style={{ height: "350px" }}>
+                    <h1 class="card-title pricing-card-title">
+                      Rs 19999 <small class="text-muted">/ mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>
+                        Get Priority over other business listings under - Sub
+                        and Sub - Sub Category
+                      </li>
+                      <br />
+                      <li>Visibility & Reach - 70%</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-block btn-outline-danger"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
             </Col>
+
             <Col xs="12" lg="3" className="mt-4">
-              <Card>
-                <Card.Body>
-                  <h4>Master Category</h4>
-                </Card.Body>
-              </Card>
+              <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Master Category</h4>
+                  </div>
+                  <div class="card-body" style={{ height: "350px" }}>
+                    <h1 class="card-title pricing-card-title">
+                      Rs 39999 <small class="text-muted">/ mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>
+                      Get Priority over other business listings under - Master, Sub and Sub -Sub Category
+                      </li>
+                      <br />
+                      <li>Visibility & Reach - 100%</li>
+                    </ul>
+                    <button
+                      type="button"
+                      class="btn btn-lg btn-block btn-outline-danger"
+                    >
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+              </div>
             </Col>
           </Row>
         </div>
