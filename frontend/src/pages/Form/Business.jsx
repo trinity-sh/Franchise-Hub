@@ -102,30 +102,6 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
             <Form.Group className="mb-3">
               <Row>
                 <Col md="2">
-                  <Form.Label>CEO/ MD / Owner Name</Form.Label>
-                </Col>
-                <Col>
-                  {" "}
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.ownerName}
-                    type="text"
-                    placeholder="Enter the owner name"
-                    onChange={handleFormData("ownerName")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                </Col>
-              </Row>
-            </Form.Group>
-            <Form.Group className="mb-3">
-              <Row>
-                <Col md="2">
                   <Form.Label>CEO/ MD / Owner Email</Form.Label>
                 </Col>
                 <Col>

@@ -12,6 +12,8 @@
 .progressbar {
     margin: 60px 0 30px;
     counter-reset: step;
+    justify-content: center;
+    align-items: center;
 }
 .progressbar .items {
   position: relative;

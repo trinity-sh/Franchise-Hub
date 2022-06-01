@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import NavbarComponent from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
 import Registration from "./Registration";
-
+import "./styles/StepNav.css"
 function StepNav(props) {
   return (
     <div className="main-content">
@@ -17,9 +17,6 @@ function StepNav(props) {
             </Col>
             <Col xs="2" className="items ">
               Business
-            </Col>
-            <Col xs="2" className="items ">
-              Professional
             </Col>
             <Col xs="2" className="items ">
               Property

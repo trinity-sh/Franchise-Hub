@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Col, Row, Container, Button, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Business from "./Form/Business";
 import Personal from "./Form/Personal";
-import Professional from "./Form/Professional";
 import Property from "./Form/Property";
 import Agreements from "./Form/Agreements";
 import Payments from "./Form/Payments";
-import "./styles/Registration.css";
 
 function Registration() {
   const [step, setstep] = useState(1);
@@ -85,7 +83,7 @@ function Registration() {
       return (
         <div className="App">
           <Container>
-            <Professional values={formData} />
+          <Property values={formData} />
           </Container>
         </div>
       );
@@ -93,7 +91,7 @@ function Registration() {
       return (
         <div className="App">
           <Container>
-            <Property values={formData} />
+          <Agreements values={formData} />
           </Container>
         </div>
       );
@@ -101,19 +99,10 @@ function Registration() {
         return (
           <div className="App">
             <Container>
-              <Agreements values={formData} />
+            <Payments values={formData} />
             </Container>
           </div>
         );
-        
-        case 6:
-          return (
-            <div className="App">
-              <Container>
-                <Payments values={formData} />
-              </Container>
-            </div>
-          );
 
     // default case to show nothing
     default:
