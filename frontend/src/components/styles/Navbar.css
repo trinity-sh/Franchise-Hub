@@ -5,6 +5,9 @@
   z-index: 2;
   top: 0px;
 }
+.modal-search{
+  flex-direction: column;
+}
 .topbar {
   background-color: #f5f5f5;
 }

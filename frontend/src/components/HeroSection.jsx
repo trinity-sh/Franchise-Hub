@@ -120,7 +120,7 @@ function HeroSection() {
                           class="form-control-custom dropdown-toogle-icon"
                         >
                           <option value="" hidden="">
-                            Select Sector
+                            Select Country
                           </option>
                         </select>
                       </li>
@@ -131,7 +131,7 @@ function HeroSection() {
                           id="getSubCatCategoryDataHeader1"
                         >
                           <option value="" hidden="">
-                            Select Service/Product
+                            Select State
                           </option>
                         </select>
                       </li>
