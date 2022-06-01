@@ -1,11 +1,14 @@
 .bdy-spc {
     min-height: 100vh;
 }
+.head{
+    margin: 150px 50px 0;
+}
 .Brandrow {
     margin: 0 15px;
 }
 .Brandcontainer{
-    margin: 10rem auto 0 auto;
+    margin: 1.5rem auto 0 auto;
     padding: 0 15px;
 }
 .Brandlanding .tab-content {
@@ -52,6 +55,12 @@
     margin-top: 20px;
     font-weight: 300;
     background: #fff;
+}
+.tab-section{
+    margin: 10px 0;
+}
+.tab-sec-ttl{
+    margin-top: 10px;
 }
 .tab-sec-ttl{
     border-bottom: 1px solid #dbdbdb;
@@ -167,6 +176,16 @@ strong{
     text-align: center;
     overflow: hidden;
 }
+.like{
+    margin: 10px auto;
+    text-align: center;
+}
+.like button{
+    margin-right:15px ;
+    padding: 5px 10px;
+    border: 1px solid #f01;
+    background-color: transparent;
+}
 @media only screen and (min-width: 1024px) and (max-width: 1199px){
 .landing .tab-content .lft-pnl {
     width: 65%;
@@ -183,4 +202,19 @@ strong{
     .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
     float: left;
 }
+}
+@media only screen and (max-width: 425px){
+    .head{
+        margin: 80px 20px 0;
+    }
+    .Brandrow{
+        margin: 0;
+    }
+    .business-infonoimg ul li{
+        padding: 0 5px;
+        font-size: 12px;
+    }
+    .business-infonoimg ul li div{
+        font-size: 12px;
+    }
 }
