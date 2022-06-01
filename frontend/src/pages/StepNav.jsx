@@ -10,7 +10,7 @@ function StepNav(props) {
       <div className="register">
         <h1>It's Easy To Register Your Company Now With Us! </h1>
 
-        <Container>
+        <Container className="mobile">
           <Row className="progressbar">
             <Col xs="2" className="items active">
               Personal

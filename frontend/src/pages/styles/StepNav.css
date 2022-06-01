@@ -2,7 +2,7 @@
   overflow-x: hidden;
 }
 .register {
-  margin: 125px 50px 0;
+  margin: 145px 80px 30px;
 }
 .register h1 {
   font-size: 40px;
@@ -53,4 +53,16 @@
   }
   .progressbar .items.active + .items::after{
       background-color: rgb(22, 109, 0);
+  }
+
+  @media (max-width:425px) {
+    .register{
+      margin: 80px 15px 0;
+    }
+    .register h1{
+      margin-bottom: 30px;
+    }
+    .mobile{
+      display: none;
+    }
   }

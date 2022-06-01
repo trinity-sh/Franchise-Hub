@@ -102,7 +102,7 @@ function NavbarComponent() {
 
                   <div class="logo">
                     {" "}
-                    <a href="#">
+                    <a href="/">
                       <img
                         className="logo"
                         src={Logo}
@@ -211,9 +211,9 @@ function NavbarComponent() {
 
               <div class="logo">
                 {" "}
-                <a href="#">
+                <Nav.Link href="/">
                   <img className="logo" src={Logo} alt="FranchiseHub Logo" />
-                </a>
+                </Nav.Link>
               </div>
               <br />
               <span class="search" id="search">
