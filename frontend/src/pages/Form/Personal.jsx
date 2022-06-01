@@ -49,30 +49,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                 </Col>
               </Row>
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Row>
-                <Col  md="2">
-                  <Form.Label>Password</Form.Label>
-                </Col>
-                <Col>
-                  {" "}
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.password}
-                    type="password"
-                    placeholder="Enter your password"
-                    onChange={handleFormData("password")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
-                </Col>
-              </Row>
-            </Form.Group>
+            
             <Form.Group className="mb-3">
               <Row>
                 <Col  md="2" >

@@ -12,7 +12,6 @@ function Registration() {
   //state for form data
   const [formData, setFormData] = useState({
     email: "",
-    password: "",
     mobile: "",
     brandName: "",
     companyName: "",
