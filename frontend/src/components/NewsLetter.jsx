@@ -67,7 +67,7 @@ function NewsLetter() {
         >
           <Container>
             <Row class="justify-content-center">
-              <div class="modified-col col-md-6">
+              <div class="modified-col col-lg-6">
                 <p>
                   Share your email address to get latest update from the
                   industry
@@ -105,7 +105,7 @@ function NewsLetter() {
                 </div>
               </div>
               <div
-                class="modified-col col-md-6 text-right
+                class="modified-col col-lg-6 text-right
                                      socail-newsletter-section"
               >
                 <p>Stay tuned &amp; get updated</p>
