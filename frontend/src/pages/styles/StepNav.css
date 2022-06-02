@@ -9,6 +9,9 @@
   color: #333333;
   font-weight: 300;
 }
+.mobile-nav{
+  display: none;
+}
 .progressbar {
     margin: 60px 0 30px;
     counter-reset: step;
@@ -61,8 +64,5 @@
     }
     .register h1{
       margin-bottom: 30px;
-    }
-    .mobile{
-      display: none;
     }
   }
