@@ -10,7 +10,7 @@
 #hero-section::before {
   margin: 0 80px;
 }
-.title{
+.title {
   display: inline-block;
 }
 .lnkblk {
@@ -50,9 +50,25 @@
   text-align: center;
   display: flex;
 }
-
+.modal-search {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0px;
+  padding-inline-start: 0px;
+  text-align: center;
+  flex-direction: column;
+}
+ul.modal-search li {
+  display: inline-block;
+}
 ul.hero-search-main li {
   display: inline-block;
+}
+ul.modal-search li select {
+  width: 336px;
+  padding: 10px 20px;
+  margin-right: 3px;
+  border: none;
 }
 ul.hero-search-main li select {
   width: 336px;
@@ -60,12 +76,22 @@ ul.hero-search-main li select {
   margin-right: 3px;
   border: none;
 }
-ul.hero-search-main li select:focus {
-   outline: none;
-  }
+ul.hero-search-main.modal-search li select:focus {
+  outline: none;
+}
 .tab-content .tab-pane.active {
   transform: translateY(-1px);
   opacity: 1;
+}
+ul.modal-search li button {
+  width: 50px;
+  font-size: 16px;
+  line-height: 1;
+  height: 44px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  text-align: center;
 }
 ul.hero-search-main li button {
   width: 50px;
@@ -78,46 +104,45 @@ ul.hero-search-main li button {
   text-align: center;
 }
 
-#searchbtn{
+#searchbtn {
   display: none;
 }
 
 /*media query*/
 
 /*mobiles*/
-@media (max-width:425px) {
+@media (max-width: 425px) {
   #heroBar {
     width: 100vw;
   }
-  .hero{
+  .hero {
     display: block;
   }
-  .hero-search-main{
+  .hero-search-main {
     margin-top: 10px;
   }
-  ul.hero-search-main li select{
+  ul.hero-search-main li select {
     width: 300px;
   }
-  ul.hero-search-main li button{
+  ul.hero-search-main li button {
     width: 100px;
     height: 35px;
     text-align: center;
   }
-  .search-btn{
+  .search-btn {
     margin-top: 10px;
   }
-  #searchbtn{
+  #searchbtn {
     display: block;
     color: #fff;
-   justify-content: center;
+    justify-content: center;
   }
-  .search-icon{
+  .search-icon {
     display: none;
-
   }
 }
-@media (max-width:768px){
-  .hero-search-main{
+@media (max-width: 768px) {
+  .hero-search-main {
     flex-direction: column;
     padding-top: 1rem;
   }
