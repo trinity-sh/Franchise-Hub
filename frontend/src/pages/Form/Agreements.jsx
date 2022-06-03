@@ -13,7 +13,7 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
   };
   return (
     <>
-      <h1 style={{ color: "#333333", fontSize: "30px" }}>Tranning Details</h1>
+      <h1 style={{ color: "#333333", fontSize: "30px" }}>Training Details</h1>
       <Card style={{ margin: "30px 0 80px" }}>
         <Card.Body>
           <Form onSubmit={submitFormData}>
