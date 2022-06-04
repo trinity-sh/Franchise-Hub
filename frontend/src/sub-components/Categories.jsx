@@ -62,7 +62,7 @@ function Categories(props) {
           Investment
         </Nav.Link>
       </Nav>
-      <div class="tab-content">
+      <div className="tab-content">
         <div id="categories1" className="tab-pane fade in active">
           <Form
             className="form-horizontal"
@@ -71,7 +71,7 @@ function Categories(props) {
           >
             <input type="hidden" name="catTab" value="1" />
             <ul className={props.search ? "modal-search" : "hero-search-main"}>
-              <li class="p-0 m-0">
+              <li class="p-0">
                 <select
                   name="mc"
                   className="form-control-custom dropdown-toogle-icon"
@@ -127,7 +127,7 @@ function Categories(props) {
                   </option>
                 </select>
               </li>
-              <li class="p-0 m-0">
+              <li class="p-0">
                 <select
                   name="sc"
                   id="getSubCategoryDataHeader1"
@@ -144,7 +144,7 @@ function Categories(props) {
                   ))}
                 </select>
               </li>
-              <li class="p-0 m-0">
+              <li class="p-0">
                 <select
                   name="sc"
                   id="getSubCategoryDataHeader1"

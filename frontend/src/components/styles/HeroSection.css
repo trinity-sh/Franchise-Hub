@@ -121,8 +121,17 @@ ul.hero-search-main li button {
   .hero-search-main {
     margin-top: 10px;
   }
+  #hero-search .tab-content {
+    background: rgba(255,255,255,0.7);
+    padding: 8px;
+  }
   ul.hero-search-main li select {
     width: 300px;
+  }
+  ul.hero-search-main li {
+    width: 100%;
+    display: block;
+    margin-bottom:12px ;
   }
   ul.hero-search-main li button {
     width: 100px;
