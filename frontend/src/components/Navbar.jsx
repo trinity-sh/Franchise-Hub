@@ -135,7 +135,7 @@ function NavbarComponent() {
                             <Modal.Title>Search</Modal.Title>
                           </Modal.Header>
                           <Modal.Body>
-                           <Categories search={true} />
+                            <Categories search={true} />
                           </Modal.Body>
                           <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
@@ -184,29 +184,47 @@ function NavbarComponent() {
         </div>
       </header>
       {/* Mobile Version */}
-      <Navbar collapseOnSelect fixed="top" expand="sm" id="navbar">
-        <Container>
+      <Navbar collapseOnSelect fixed="top" expand="sm" id="navbar" className="mob-nav">
+        <Container className="contain">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav>
-              <Nav.Link
-                className="navlinks"
-                href="/franchisor/registration/step/:id"
-                target="_blank"
-                data-toggle="modal"
-                data-target="#expandFranchisenew"
-              >
-                Expand Your Franchise
-              </Nav.Link>
-              <span>|</span>
-              <Nav.Link
-                className="navlinks"
-                href="/advertise-with-us-payment"
-                target="_blank"
-              >
-                Advertise
-              </Nav.Link>
-              <InputGroup className="input-group-custom">
+         
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav>
+                  <Nav.Link
+                    className="navlinks"
+                    href="/franchisor/registration/step/:id"
+                    target="_blank"
+                    data-toggle="modal"
+                    data-target="#expandFranchisenew"
+                  >
+                    Expand Your Franchise
+                  </Nav.Link>
+
+                  <Nav.Link
+                    className="navlinks"
+                    href="/advertise-with-us-payment"
+                    target="_blank"
+                  >
+                    Advertise
+                  </Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+        
+
+         
+            <div>
+            {" "}
+            <Nav.Link href="/" className="mobile-logo">
+              <img
+                className="mobile-logo-img"
+                src={Logo}
+                alt="FranchiseHub Logo"
+              />
+            </Nav.Link>
+          </div>
+           
+
+          {/* <InputGroup className="input-group-custom">
                 <img
                   className="language"
                   src="https://www.franchiseindia.com/newhomepage/assets/img/language-icon.svg"
@@ -227,46 +245,35 @@ function NavbarComponent() {
                     </option>
                   </select>
                 </Form.Group>
-              </InputGroup>
+              </InputGroup> */}
 
-              <div class="logo">
-                {" "}
-                <Nav.Link href="/">
-                  <img className="logo" src={Logo} alt="FranchiseHub Logo" />
-                </Nav.Link>
-              </div>
-              <br />
-              <span class="search" id="search">
-                <div
-                  class="p-2 icon"
-                  data-toggle="modal"
-                  data-target="#search-main"
-                >
-                  <img
-                    src="https://www.franchiseindia.com/newhomepage/assets/img/Search.svg"
-                    alt="Search"
-                  />
-                  <span>Search</span>
-                </div>
-              </span>
-
+         
+      
+          <span class="search" id="search" onClick={handleShow}>
+            <div
+              class="p-2 icon"
+              data-toggle="modal"
+              data-target="#search-main"
+            >
               <img
-                className="login"
-                src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
-                alt="Login"
+                src="https://www.franchiseindia.com/newhomepage/assets/img/Search.svg"
+                alt="Search"
               />
+            </div>
+          </span>
 
-              <Nav.Link
-                className="links"
-                href="/franchisor/registration/step/:id"
-                data-toggle="modal"
-                data-target="#login-pnl"
-                id="mobilereg"
-              >
-                Register
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav.Link
+            className="links"
+            href="/franchisor/registration/step/:id"
+            data-toggle="modal"
+            data-target="#login-pnl"
+            id="mobilereg"
+          >
+            <img
+              src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
+              alt="Login"
+            />
+          </Nav.Link>
         </Container>
       </Navbar>
     </>

@@ -92,6 +92,20 @@ select#language-changer {
 .input-group-custom {
   margin-left: 55vw;
 }
+.navbar>.contain{
+  flex-wrap: nowrap;
+}
+.mob-nav{
+  background-color: #fff;
+  padding: 0 auto;
+}
+.mobile-logo{
+  width: 90%;
+  text-align: center;
+}
+.mobile-logo-img{
+  width: 70%;
+}
 /* @media (max-width:425px) {
   .input-group-custom{
     margin-left: 65vw;
