@@ -12,7 +12,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
     e.preventDefault();
 
     
-    if (validator.isEmpty(values.email)) {
+    if (validator.isEmpty(values.email_id)) {
       setError(true);
     } else {
       nextStep();
@@ -34,10 +34,10 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.email}
+                    defaultValue={values.email_id}
                     type="email"
                     placeholder="Enter your UserId"
-                    onChange={handleFormData("email")}
+                    onChange={handleFormData("personal_details.email")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
@@ -62,7 +62,7 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                     defaultValue={values.mobile}
                     type="text"
                     placeholder="Enter your mobile number"
-                    onChange={handleFormData("mobile")}
+                    onChange={handleFormData("personal_details.mobile")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
