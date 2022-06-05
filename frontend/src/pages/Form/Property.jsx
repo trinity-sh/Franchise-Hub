@@ -30,7 +30,7 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
   }
   function handleRadio4(e) {
     const val = e.target.value;
-    setRadio3(val);
+    setRadio4(val);
   }
   return (
     <>

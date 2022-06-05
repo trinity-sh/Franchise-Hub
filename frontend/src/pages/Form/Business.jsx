@@ -393,7 +393,7 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
             <Form.Group className="mb-3">
               <Row>
                 <Col md="2">
-                  <Form.Label> No of Franchise Outlets</Form.Label>
+                  <Form.Label> Investment Range</Form.Label>
                 </Col>
                 <Col>
                   <div class="input-group">
