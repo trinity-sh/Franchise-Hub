@@ -38,7 +38,13 @@ function Categories(props) {
     let cities = data.filter((city) => city.subcountry === e.target.value);
     console.log(cities);
   }
+  // investment
+  const [tab, setTab] = useState("");
 
+  function handleTabs(e) {
+    const name = e.target.name;
+    setTab(name);
+  }
   return (
     <div class="hero-search" id="hero-search">
       <Nav className="nav-tabs">
@@ -48,6 +54,8 @@ function Categories(props) {
           aria-controls="location1"
           role="tab"
           data-toggle="tab"
+          name="location"
+          onClick={handleTabs}
         >
           Location
         </Nav.Link>
@@ -58,6 +66,8 @@ function Categories(props) {
           aria-controls="investment1"
           role="tab"
           data-toggle="tab"
+          name="investment"
+          onClick={handleTabs}
         >
           Investment
         </Nav.Link>
@@ -127,40 +137,138 @@ function Categories(props) {
                   </option>
                 </select>
               </li>
-              <li class="p-0">
-                <select
-                  name="sc"
-                  id="getSubCategoryDataHeader1"
-                  onChange={(e) => handleCountry(e)}
-                  class="form-control-custom dropdown-toogle-icon"
-                >
-                  <option value="" hidden="">
-                    Select Country
-                  </option>
-                  {country.map((items) => (
-                    <option key={items} value={items}>
-                      {items}
-                    </option>
-                  ))}
-                </select>
-              </li>
-              <li class="p-0">
-                <select
-                  name="sc"
-                  id="getSubCategoryDataHeader1"
-                  onChange={handleState}
-                  class="form-control-custom dropdown-toogle-icon"
-                >
-                  <option value="" hidden="">
-                    Select State
-                  </option>
-                  {getState.map((items) => (
-                    <option key={items} value={selectedState}>
-                      {items}
-                    </option>
-                  ))}
-                </select>
-              </li>
+              {tab === "location" ? (
+                <>
+                  <li class="p-0">
+                    <select
+                      name="sc"
+                      id="getSubCategoryDataHeader1"
+                      onChange={(e) => handleCountry(e)}
+                      class="form-control-custom dropdown-toogle-icon"
+                    >
+                      <option value="" hidden="">
+                        Select Country
+                      </option>
+                      {country.map((items) => (
+                        <option key={items} value={items}>
+                          {items}
+                        </option>
+                      ))}
+                    </select>
+                  </li>
+                  <li class="p-0">
+                    <select
+                      name="sc"
+                      id="getSubCategoryDataHeader1"
+                      onChange={handleState}
+                      class="form-control-custom dropdown-toogle-icon"
+                    >
+                      <option value="" hidden="">
+                        Select State
+                      </option>
+                      {getState.map((items) => (
+                        <option key={items} value={selectedState}>
+                          {items}
+                        </option>
+                      ))}
+                    </select>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li class="p-0">
+                    <select
+                      name="min_cost"
+                      class="dropdown-toogle-icon"
+                      id="minAmount1"
+                    >
+                      <option value="" hidden="">
+                        {" "}
+                        Select Min Investment{" "}
+                      </option>
+                      <option slug="10000" value="1">
+                        Rs. 10000
+                      </option>
+                      <option slug="50000" value="3">
+                        Rs. 50000
+                      </option>
+                      <option slug="200000" value="5">
+                        Rs. 2lac
+                      </option>
+                      <option slug="500000" value="7">
+                        Rs. 5lac
+                      </option>
+                      <option slug="1000000" value="9">
+                        Rs. 10lac
+                      </option>
+                      <option slug="2000000" value="11">
+                        Rs. 20lac
+                      </option>
+                      <option slug="3000000" value="13">
+                        Rs. 30lac
+                      </option>
+                      <option slug="5000000" value="15">
+                        Rs. 50lac
+                      </option>
+                      <option slug="10000000" value="17">
+                        Rs. 1 Cr.
+                      </option>
+                      <option slug="20000000" value="19">
+                        Rs. 2 Cr.
+                      </option>
+                      <option slug="50000000" value="21">
+                        Rs. 5 Cr.
+                      </option>
+                    </select>
+                  </li>
+                  <li class="p-0">
+                    <select
+                      name="min_cost"
+                      class="dropdown-toogle-icon"
+                      id="minAmount1"
+                    >
+                      <option value="" hidden="">
+                        {" "}
+                        Select Max Investment{" "}
+                      </option>
+                      <option slug="10000" value="1">
+                        Rs. 10000
+                      </option>
+                      <option slug="50000" value="3">
+                        Rs. 50000
+                      </option>
+                      <option slug="200000" value="5">
+                        Rs. 2lac
+                      </option>
+                      <option slug="500000" value="7">
+                        Rs. 5lac
+                      </option>
+                      <option slug="1000000" value="9">
+                        Rs. 10lac
+                      </option>
+                      <option slug="2000000" value="11">
+                        Rs. 20lac
+                      </option>
+                      <option slug="3000000" value="13">
+                        Rs. 30lac
+                      </option>
+                      <option slug="5000000" value="15">
+                        Rs. 50lac
+                      </option>
+                      <option slug="10000000" value="17">
+                        Rs. 1 Cr.
+                      </option>
+                      <option slug="20000000" value="19">
+                        Rs. 2 Cr.
+                      </option>
+                      <option slug="50000000" value="21">
+                        Rs. 5 Cr.
+                      </option>
+                    </select>
+                  </li>
+                </>
+              )}
+
               <li class="p-0 m-0">
                 <button type="submit" class="search-btn">
                   {" "}
