@@ -39,9 +39,11 @@ function Franchise(props) {
               </Col>
             </Row>
           </Card.Text>
-          <Button variant="outline-danger" className="button">
-            <a href="./brands/:" target="_blank">Know More</a>
-          </Button>
+          <a href="./brands/:" target="_blank">
+            <Button variant="outline-danger" className="button">
+              Know More
+            </Button>
+          </a>
         </Card.Body>
       </Card>
     </div>
