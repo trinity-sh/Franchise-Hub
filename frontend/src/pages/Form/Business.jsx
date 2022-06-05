@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Card, Button, Row, Col, InputGroup } from "react-bootstrap";
 import validator from "validator";
+import axios from "axios";
 
 // creating functional component ans getting props from app.js and destucturing them
 const Business = ({ nextStep, handleFormData, prevStep, values }) => {
   //creating error state for validation
   const [error, setError] = useState(false);
+  const [data, setData] = useState([]);
+  const [getCountry, setCountry] = useState([]);
+  const [getState, setState] = useState([]);
+  const [selectedState, setSelectedState] = useState([]);
+  //making the country data unique
+  const country = [...new Set(data.map((item) => item.country))];
+  country.sort();
 
   // after form submit validating the form data using validator
   const submitFormData = (e) => {
@@ -32,6 +40,30 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
   function handleOutlets(e) {
     let val = e.target.value;
     setOutlets(val);
+  }
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json"
+      )
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, []);
+  function handleCountry(e) {
+    e.persist();
+
+    let states = data.filter((state) => state.country === e.target.value);
+
+    states = [...new Set(states.map((item) => item.subcountry))];
+    states.sort();
+    setState(states);
+  }
+  console.log(getState);
+
+  function handleState(e) {
+    let cities = data.filter((city) => city.subcountry === e.target.value);
+    console.log(cities);
   }
 
   return (
@@ -192,20 +224,22 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                 </Col>
                 <Col>
                   {" "}
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.country}
-                    type="text"
-                    placeholder="Enter the country"
+                  <select
+                    name="sc"
+                    id="getSubCategoryDataHeader1"
+                    class="form-control dropdown-toogle-icon"
                     onChange={handleFormData("personal_details.country")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
+                    onClick={handleCountry}
+                  >
+                    <option value="" hidden="">
+                      Select Country
+                    </option>
+                    {country.map((items) => (
+                      <option key={items} value={items}>
+                        {items}
+                      </option>
+                    ))}
+                  </select>
                 </Col>
               </Row>
             </Form.Group>
@@ -215,21 +249,21 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Label>State</Form.Label>
                 </Col>
                 <Col>
-                  {" "}
-                  <Form.Control
-                    style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.state}
-                    type="text"
-                    placeholder="Enter the state"
+                  <select
+                    name="sc"
+                    id="getSubCategoryDataHeader1"
                     onChange={handleFormData("personal_details.state")}
-                  />
-                  {error ? (
-                    <Form.Text style={{ color: "red" }}>
-                      This is a required field
-                    </Form.Text>
-                  ) : (
-                    ""
-                  )}
+                    className="form-control dropdown-toogle-icon"
+                  >
+                    <option value="" hidden="">
+                      Select State
+                    </option>
+                    {getState.map((items) => (
+                      <option key={items} value={items}>
+                        {items}
+                      </option>
+                    ))}
+                  </select>
                 </Col>
               </Row>
             </Form.Group>
@@ -309,7 +343,7 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       <option value="11">
                         Sports, Fitness &amp; Entertainment
                       </option>
-                      <option value="263">Hotel, Travel &amp; Tourism</option>
+                      <option value="12">Hotel, Travel &amp; Tourism</option>
                     </select>
                   </InputGroup>
                 </Col>
@@ -327,7 +361,9 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       name="no_of_franch_outlets"
                       id="no_fran_outlets"
                       class="form-control myselectclass blur"
-                      onChange={handleFormData('personal_details.no_of_franch_outlets')}
+                      onChange={handleFormData(
+                        "personal_details.no_of_franch_outlets"
+                      )}
                     >
                       <option value="">Select No of Outlets</option>
 
@@ -355,25 +391,59 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
             </Form.Group>
 
             <Form.Group className="mb-3">
-              <label for="business_desc">Investment Range</label>
-              <br />
+              <Row>
+                <Col md="2">
+                  <Form.Label> No of Franchise Outlets</Form.Label>
+                </Col>
+                <Col>
+                  <div class="input-group">
+                    <select
+                      name="no_of_franch_outlets"
+                      id="no_fran_outlets"
+                      class="form-control myselectclass blur"
+                      onChange={handleFormData("personal_details.inv")}
+                    >
+                      <option value="">Investment Range</option>
+
+                      <option slug="10000" value="1">
+                        Rs. 10000
+                      </option>
+                      <option slug="50000" value="3">
+                        Rs. 50000
+                      </option>
+                      <option slug="200000" value="5">
+                        Rs. 2lac
+                      </option>
+                      <option slug="500000" value="7">
+                        Rs. 5lac
+                      </option>
+                      <option slug="1000000" value="9">
+                        Rs. 10lac
+                      </option>
+                      <option slug="2000000" value="11">
+                        Rs. 20lac
+                      </option>
+                      <option slug="3000000" value="13">
+                        Rs. 30lac
+                      </option>
+                      <option slug="5000000" value="15">
+                        Rs. 50lac
+                      </option>
+                      <option slug="10000000" value="17">
+                        Rs. 1 Cr.
+                      </option>
+                      <option slug="20000000" value="19">
+                        Rs. 2 Cr.
+                      </option>
+                      <option slug="50000000" value="21">
+                        Rs. 5 Cr.
+                      </option>
+                    </select>
+                  </div>
+                </Col>
+              </Row>
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Control
-                style={{ border: error ? "2px solid red" : "" }}
-                defaultValue={values.inv}
-                type="text"
-                placeholder="Enter the investment"
-                onChange={handleFormData("personal_details.inv")}
-              />
-              {error ? (
-                <Form.Text style={{ color: "red" }}>
-                  This is a required field
-                </Form.Text>
-              ) : (
-                ""
-              )}
-            </Form.Group>
+            
 
             <Form.Group className="mb-3">
               <label for="business_desc">Describe your Business</label>

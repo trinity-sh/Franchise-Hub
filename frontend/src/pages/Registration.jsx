@@ -11,25 +11,8 @@ function Registration() {
 
   //state for form data
   const [formData, setFormData] = useState({
-    // email: "",
-    // mobile: "",
-    // brandName: "",
-    // companyName: "",
-    // ownerName: "",
-    // ownerEmail: "",
-    // ownerMobile: "",
-    // address: "",
-    // country: "",
-    // state: "",
-    // city: "",
-    // pincode: "",
-    // industry: "",
-    // picture: "",
-    // video:"",
-    // gst:"",
-
     personal_details: {
-      email_id:"",
+      email_id: "",
       mobile: "",
       brand_name: "",
       company_name: "",
@@ -43,12 +26,12 @@ function Registration() {
       pincode: "",
       industry: "",
       no_of_franch_outlets: "",
-      inv: parseInt(),
+      inv: "",
       business_desc: "",
       q_excl_terr_rights: "",
       q_perf_guarantees: "",
       q_adv_market_levies: "",
-      antc_perc_ret:"",
+      antc_perc_ret: "",
       likely_payback_period: {
         min: "",
         max: "",
@@ -77,7 +60,7 @@ function Registration() {
     },
     final_rites: {
       company_logo: "",
-      video_link:"",
+      video_link: "",
       gst_no: "",
       mode_of_payment: "",
       q_sub_news: "",
@@ -104,6 +87,7 @@ function Registration() {
       ...prevState,
       [input]: value,
     }));
+    console.log(value);
   };
 
   switch (step) {
@@ -134,7 +118,7 @@ function Registration() {
           </Container>
         </div>
       );
-    // Only formData is passed as prop to show the final value at form submit
+   
     case 3:
       return (
         <div className="App">

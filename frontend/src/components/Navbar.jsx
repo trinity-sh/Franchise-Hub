@@ -73,10 +73,7 @@ function NavbarComponent() {
                           class="form-control-custom-main language-dropdown"
                           id="language-changer"
                         >
-                          <option
-                            value="https://www.franchiseindia.com"
-                            selected=""
-                          >
+                          <option value="https://www.franchiseindia.com">
                             EN - English
                           </option>
                           <option value="https://www.franchiseindia.com/hi">
@@ -184,35 +181,39 @@ function NavbarComponent() {
         </div>
       </header>
       {/* Mobile Version */}
-      <Navbar collapseOnSelect fixed="top" expand="sm" id="navbar" className="mob-nav">
+      <Navbar
+        collapseOnSelect
+        fixed="top"
+        expand="sm"
+        id="navbar"
+        className="mob-nav"
+      >
         <Container className="contain">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-         
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav>
-                  <Nav.Link
-                    className="navlinks"
-                    href="/franchisor/registration/step/:id"
-                    target="_blank"
-                    data-toggle="modal"
-                    data-target="#expandFranchisenew"
-                  >
-                    Expand Your Franchise
-                  </Nav.Link>
 
-                  <Nav.Link
-                    className="navlinks"
-                    href="/advertise-with-us-payment"
-                    target="_blank"
-                  >
-                    Advertise
-                  </Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
-        
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav>
+              <Nav.Link
+                className="navlinks"
+                href="/franchisor/registration/step/:id"
+                target="_blank"
+                data-toggle="modal"
+                data-target="#expandFranchisenew"
+              >
+                Expand Your Franchise
+              </Nav.Link>
 
-         
-            <div>
+              <Nav.Link
+                className="navlinks"
+                href="/advertise-with-us-payment"
+                target="_blank"
+              >
+                Advertise
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+
+          <div>
             {" "}
             <Nav.Link href="/" className="mobile-logo">
               <img
@@ -222,7 +223,6 @@ function NavbarComponent() {
               />
             </Nav.Link>
           </div>
-           
 
           {/* <InputGroup className="input-group-custom">
                 <img
@@ -247,8 +247,6 @@ function NavbarComponent() {
                 </Form.Group>
               </InputGroup> */}
 
-         
-      
           <span class="search" id="search" onClick={handleShow}>
             <div
               class="p-2 icon"

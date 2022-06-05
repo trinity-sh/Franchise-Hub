@@ -12,7 +12,26 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
 
     // checking if value of first name and last name is empty show error else take to next step
   };
-  const [radios, setRadios] = useState("");
+  const [radio1, setRadio1] = useState("");
+  const [radio2, setRadio2] = useState("");
+  const [radio3, setRadio3] = useState("");
+  const [radio4, setRadio4] = useState("");
+  function handleRadio1(e) {
+    const val = e.target.value;
+    setRadio1(val);
+  }
+  function handleRadio2(e) {
+    const val = e.target.value;
+    setRadio2(val);
+  }
+  function handleRadio3(e) {
+    const val = e.target.value;
+    setRadio3(val);
+  }
+  function handleRadio4(e) {
+    const val = e.target.value;
+    setRadio3(val);
+  }
   return (
     <>
       <h1 style={{ color: "#333333", fontSize: "30px" }}>Franchise Details</h1>
@@ -33,16 +52,22 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    value="yes"
+                    checked={radio1 === "yes"}
                     onChange={handleFormData(
                       "property_details.q_excl_terr_rights"
                     )}
+                    onClick={handleRadio1}
                   />
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
+                    checked={radio1 === "no"}
                     onChange={handleFormData(
                       "property_details.q_excl_terr_rights"
                     )}
+                    onClick={handleRadio1}
                   />
                 </Col>
               </Row>
@@ -61,6 +86,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    value="yes"
+                    checked={radio2 === "yes"}
+                    onClick={handleRadio2}
                     onChange={handleFormData(
                       "personal_details.q_perf_guarantees"
                     )}
@@ -68,6 +96,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
+                    checked={radio2 === "no"}
+                    onClick={handleRadio2}
                     onChange={handleFormData(
                       "personal_details.q_perf_guarantees"
                     )}
@@ -89,6 +120,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    value="yes"
+                    checked={radio3 === "yes"}
+                    onClick={handleRadio3}
                     onChange={handleFormData(
                       "personal_details.q_adv_market_levies"
                     )}
@@ -96,6 +130,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
+                    checked={radio3 === "no"}
+                    onClick={handleRadio3}
                     onChange={handleFormData(
                       "personal_details.q_adv_market_levies"
                     )}
@@ -338,6 +375,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    value="yes"
+                    checked={radio4 === "yes"}
+                    onClick={handleRadio4}
                     onChange={handleFormData(
                       "property_details.q_site_select_assist"
                     )}
@@ -345,6 +385,9 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
+                    checked={radio4 === "no"}
+                    onClick={handleRadio4}
                     onChange={handleFormData(
                       "property_details.q_site_select_assist"
                     )}
