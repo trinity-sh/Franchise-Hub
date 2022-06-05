@@ -26,6 +26,11 @@ function NavbarComponent() {
     setClick(!click);
   }
 
+  const [advice, setAdvice] = useState(false);
+
+  const ClosefreeAdvice = () => setAdvice(false);
+  const freeAdvice = () => setAdvice(true);
+
   return (
     <>
       <header class="header" id="header">
@@ -38,10 +43,11 @@ function NavbarComponent() {
                     <Nav class="top-nav">
                       <Nav.Link
                         className="navlinks"
-                        href="/franchisor/registration/step/:id"
+                        href="#"
                         target="_blank"
                         data-toggle="modal"
                         data-target="#expandFranchisenew"
+                        onClick={freeAdvice}
                       >
                         Expand Your Franchise
                       </Nav.Link>
@@ -55,7 +61,87 @@ function NavbarComponent() {
                       </Nav.Link>
                     </Nav>
                   </div>
+                  <Modal show={advice} onHide={ClosefreeAdvice}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Free Advice-Ask our Experts</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Row>
+                        <Col>
+                          <Form.Group className="mb-3">
+                            <Form.Check type="radio" label="Expand my brand" />
+                          </Form.Group>
+                        </Col>
+                        <Col>
+                          <Form.Group className="mb-3">
+                            <Form.Check type="radio" label="Buy a Franchise" />
+                          </Form.Group>
+                        </Col>
+                      </Row>
 
+                      <Form>
+                      <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlInput1"
+                        >
+                          <Form.Label>Name</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="Enter name"
+                            autoFocus
+                          />
+                        </Form.Group>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlInput1"
+                        >
+                          <Form.Label>Email address</Form.Label>
+                          <Form.Control
+                            type="email"
+                            placeholder="name@example.com"
+                            
+                          />
+                        </Form.Group>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlInput1"
+                        >
+                          <Form.Label>Mobile No</Form.Label>
+                          <Form.Control
+                            type="text"
+                            placeholder="Enter mobile number"
+                            autoFocus
+                          />
+                        </Form.Group>
+                        <Form.Group
+                          className="mb-3"
+                          controlId="exampleForm.ControlTextarea1"
+                        >
+                          <Form.Label>Details</Form.Label>
+                          <Form.Control as="textarea" rows={3} />
+                        </Form.Group>
+                        <Form.Check 
+                          type="checkbox"
+                          label="Yes, I want to subscribe to the newsletter"
+                          checked
+                        />
+                         <Form.Check 
+                          type="checkbox"
+                          label="I agree to the terms and conditions"
+                          checked
+                        />
+                      </Form>
+                      
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={ClosefreeAdvice}>
+                        Close
+                      </Button>
+                      <Button variant="danger" onClick={ClosefreeAdvice}>
+                        Submit
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
                   <div class="p-2">
                     <InputGroup class="input-group-custom d-flex">
                       <span
@@ -157,18 +243,6 @@ function NavbarComponent() {
                         data-target="#login-pnl"
                         id="mobilereg"
                       >
-                        Register
-                      </Nav.Link>
-                      <span style={{ position: "relative", top: "0.9vh" }}>
-                        /
-                      </span>
-                      <Nav.Link
-                        className="links"
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#login-pnl"
-                        id="loginselect"
-                      >
                         Login
                       </Nav.Link>
                     </div>
@@ -192,13 +266,14 @@ function NavbarComponent() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav>
+            <Nav className="me-auto">
               <Nav.Link
                 className="navlinks"
-                href="/franchisor/registration/step/:id"
+                href="#"
                 target="_blank"
                 data-toggle="modal"
                 data-target="#expandFranchisenew"
+                onClick={freeAdvice}
               >
                 Expand Your Franchise
               </Nav.Link>

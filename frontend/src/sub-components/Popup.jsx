@@ -11,13 +11,7 @@ function Popup(setClick) {
     <Modal show={show} onHide={handleClose} animation={false}>
       <Modal.Header closeButton>
         <Modal.Title>
-          <Row>
-            <Col>
-              <Button variant="dark" name="register">
-                <a className="popup-anchor" href="/franchisor/registration/step/:id" target="_blank">Register</a>
-              </Button>
-            </Col>
-          </Row>
+         Admin Login
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -40,7 +34,7 @@ function Popup(setClick) {
             <Button variant="danger">Submit</Button>
           </Form>
       </Modal.Body>
-      <Modal.Footer className="modal-footer">
+      <Modal.Footer className="modal-footer" style={{textAlign: "left"}}>
         <span>Why should I register? </span>
         <br />
         <span>

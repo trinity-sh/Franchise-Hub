@@ -40,12 +40,14 @@ function Advertise() {
                       <br />
                       <li>Get Maximum 5 Leads in a month</li>
                     </ul>
+                    <a href="/franchisor/registration/step/:id">
                     <button
                       type="button"
                       class="btn btn-lg btn-block btn-outline-danger"
                     >
                       Try Now
                     </button>
+                    </a>
                   </div>
                 </div>
               </div>
