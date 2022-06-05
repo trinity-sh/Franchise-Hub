@@ -154,6 +154,7 @@ function Registration() {
               prevStep={prevStep}
               handleFormData={handleInputData}
               values={formData}
+              
             />
           </Container>
         </div>

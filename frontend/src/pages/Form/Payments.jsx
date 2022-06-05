@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Card,
@@ -8,8 +8,9 @@ import {
   InputGroup,
   Modal,
 } from "react-bootstrap";
-import BrandPage from "../BrandPage"
+import BrandPage from "../BrandPage";
 import validator from "validator";
+import axios from "axios";
 
 function Payments({ nextStep, handleFormData, prevStep, values }) {
   const [error, setError] = useState(false);
@@ -26,6 +27,30 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
       nextStep();
     }
   };
+
+  async function postData() {
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/v1/admin/dashboard/forms/franchisor-registration/new",
+        {
+          method: 'POST',
+          body: JSON.stringify({"name": "ddd"}),
+          headers: {
+            // 'Authorization': `bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      console.log(values);
+      console.log(response.body);
+      // return  response;
+    } catch (error) {
+      return [];
+    }
+  }
+  useEffect(() => {
+    postData();
+  }, []);
 
   return (
     <div>
@@ -149,7 +174,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
             </Form.Group>
 
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <Button variant="outline-danger" type="submit">
+              <Button variant="outline-danger" type="submit" onClick={postData}>
                 Submit
               </Button>
             </div>
