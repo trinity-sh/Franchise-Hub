@@ -65,7 +65,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
                     size="sm"
                     type="file"
                     defaultValue={values.logo}
-                    onChange={handleFormData("picture")}
+                    onChange={handleFormData("final_rites.company_logo")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
@@ -89,7 +89,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
                     placeholder="Enter video link"
                     type="text"
                     defaultValue={values.video}
-                    onChange={handleFormData("video")}
+                    onChange={handleFormData("final_rites.video_link")}
                   />
                 </Col>
               </Row>
@@ -106,7 +106,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
                     placeholder="Enter your GST number"
                     type="text"
                     defaultValue={values.gst}
-                    onChange={handleFormData("gst")}
+                    onChange={handleFormData("final_rites.gst_no")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
@@ -144,6 +144,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
                 type="checkbox"
                 label="Yes, I want to subscribe to the weekly Newsletter"
                 checked
+                onChange={handleFormData("final_rites.q_sub_news")}
               />
             </Form.Group>
 

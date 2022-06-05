@@ -31,6 +31,9 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    onChange={handleFormData(
+                      "training_details.q_hv_det_op_man"
+                    )}
                   />
                   <Form.Check type="radio" label="No" />
                 </Col>
@@ -46,7 +49,13 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                 </Col>
                 <Col>
                   {" "}
-                  <Form.Control type="text" placeholder="Enter your req" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your req"
+                    onChange={handleFormData(
+                      "training_details.whr_franch_training"
+                    )}
+                  />
                 </Col>
               </Row>
             </Form.Group>
@@ -63,8 +72,17 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    onChange={handleFormData(
+                      "training_details.q_field_assist_avail"
+                    )}
                   />
-                  <Form.Check type="radio" label="No" />
+                  <Form.Check
+                    type="radio"
+                    label="No"
+                    onChange={handleFormData(
+                      "training_details.q_field_assist_avail"
+                    )}
+                  />
                 </Col>
               </Row>
             </Form.Group>
@@ -89,8 +107,17 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    onChange={handleFormData(
+                      "agreement_details.q_hv_std_franch_agr"
+                    )}
                   />
-                  <Form.Check type="radio" label="No" />
+                  <Form.Check
+                    type="radio"
+                    label="No"
+                    onChange={handleFormData(
+                      "agreement_details.q_hv_std_franch_agr"
+                    )}
+                  />
                 </Col>
               </Row>
             </Form.Group>
@@ -109,6 +136,9 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                           name="franchise_term_duration"
                           value="Life"
                           label="Lifetime"
+                          onChange={handleFormData(
+                            "agreement_details.duration_of_contr"
+                          )}
                         />{" "}
                       </Col>
                       <Col>
@@ -127,6 +157,9 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                               class=""
                               id="term_year_franchise"
                               title="Term Years"
+                              onChange={handleFormData(
+                                "agreement_details.duration_of_contr"
+                              )}
                             >
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -165,8 +198,17 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    onChange={handleFormData(
+                      "agreement_details.q_term_renewable"
+                    )}
                   />
-                  <Form.Check type="radio" label="No" />
+                  <Form.Check
+                    type="radio"
+                    label="No"
+                    onChange={handleFormData(
+                      "agreement_details.q_term_renewable"
+                    )}
+                  />
                 </Col>
               </Row>
             </Form.Group>

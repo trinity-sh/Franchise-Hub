@@ -34,14 +34,14 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     type="radio"
                     label="Yes"
                     onChange={handleFormData(
-                      "personal_details.q_excl_terr_rights"
+                      "property_details.q_excl_terr_rights"
                     )}
                   />
                   <Form.Check
                     type="radio"
                     label="No"
                     onChange={handleFormData(
-                      "personal_details.q_excl_terr_rights"
+                      "property_details.q_excl_terr_rights"
                     )}
                   />
                 </Col>
@@ -244,7 +244,7 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                         class="form-control"
                         id="range_rate_min"
                         onChange={handleFormData(
-                          "personal_details.property_details.typ_prop_req"
+                          "property_details.typ_prop_req"
                         )}
                       >
                         <option value="0"></option>
@@ -278,7 +278,7 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                         maxlength="5"
                         class="form-control blur"
                         onChange={handleFormData(
-                          "personal_details.floor_area_req.min"
+                          "property_details.floor_area_req.min"
                         )}
                       />
                     </div>
@@ -294,7 +294,7 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                       maxlength="6"
                       class="form-control blur"
                       onChange={handleFormData(
-                        "personal_details.floor_area_req.max"
+                        "property_details.floor_area_req.max"
                       )}
                     />
                   </div>
@@ -320,7 +320,7 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Control
                     type="text"
                     placeholder="Enter Preffered location"
-                    onChange={handleFormData("personal_details.pref_loc")}
+                    onChange={handleFormData("property_details.pref_loc")}
                   />
                 </Col>
               </Row>
@@ -339,14 +339,14 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                     type="radio"
                     label="Yes"
                     onChange={handleFormData(
-                      "personal_details.q_site_select_assist"
+                      "property_details.q_site_select_assist"
                     )}
                   />
                   <Form.Check
                     type="radio"
                     label="No"
                     onChange={handleFormData(
-                      "personal_details.q_site_select_assist"
+                      "property_details.q_site_select_assist"
                     )}
                   />
                 </Col>
