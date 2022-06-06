@@ -27,24 +27,20 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
       nextStep();
     }
   };
-
+  // "http://localhost:4000/api/v1/admin/dashboard/forms/franchisor-registration/new"
   async function postData() {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/admin/dashboard/forms/franchisor-registration/new",
+        "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/franchisor-registration/new",
         {
-          method: 'POST',
-          body: JSON.stringify({"name": "ddd"}),
-          headers: {
-            // 'Authorization': `bearer ${token}`,
-            'Content-Type': 'application/json'
-          }
+          body: JSON.stringify({ values }),
         }
       );
       console.log(values);
-      console.log(response.body);
+      console.log(response.data);
       // return  response;
     } catch (error) {
+      console.log("error");
       return [];
     }
   }

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
+import axios from "axios";
 
 const Newsletter = styled.div`
   #newslettersection {
@@ -58,6 +59,33 @@ const Footer = styled.footer`
 
 function NewsLetter() {
   const date = new Date();
+
+  async function postData() {
+    try {
+      const response = await axios.post(
+        "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/newsletter-subscribers/new",
+        {
+          body: JSON.stringify({
+            metadata: {
+              is_read: false,
+            },
+            content: {
+              email: "a@a.a",
+            },
+          }),
+        }
+      );
+
+      console.log(response.data);
+      // return  response;
+    } catch (error) {
+      console.log("error");
+      return [];
+    }
+  }
+  useEffect(() => {
+    postData();
+  }, []);
   return (
     <>
       <Newsletter>
@@ -96,6 +124,7 @@ function NewsLetter() {
                           variant="danger"
                           id="button-addon2"
                           className="mt-2"
+                          onClick={postData}
                         >
                           SignUp
                         </Button>
