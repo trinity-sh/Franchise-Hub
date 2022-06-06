@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import axios from "axios";
@@ -59,7 +59,12 @@ const Footer = styled.footer`
 
 function NewsLetter() {
   const date = new Date();
-
+  const [news , setNews] = useState("");
+  function handleNewsletter(e){
+    const val = e.target.value;
+    setNews(val);
+  }
+  console.log(news);
   async function postData() {
     try {
       const response = await axios.post(
@@ -70,7 +75,7 @@ function NewsLetter() {
               is_read: false,
             },
             content: {
-              email: "soumali@gmail.com",
+              email: {news},
             }
           },
         }
@@ -117,6 +122,7 @@ function NewsLetter() {
                           aria-describedby="button-addon2"
                           name="email"
                           required=""
+                          onChange={handleNewsletter}
                         />
                       </li>
                       <li>
