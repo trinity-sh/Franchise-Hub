@@ -65,14 +65,14 @@ function NewsLetter() {
       const response = await axios.post(
         "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/newsletter-subscribers/new",
         {
-          body: JSON.stringify({
+          body: {
             metadata: {
               is_read: false,
             },
             content: {
-              email: "a@a.a",
-            },
-          }),
+              email: "soumali@gmail.com",
+            }
+          },
         }
       );
 
