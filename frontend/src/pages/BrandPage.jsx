@@ -4,7 +4,7 @@ import NewsLetter from "../components/NewsLetter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./styles/Brandpage.css";
-import { Card, Row, Col, Navbar, Nav, Button } from "react-bootstrap";
+import { Card, Row, Col, Navbar, Nav, Button, Form } from "react-bootstrap";
 
 function BrandPage(props) {
   let [count, setCount] = useState(0);
@@ -248,6 +248,106 @@ function BrandPage(props) {
           <span>{count}</span>
         </div>
       </div>
+      <div className="insta-apply" id="show-m">
+        <div className="ttl" id="instahead">Insta Apply</div>
+        <div className="green" id="instaMsg" style={{display:"none"}}>
+          <div className="bigth">Thank You!</div>
+          <p>Thanks for showing you interest in Scentials.</p>
+          <p> Your contact detail has been shared with the company. requested you to create your investor profile and upgrade to directly contact the brand.</p>
+        </div>
+        <div id="existsMsg" style={{display:"none"}} className="green">
+                                    <div class="bigth">Thank You!</div>
+                                    <p> Thanks for showing your interest in Scentials.</p>
+                                    <p> But you have already applied for Scentials.</p>
+        </div>
+        <div className="frm-sec" id="instaForm">
+          <Form id="insta" action="https://www.franchiseindia.com/-brandpagecontactinfo" method="post" name="insta">
+            <input type="hidden" name="frandetailsid" id="franId" value="FIHL386239"/>
+            <input type="hidden" name="_token" value="5hYnAocLElvuGcU10Wmiyby47kr29IX30pHJsbUC"/>
+              <Form.Group>
+              <div className="form-group">
+                <input type="text" class="form-control blur" name="infoname" placeholder="Enter Name"/>
+              </div>
+              <div className="form-group">
+                <input type="text" className="form-control check-existing-registered-investor blur" id="newemail" name="infoemail" placeholder="Enter Email"/>
+              </div>
+              <div className="form-group" style={{position:"relative"}}>
+                <input type="text" name="mobile" id="txtPhone" className="form-control blur" placeholder="Enter Mobile No." maxlength="10" autocomplete="off" onKeyUp="getMobileStatus(this.value)"/>
+                <input className="verif-submitbtn" id="verifybutton" value="Verify" type="button" onClick="veryfie()"/>
+                <input className="verif-submitbtn" id="editmobile" value="Edit" type="button" onClick="editmobileinsta()" style={{display:"none"}}/>
+              </div>
+              <div className="form-group" id="otpblk" style={{display:"none"}}>
+                <input type="text" id="otp" className="form-control blur" placeholder="one time password"/>
+                <input type="button" id="submit" className="verify" value="verify" onClick="checkinstaotp()"/>
+                <span id="mobcat"></span>
+              </div>
+              <div className="form-group" id="otpblk1" style={{display:"none",color:"red"}}>
+                OTP mismatch...!
+              </div>
+              <div className="form-group">
+              <select class="form-control blur" id="state" name="infostate" onchange="getcityinfoinsta(this.value)">
+                                                <option value="">select state</option>
+                                                <option value="23">Delhi</option><option value="10">Haryana</option><option value="11">Himachal Pradesh</option><option value="12">Jammu and Kashmir</option><option value="26">Punjab</option><option value="31">Uttarakhand</option><option value="32">Uttar Pradesh</option><option value="9">Gujarat</option><option value="27">Rajasthan</option><option value="18">Maharashtra</option><option value="8">Goa</option><option value="3">Assam</option><option value="20">Meghalaya</option><option value="21">Mizoram</option><option value="30">Tripura</option><option value="2">Arunachal Pradesh</option><option value="19">Manipur</option><option value="22">Nagaland</option><option value="33">West Bengal</option><option value="28">Sikkim</option><option value="24">Odisha</option><option value="15">Kerala</option><option value="14">Karnataka</option><option value="29">Tamil Nadu</option><option value="1">Andhra Pradesh</option><option value="34">Telangana</option><option value="35">Andaman and Nicobar</option><option value="25">Pondicherry</option><option value="5">Chandigarh</option><option value="16">Lakshadweep</option><option value="7">Daman and Diu</option><option value="6">Chhattisgarh</option><option value="17">Madhya Pradesh</option><option value="4">Bihar</option><option value="13">Jharkhand</option>                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control blur" name="infocity" id="city">
+                                                <option value="">Select City</option>
+                                            </select>
+              </div>
+              <div className="form-group">
+              <input type="text" className="form-control blur" name="pincode" placeholder="Enter Pincode" maxlength="6"/>
+              </div>
+              <div className="form-group">
+              <textarea className="form-control blur" name="address" placeholder="Enter Address" rows="3"></textarea>
+              </div>
+              <div className="form-group">
+              <select class="form-control blur" id="investment_range_gallery" name="investment_range">
+                                                <option value="">Select Investment Range</option>
+                                                l
+                                                <option value="1">Rs. 10000 - 50000</option>
+                                                l
+                                                <option value="3">Rs. 50000 - 2lac</option>
+                                                l
+                                                <option value="5">Rs. 2lac - 5lac</option>
+                                                l
+                                                <option value="7">Rs. 5lac - 10lac</option>
+                                                l
+                                                <option value="9">Rs. 10lac - 20lac</option>
+                                                l
+                                                <option value="11">Rs. 20lac - 30lac</option>
+                                                l
+                                                <option value="13">Rs. 30lac - 50lac</option>
+                                                l
+                                                <option value="15">Rs. 50lac - 1 Cr.</option>
+                                                l
+                                                <option value="17">Rs. 1 Cr. - 2 Cr</option>
+                                                l
+                                                <option value="19">Rs. 2 Cr. - 5 Cr</option>
+                                                l
+                                                <option value="21">Rs. 5 Cr. above</option>
+                                                                                            </select>
+              </div>
+              <div className="checkbox">
+                <label>
+                  <input type="checkbox" name="newsletter_sub" checked=""/>  Yes, I want to subscribe for weekly Newsletter.
+                </label>
+              </div>
+              <div className="checkbox">
+                <label>
+                  <input type="checkbox" name="is_termsagree3" id="is_termsagree3" value="1" checked=""/>
+                  I agree to the <a href="https://www.franchiseindia.com/terms" target="_blank">Terms &amp; Conditions</a>
+                </label>
+              </div>
+              <div className="submit-btn" id="sub" style={{float:"none"}}>
+                <input type="submit" id="btninsta" className="btn btn-default btn-red" value="Apply Now"/>
+              </div>
+              </Form.Group>
+          </Form>
+        </div>
+        <div className="loantxt" style={{borderTop:"1px solid #dfdfdf", marginTop:"20px", textAlign:"center",paddingTop:"10px",clear:"both"}}>
+          <a style={{color:"#e62005"}} target="_blank" href="https://www.franchiseindia.com/property-loan">Loan Against Property </a>
+        </div>
+      </div>  
     </div>
   );
 }
