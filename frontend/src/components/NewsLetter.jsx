@@ -59,27 +59,26 @@ const Footer = styled.footer`
 
 function NewsLetter() {
   const date = new Date();
-  const [news , setNews] = useState("");
-  function handleNewsletter(e){
+  const [news, setNews] = useState("");
+  function handleNewsletter(e) {
     const val = e.target.value;
     setNews(val);
   }
   console.log(news);
   async function postData() {
     try {
-      const response = await axios.post(
-        "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/newsletter-subscribers/new",
-        {
-          body: {
-            metadata: {
-              is_read: false,
-            },
-            content: {
-              email: {news},
-            }
+      const response = await axios({
+        method: "post",
+        url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/newsletter-subscribers/new",
+        data: {
+          metadata:{
+            is_read: false
           },
-        }
-      );
+          content: {
+            email: news
+          },
+        },
+      });
 
       console.log(response.data);
       // return  response;
