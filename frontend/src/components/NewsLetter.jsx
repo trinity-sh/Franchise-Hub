@@ -87,9 +87,7 @@ function NewsLetter() {
       return [];
     }
   }
-  useEffect(() => {
-    postData();
-  }, []);
+
   return (
     <>
       <Newsletter>

@@ -1,8 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/CardSection.css";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import axios from "axios";
 
 function CardSection() {
+  const [formData, setFormData] = useState({
+    advise_on: "",
+    email: "",
+    phone_no: "",
+  });
+  const [radio, setRadio] = useState("");
+  const [handleSubmit, setSubmit] = useState(false);
+
+  function handleRadios(e) {
+    let val = e.target.value;
+    setRadio(val);
+  }
+
+  const handleFormData = (input) => (e) => {
+    // input value from the form
+    const { value } = e.target;
+
+    //updating for data state taking previous state and then adding new value to create new object
+    setFormData((prevState) => ({
+      ...prevState,
+      [input]: value,
+    }));
+    console.log(value);
+  };
+
+  async function freeAdviceData() {
+    try {
+      const response = await axios({
+        method: "post",
+        url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/free-advice/new",
+        data: {
+          metadata: {
+            is_read: false,
+          },
+          content: formData,
+        },
+      });
+
+      console.log(response.data);
+
+      // return  response;
+    } catch (error) {
+      console.log("error");
+      return [];
+    }
+    setSubmit(true);
+  }
+
   return (
     <main className="main">
       <section class="card-section section-30" id="card-section">
@@ -31,31 +80,24 @@ function CardSection() {
                         <div class="raido-main-section">
                           <ul class="radio-main">
                             <li>
-                              <div class="radio">
-                                <label>
-                                  <input
-                                    type="radio"
-                                    name="optionsRadios"
-                                    id="optionsRadios3"
-                                    checked=""
-                                    value="franchisor"
-                                  />{" "}
-                                  Expand My Brand{" "}
-                                </label>
-                              </div>
+                              <Form.Check
+                                type="radio"
+                                label=" Expand My Brand"
+                                checked={radio === "expand brand"}
+                                value="expand brand"
+                                onClick={handleRadios}
+                                onChange={handleFormData("advise_on")}
+                              />
                             </li>
                             <li>
-                              <div class="radio">
-                                <label>
-                                  <input
-                                    type="radio"
-                                    name="optionsRadios"
-                                    id="optionsRadios1"
-                                    value="investor"
-                                  />{" "}
-                                  Buy a Franchise
-                                </label>
-                              </div>
+                            <Form.Check
+                                type="radio"
+                                label=" Buy a Franchise"
+                                checked={radio === "buy franchise"}
+                                value="buy franchise"
+                                onClick={handleRadios}
+                                onChange={handleFormData("advise_on")}
+                              />
                             </li>
                           </ul>
                         </div>
@@ -75,6 +117,7 @@ function CardSection() {
                             name="emailfreeadvice"
                             id="emailfreeadvice"
                             placeholder="Enter Email"
+                            onChange={handleFormData("email")}
                           />
                         </div>
                         <div class="input-group mb-15 form-input">
@@ -94,6 +137,7 @@ function CardSection() {
                             id="mobilefreeadvice"
                             placeholder="Enter Mobile No"
                             required=""
+                            onChange={handleFormData("phone_no")}
                           />
                         </div>
                         {/* <div id="askMsg">
@@ -102,9 +146,14 @@ function CardSection() {
                             Advice!
                           </div>
                         </div> */}
-                        <Button variant="danger" id="btnhome">
+                        <Button variant="danger" onClick={freeAdviceData}>
                           Submit
                         </Button>
+                        {handleSubmit ? (
+                          <p className="mt-3">
+                            Woahh!! Your form have been submitted"{" "}
+                          </p>
+                        ) : null}
                       </form>
                     </div>
                   </div>

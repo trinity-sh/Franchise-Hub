@@ -15,6 +15,7 @@ import {
 import "./styles/Navbar.css";
 import Popup from "../sub-components/Popup";
 import Categories from "../sub-components/Categories";
+import FreeAdvice from "../sub-components/FreeAdvice";
 
 function NavbarComponent() {
   const [click, setClick] = useState(false);
@@ -66,81 +67,9 @@ function NavbarComponent() {
                       <Modal.Title>Free Advice-Ask our Experts</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                      <Row>
-                        <Col>
-                          <Form.Group className="mb-3">
-                            <Form.Check type="radio" label="Expand my brand" />
-                          </Form.Group>
-                        </Col>
-                        <Col>
-                          <Form.Group className="mb-3">
-                            <Form.Check type="radio" label="Buy a Franchise" />
-                          </Form.Group>
-                        </Col>
-                      </Row>
-
-                      <Form>
-                      <Form.Group
-                          className="mb-3"
-                          controlId="exampleForm.ControlInput1"
-                        >
-                          <Form.Label>Name</Form.Label>
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter name"
-                            autoFocus
-                          />
-                        </Form.Group>
-                        <Form.Group
-                          className="mb-3"
-                          controlId="exampleForm.ControlInput1"
-                        >
-                          <Form.Label>Email address</Form.Label>
-                          <Form.Control
-                            type="email"
-                            placeholder="name@example.com"
-                            
-                          />
-                        </Form.Group>
-                        <Form.Group
-                          className="mb-3"
-                          controlId="exampleForm.ControlInput1"
-                        >
-                          <Form.Label>Mobile No</Form.Label>
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter mobile number"
-                            autoFocus
-                          />
-                        </Form.Group>
-                        <Form.Group
-                          className="mb-3"
-                          controlId="exampleForm.ControlTextarea1"
-                        >
-                          <Form.Label>Details</Form.Label>
-                          <Form.Control as="textarea" rows={3} />
-                        </Form.Group>
-                        <Form.Check 
-                          type="checkbox"
-                          label="Yes, I want to subscribe to the newsletter"
-                          checked
-                        />
-                         <Form.Check 
-                          type="checkbox"
-                          label="I agree to the terms and conditions"
-                          checked
-                        />
-                      </Form>
-                      
+                      <FreeAdvice />
                     </Modal.Body>
-                    <Modal.Footer>
-                      <Button variant="secondary" onClick={ClosefreeAdvice}>
-                        Close
-                      </Button>
-                      <Button variant="danger" onClick={ClosefreeAdvice}>
-                        Submit
-                      </Button>
-                    </Modal.Footer>
+                  
                   </Modal>
                   <div class="p-2">
                     <InputGroup class="input-group-custom d-flex">
