@@ -111,7 +111,7 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
-                    value="no"
+                    value="yes"
                     checked={radio2 === "yes"}
                     onClick={handleRadio2}
                     onChange={handleFormData(
@@ -121,6 +121,7 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
                     checked={radio2 === "no"}
                     onClick={handleRadio2}
                     onChange={handleFormData(
@@ -151,6 +152,7 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                     style={{ marginRight: "50px" }}
                     type="radio"
                     label="Yes"
+                    value="yes"
                     checked={radio3 === "yes"}
                     onClick={handleRadio3}
                     onChange={handleFormData(
@@ -160,6 +162,7 @@ const Agreements = ({ nextStep, handleFormData, prevStep, values }) => {
                   <Form.Check
                     type="radio"
                     label="No"
+                    value="no"
                     checked={radio3 === "no"}
                     onClick={handleRadio3}
                     onChange={handleFormData(
