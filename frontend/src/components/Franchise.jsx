@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 import "./styles/Frachise.css";
 import axios from "axios"
