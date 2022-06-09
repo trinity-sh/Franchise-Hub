@@ -1,8 +1,22 @@
-import React from "react";
+import { useState } from "react";
 import { Button, Card, Row, Col } from "react-bootstrap";
 import "./styles/Frachise.css";
+import React from "react";
+import axios from "axios";
 
 function Franchise(props) {
+  const [datas, setDatas] = useState([]);
+  const getData = async () => {
+    try {
+      const data = await axios.get(
+        "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/listed-franchises/all?quantity=1000"
+      );
+      console.log(data.data.payload);
+      setDatas(data.data.payload);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <div className="franchise">
       <Card className="custom-card">
