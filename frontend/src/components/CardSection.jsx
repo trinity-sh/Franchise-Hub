@@ -58,7 +58,7 @@ function CardSection() {
         <Container className="askme">
           <Row class="justify-content-center">
             <Col class="col-md-12">
-              <Card class="card-m card-p-20">
+              <Card class="sec card-p-20">
                 <Row class="justify-content-center">
                   <Col class="md-8">
                     <Row class="justify-content-center">
