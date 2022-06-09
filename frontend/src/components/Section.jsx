@@ -61,10 +61,10 @@ function Section(props) {
 
 
   return (
-    // <FranchiseSection>
-    //   <Franchise item={data} />
-    // </FranchiseSection>
-    sliceitem
+    <FranchiseSection>
+      <Franchise item={data} />
+    </FranchiseSection>
+    // sliceitem
    );
 }
 

@@ -22,7 +22,11 @@ function Franchise(props) {
   }, []);
   console.log(data);
 
-  return data.map((item) => {
+  var items = data.map((item) => item);
+  var sliceitem = items.slice(0, 3);
+  console.log(sliceitem)
+
+  return sliceitem.map((item) => {
     return (
       <div className="franchise">
         <Card className="custom-card">
@@ -72,16 +76,16 @@ function Franchise(props) {
               to={{
                 pathname: "/brands/" + `${item._id}`,
               }}
-              state= {{data : item}}
+              state={{ data: item }}
               target="_blank"
             >
-            <Button variant="outline-danger" className="button" >
-              Know More
-            </Button>
+              <Button variant="outline-danger" className="button" >
+                Know More
+              </Button>
             </Link>
           </Card.Body>
         </Card>
-      </div>  
+      </div>
     );
   });
 }
