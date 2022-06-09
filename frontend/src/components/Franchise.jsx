@@ -6,7 +6,6 @@ import axios from "axios";
 
 function Franchise(props) {
   const [data, setData] = useState([]);
-  const navigate = useNavigate();
   const getData = async () => {
     try {
       const response = await axios.get(
@@ -69,20 +68,20 @@ function Franchise(props) {
                 </Col>
               </Row>
             </Card.Text>
-            <NavLink
+            <Link
               to={{
                 pathname: "/brands/" + `${item._id}`,
-                state: item
               }}
+              state= {{data : item}}
               target="_blank"
             >
             <Button variant="outline-danger" className="button" >
               Know More
             </Button>
-            </NavLink>
+            </Link>
           </Card.Body>
         </Card>
-      </div>
+      </div>  
     );
   });
 }
