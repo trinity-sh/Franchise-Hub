@@ -331,19 +331,19 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       onChange={handleFormData("personal_details.industry")}
                     >
                       <option value="">---- Select Industry ----</option>
-                      <option value="1">Beauty &amp; Health</option>
-                      <option value="2">Food And Beverage</option>
-                      <option value="3">Education</option>
-                      <option value="5">Dealers &amp; Distributors</option>
-                      <option value="6">Business Services</option>
-                      <option value="7">Home Based Business</option>
-                      <option value="8">Automotive</option>
-                      <option value="9">Retail</option>
-                      <option value="10">Fashion</option>
-                      <option value="11">
+                      <option value="Beauty&Health">Beauty &amp; Health</option>
+                      <option value="Food And Beverage">Food And Beverage</option>
+                      <option value="Education">Education</option>
+                      <option value="Dealers and Distributors">Dealers &amp; Distributors</option>
+                      <option value="Business Services">Business Services</option>
+                      <option value="Home Based Business">Home Based Business</option>
+                      <option value="Automotive">Automotive</option>
+                      <option value="Retail">Retail</option>
+                      <option value="Fashion">Fashion</option>
+                      <option value="Sports,Fitness and Entertainment">
                         Sports, Fitness &amp; Entertainment
                       </option>
-                      <option value="12">Hotel, Travel &amp; Tourism</option>
+                      <option value="Hotel,Travel and Tourism">Hotel, Travel &amp; Tourism</option>
                     </select>
                   </InputGroup>
                 </Col>
