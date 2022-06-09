@@ -27,7 +27,7 @@ function FeaturedFranchise(props) {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/top-franchise-opportunities/all"
+        "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/listed-franchises/all"
       );
       console.log(response.data);
       setData(response.data.payload);

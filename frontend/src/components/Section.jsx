@@ -3,11 +3,9 @@ import Franchise from "./Franchise";
 import styled from "styled-components";
 import axios from "axios";
 import { Col, Container, Row } from "react-bootstrap";
-import paginationFactory from "react-bootstrap-table2-paginator"
+// import paginationFactory from "react-bootstrap-table2-paginator"
 
 const FranchiseSection = styled.div`
-
-
     margin: 30px 0 80px;
     h2{
         color: #333333;
@@ -20,7 +18,7 @@ const FranchiseSection = styled.div`
         height: 2px;
         margin-bottom: 50px;
     }
-    .FranCard{
+    .cards{
       display: flex;
     }
     .cards{
@@ -53,12 +51,10 @@ function Section(props) {
   console.log(data);
 
   return (
-    <FranchiseSection pagination={paginationFactory()} >
-      <h2>{props.heading}</h2>
-      <hr />
-      <div className="FranCard">
-      <Franchise item={data}/>
-      </div>
+    <FranchiseSection >
+
+      <Franchise item={data} />
+
 
     </FranchiseSection>
   );

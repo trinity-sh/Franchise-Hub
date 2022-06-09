@@ -228,29 +228,6 @@ function NavbarComponent() {
             </Nav.Link>
           </div>
 
-          {/* <InputGroup className="input-group-custom">
-                <img
-                  className="language"
-                  src="https://www.franchiseindia.com/newhomepage/assets/img/language-icon.svg"
-                  alt="language-icon"
-                />
-
-                <Form.Group className="sm lang">
-                  <select
-                    type="text"
-                    className="language-dropdown"
-                    id="language-changer"
-                  >
-                    <option value="https://www.franchiseindia.com" selected="">
-                      EN - English
-                    </option>
-                    <option value="https://www.franchiseindia.com/hi">
-                      HI - Hindi
-                    </option>
-                  </select>
-                </Form.Group>
-              </InputGroup> */}
-
           <span class="search" id="search" onClick={handleShow}>
             <div
               class="p-2 icon"
