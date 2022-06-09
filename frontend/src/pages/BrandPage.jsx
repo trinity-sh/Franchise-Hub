@@ -12,11 +12,8 @@ function BrandPage(props) {
   function handleLike() {
     setCount(count++);
   }
-console.log(props.to);
   const { type } = useParams();
-
-  const  {state}  = useLocation();
-  console.log(state);
+  console.log(useLocation());
 
   return (
     <div>

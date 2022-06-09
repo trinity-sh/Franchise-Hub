@@ -20,7 +20,6 @@ function Franchise(props) {
   useEffect(() => {
     getData();
   }, []);
-  console.log(data);
 
   var items = data.map((item) => item);
   var sliceitem = items.slice(0, 3);
@@ -73,15 +72,11 @@ function Franchise(props) {
               </Row>
             </Card.Text>
             <Link
-              to={{
-                pathname: "/brands/" + `${item._id}`,
-              }}
-              state={{ data: item }}
-              target="_blank"
-            >
-              <Button variant="outline-danger" className="button" >
-                Know More
-              </Button>
+              to={"/brands/" + `${item._id}`}
+              state={{ prop: item }}>
+            <Button variant="outline-danger" className="button" >
+              Know More
+            </Button>
             </Link>
           </Card.Body>
         </Card>
