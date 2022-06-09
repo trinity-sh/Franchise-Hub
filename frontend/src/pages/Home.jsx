@@ -22,7 +22,7 @@ function Home() {
         <Section/>
         <CarouselSection />
         <h2>Top Franchise</h2>
-        <Section heading="Top Franchise Opportunities" />
+        <Section/>
         <h2>All Franchise</h2>
         <FeaturedFranchise/>
         <Testimonial />
