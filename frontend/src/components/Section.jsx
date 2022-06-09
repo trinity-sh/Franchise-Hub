@@ -50,11 +50,14 @@ function Section(props) {
   }, []);
   console.log(data);
 
+
+
   return (
     <FranchiseSection>
       <Franchise item={data} />
     </FranchiseSection>
-  );
+      
+   );
 }
 
 export default Section;
