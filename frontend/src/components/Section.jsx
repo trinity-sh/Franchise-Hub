@@ -52,7 +52,7 @@ function Section(props) {
     <FranchiseSection>
       <h2>{props.heading}</h2>
       <hr />
-      <Franchise/>
+      <Franchise item={data}/>
       {/* <Container>
         <Row>
           <Col lg="4">
