@@ -50,13 +50,21 @@ function Section(props) {
   }, []);
   console.log(data);
 
+  var items = data.map((item) => {
+    console.log(items)
+    // return <FranchiseSection><Franchise key={item.id} items={item} /></FranchiseSection>
+});
+  var sliceitem = items.slice(0,2).map((item)=>{
+    return <FranchiseSection><Franchise key={item} items={item} /></FranchiseSection>
+  })
+  console.log(sliceitem)
 
 
   return (
-    <FranchiseSection>
-      <Franchise item={data} />
-    </FranchiseSection>
-      
+    // <FranchiseSection>
+    //   <Franchise item={data} />
+    // </FranchiseSection>
+    sliceitem
    );
 }
 
