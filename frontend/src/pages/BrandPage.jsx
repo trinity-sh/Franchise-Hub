@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import NavbarComponent from "../components/Navbar";
-import NewsLetter from "../components/NewsLetter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import "./styles/Brandpage.css";
-import { Card, Row, Col, Navbar, Nav, Button, Form } from "react-bootstrap";
+import { Card, Row, Col, Navbar, Nav } from "react-bootstrap";
 import InstaApply from "../sub-components/InstaApply";
+import { useLocation, useParams } from "react-router-dom";
 
 function BrandPage(props) {
   let [count, setCount] = useState(0);
   function handleLike() {
     setCount(count++);
   }
+
+  const { type } = useParams();
+
+  const  {data}  = {...useLocation().state};
+  console.log(data);
 
   return (
     <div>
@@ -59,7 +64,7 @@ function BrandPage(props) {
               <div className="tab-content" id="bdy-height">
                 <Card>
                   <Card.Body>
-                    <Row style={{textAlign:"center"}}>
+                    <Row style={{ textAlign: "center" }}>
                       <Col>
                         Area Req
                         <h4>154-450 Sq.ft</h4>
@@ -248,8 +253,8 @@ function BrandPage(props) {
           </button>
           <span>{count}</span>
         </div>
-        <InstaApply/>
-      </div> 
+        <InstaApply />
+      </div>
     </div>
   );
 }

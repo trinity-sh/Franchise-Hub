@@ -11,7 +11,7 @@ function App() {
      <Routes>
        <Route path='/' element={<Home/>} />
        <Route path='/advertise-with-us-payment' element={<Advertise/>} />
-       <Route path='/brands/:' element={<BrandPage/>} />
+       <Route path='/brands/:type' element={<BrandPage/>} />
        <Route path='/franchisor/registration/step/:id' element={<StepNav />} />
      </Routes>
     </>
