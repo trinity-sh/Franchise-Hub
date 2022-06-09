@@ -13,19 +13,19 @@ import {
   Button,
 } from "react-bootstrap";
 import "./styles/Navbar.css";
-import Popup from "../sub-components/Popup";
+
 import Categories from "../sub-components/Categories";
 import FreeAdvice from "../sub-components/FreeAdvice";
 
 function NavbarComponent() {
-  const [click, setClick] = useState(false);
+  // const [click, setClick] = useState(false);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  function handleClick() {
-    setClick(!click);
-  }
+  // function handleClick() {
+  //   setClick(!click);
+  // }
 
   const [advice, setAdvice] = useState(false);
 
@@ -164,7 +164,7 @@ function NavbarComponent() {
                       alt="Login"
                     />
 
-                    <div className="login-main-section" onClick={handleClick}>
+                    <div className="login-main-section">
                       <Nav.Link
                         className="links"
                         href="#"
@@ -175,7 +175,7 @@ function NavbarComponent() {
                         Login
                       </Nav.Link>
                     </div>
-                    {click && <Popup setClick={setClick} />}
+                    {/* {click && <Popup setClick={setClick} />} */}
                   </div>
                 </div>
               </Col>
@@ -266,7 +266,7 @@ function NavbarComponent() {
 
           <Nav.Link
             className="links"
-            href="/franchisor/registration/step/:id"
+            href="#"
             data-toggle="modal"
             data-target="#login-pnl"
             id="mobilereg"
