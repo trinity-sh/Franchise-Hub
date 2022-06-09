@@ -2,11 +2,8 @@
   display: none;
 }
 
-.events {
-  margin-top: 20px;
-}
 .events img {
-  height: 380px;
+  height: 250px;
 }
 .video-event {
   margin-bottom: 60px;

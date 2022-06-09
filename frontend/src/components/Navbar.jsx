@@ -157,7 +157,7 @@ function NavbarComponent() {
                         </Modal>
                       </div>
                     </span>
-
+{/* admin pannel link */}
                     <img
                       className="login"
                       src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
@@ -240,7 +240,7 @@ function NavbarComponent() {
               />
             </div>
           </span>
-
+{/* Admin pannel link */}
           <Nav.Link
             className="links"
             href="#"
