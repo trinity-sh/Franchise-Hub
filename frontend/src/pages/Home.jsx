@@ -21,7 +21,7 @@ function Home() {
         <Section heading="Trending Franchise" />
         <CarouselSection />
         <Section heading="Top Franchise Opportunities" />
-        <FeaturedFranchise heading="Featured Franchise" />
+        <FeaturedFranchise heading="All Franchise" />
         <Testimonial />
        
       </div>
