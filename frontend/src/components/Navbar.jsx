@@ -246,7 +246,7 @@ function NavbarComponent() {
           {/* Admin pannel link */}
           <Nav.Link
             className="links"
-            href="#"
+            href="https://franchisehub-admin-panel.netlify.app/"
             data-toggle="modal"
             data-target="#login-pnl"
             id="mobilereg"
