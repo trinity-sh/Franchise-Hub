@@ -5,6 +5,7 @@ import axios from "axios"
 
 const FranchiseSection = styled.div`
   margin: 30px 0 80px;
+  display: flex;
   h2 {
     color: #333333;
     font-size: 30px;
@@ -20,7 +21,6 @@ const FranchiseSection = styled.div`
     margin-top: 145px;
   }
 `;
-
 
 function FeaturedFranchise(props) {
   const [data, setData] = useState([]);
@@ -40,9 +40,17 @@ function FeaturedFranchise(props) {
   }, []);
   console.log(data);
 
-  return data.map(item => {
+
+  //return data.map(item => {
+
+    var items = data.map((item) => item);
+    var sliceitem = items.slice(0, 6);
+    console.log(sliceitem)
+  
+    return sliceitem.map((item) => {
 
   return (
+  
     <FranchiseSection>
       <h2>{props.heading}</h2>
       <hr />
@@ -63,6 +71,7 @@ function FeaturedFranchise(props) {
         </Card>
       </div>
     </FranchiseSection>
+    
   );
   })
 }

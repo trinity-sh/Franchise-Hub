@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.FeaturedFranchise{
+  display: flex;
+}
+
 @media (max-width: 425px) {
   .content {
     margin: 0 20px;

@@ -25,7 +25,9 @@ function Home() {
         <h2>Top Franchise</h2>
         <Section/>
         <h2>All Franchise</h2>
-        <FeaturedFranchise/>
+        
+          <div className="FeaturedFranchise"><FeaturedFranchise/></div>
+        
         <Testimonial />
        
       </div>
