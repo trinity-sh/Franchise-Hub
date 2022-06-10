@@ -14,7 +14,8 @@ function BrandPage(props) {
   }
   const { type } = useParams();
   console.log(useLocation());
-
+  const formData = useLocation().state.prop.content;
+  console.log(formData);
   return (
     <div>
       <NavbarComponent />
@@ -32,9 +33,11 @@ function BrandPage(props) {
           </Col>
           <Col>
             {/* putting data of the title */}
-            <span className="text-muted">Beauty and Salons</span>
+            <span className="text-muted">
+              {formData.personal_details.industry}
+            </span>
             <br />
-            <h3>Brand</h3>
+            <h3>{formData.personal_details.brand_name}</h3>
             <Card>
               <Card.Body>
                 <Navbar expand="lg">
@@ -64,15 +67,17 @@ function BrandPage(props) {
                     <Row style={{ textAlign: "center" }}>
                       <Col>
                         Area Req
-                        <h4>154-450 Sq.ft</h4>
+                        <h4>{formData.property_details.floor_area_req.min} - {formData.property_details.floor_area_req.max}</h4>
                       </Col>
                       <Col>
                         Investment Range
-                        <h4>INR 10L - 20L</h4>
+                        <h4>{formData.personal_details.inv}</h4>
                       </Col>
                       <Col>
                         No of Franchise Outlets
-                        <h4>Less than 10</h4>
+                        <h4>
+                          {formData.personal_details.no_of_franch_outlets}
+                        </h4>
                       </Col>
                     </Row>
                   </Card.Body>
@@ -85,23 +90,7 @@ function BrandPage(props) {
                       <p>
                         <strong>About Us:</strong>
                       </p>
-                      <p>
-                        Globally Recognized Influencer Led Beauty &amp; Wellness
-                        Line under one roof.
-                      </p>
-                      <p>
-                        <strong>Scentials</strong> is bringing a unique
-                        celebrity driven world-class beauty and wellness
-                        platform that combines diverse range of exquisitely
-                        crafted products curated by India’s top celebrities and
-                        fashionistas.&nbsp;
-                      </p>
-                      <p>
-                        Every celebrity brand has its own distinct value focused
-                        on integrity &amp; high-quality of beauty products
-                        driven through some serious research, science,
-                        innovation and thoughtfulness.
-                      </p>
+                      <p>{formData.personal_details.business_desc}</p>
                     </div>
                   </div>
                 </div>
@@ -109,10 +98,10 @@ function BrandPage(props) {
                   <h2 className="tab-sec-ttl">Investment Details</h2>
                   <div className="tab-sec-topics">
                     <div className="tab-sec-topics-ttl">
-                      Commenced Operations
+                      {/* Commenced Operations */}
                     </div>
                     <div className="keypoints">
-                      <p>
+                      {/* <p>
                         Operations Commenced On
                         <span className="pull-right">2017</span>
                       </p>
@@ -120,7 +109,7 @@ function BrandPage(props) {
                       <p>
                         Franchise Commenced On
                         <span className="pull-right">2022</span>
-                      </p>
+                      </p> */}
                     </div>
                     <div className="tab-sec-topics-ttl mrgn-tp">
                       Franchise Details
@@ -130,15 +119,15 @@ function BrandPage(props) {
                       <div className="keypoints">
                         <p>
                           Investment
-                          <span className="pull-right">INR 10lac - 20lac</span>
+                          <span className="pull-right">INR {formData.personal_details.inv}</span>
                         </p>
                         <p>
-                          Franchise/Brand Fee
-                          <span className="pull-right">INR 300000</span>
+                          Country
+                          <span className="pull-right">{formData.personal_details.country}</span>
                         </p>
                         <p>
                           Royalty/Commission
-                          <span className="pull-right">00 %</span>
+                          <span className="pull-right">00%</span>
                         </p>
                       </div>
                     </div>
@@ -148,22 +137,28 @@ function BrandPage(props) {
                     <div className="keypoints">
                       <p>
                         Exclusive territorial rights to a unit franchisee
-                        <span className="pull-right fnone"> Yes </span>
+                        <span className="pull-right fnone"> {formData.personal_details.q_excl_terr_rights} </span>
                       </p>
 
                       <p>
                         Anticipated percentage return on investment
-                        <span className="pull-right fnone">78 %</span>
+                        <span className="pull-right fnone">{formData.personal_details.antc_perc_ret} %</span>
                       </p>
 
                       <p>
                         Likely pay back period of capital for a Unit Franchise
-                        <span className="pull-right fnone">1-2 Years</span>
+                        <span className="pull-right fnone">
+                          {formData.personal_details.likely_payback_period.min}{" "}
+                          -{" "}
+                          {formData.personal_details.likely_payback_period.max}  {formData.personal_details.likely_payback_period.month_yr}
+                        </span>
                       </p>
 
                       <p>
                         Other investment requirements
-                        <span className="pull-right fnone">00</span>
+                        <span className="pull-right fnone">
+                          {formData.personal_details.other_inv_req}
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -174,18 +169,20 @@ function BrandPage(props) {
                     <div className="keypoints">
                       <p>
                         Type of property required for this franchise opportunity
-                        <span className="pull-right fnone">Commercial</span>
+                        <span className="pull-right fnone">
+                          {formData.property_details.typ_prop_req}
+                        </span>
                       </p>
 
                       <p>
                         Floor area requirement
                         <span className="pull-right fnone">
-                          150 - 450 Sq.ft
+                          {formData.property_details.floor_area_req.min} - {formData.property_details.floor_area_req.max}
                         </span>
                       </p>
                       <p>
                         Preferred location of unit franchise outlet
-                        <span className="pull-right fnone">PAN</span>
+                        <span className="pull-right fnone">{formData.property_details.pref_loc}</span>
                       </p>
                     </div>
                   </div>
@@ -196,31 +193,30 @@ function BrandPage(props) {
                     <div className="keypoints">
                       <p>
                         Detailed operating manuals for franchisees
-                        <span className="pull-right fnone"> Yes </span>
+                        <span className="pull-right fnone"> {formData.training_details.q_hv_det_op_man} </span>
                       </p>
 
-                      <p>
+                      {/* <p>
                         Franchisee training location
                         <span className="pull-right fnone">
                           Corporate office
                         </span>
-                      </p>
+                      </p> */}
 
                       <p>
                         Is field assistance available for franchisee ?
-                        <span className="pull-right fnone"> Yes </span>
+                        <span className="pull-right fnone"> {formData.training_details.q_field_assist_avail} </span>
                       </p>
 
                       <p>
-                        Expert guidance from Head Office to franchisee in
-                        opening the franchise
-                        <span className="pull-right fnone"> Yes </span>
+                        Why franchise training?
+                        <span className="pull-right fnone"> {formData.training_details.whr_franch_training} </span>
                       </p>
 
-                      <p>
+                      {/* <p>
                         Current IT systems will be included in the franchise
                         <span className="pull-right fnone"> Yes </span>
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </div>
@@ -231,11 +227,11 @@ function BrandPage(props) {
                     <div className="keypoints">
                       <p>
                         How long is the franchise term for?
-                        <span className="pull-right fnone">5 Years</span>
+                        <span className="pull-right fnone">{formData.agreement_details.duration_of_contr} Years</span>
                       </p>
                       <p>
                         Is the term renewable?
-                        <span className="pull-right fnone"> Yes </span>
+                        <span className="pull-right fnone"> {formData.agreement_details.q_term_renewable} </span>
                       </p>
                     </div>
                   </div>
