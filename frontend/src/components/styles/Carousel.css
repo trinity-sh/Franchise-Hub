@@ -1,7 +1,9 @@
 .mobile {
   display: none;
 }
-
+#VidCarouselCol{
+  width: 33%;
+}
 .events img {
   height: 250px;
 }
