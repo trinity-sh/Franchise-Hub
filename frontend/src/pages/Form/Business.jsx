@@ -405,37 +405,37 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                     >
                       <option value="">Investment Range</option>
 
-                      <option slug="10000" value="1">
+                      <option slug="10000" value="10000">
                         Rs. 10000
                       </option>
-                      <option slug="50000" value="3">
+                      <option slug="50000" value="50000">
                         Rs. 50000
                       </option>
-                      <option slug="200000" value="5">
+                      <option slug="200000" value="2lac">
                         Rs. 2lac
                       </option>
-                      <option slug="500000" value="7">
+                      <option slug="500000" value="5lac">
                         Rs. 5lac
                       </option>
-                      <option slug="1000000" value="9">
+                      <option slug="1000000" value="10lac">
                         Rs. 10lac
                       </option>
-                      <option slug="2000000" value="11">
+                      <option slug="2000000" value="20lac">
                         Rs. 20lac
                       </option>
-                      <option slug="3000000" value="13">
+                      <option slug="3000000" value="30lac">
                         Rs. 30lac
                       </option>
-                      <option slug="5000000" value="15">
+                      <option slug="5000000" value="50lac">
                         Rs. 50lac
                       </option>
-                      <option slug="10000000" value="17">
+                      <option slug="10000000" value="1 Cr">
                         Rs. 1 Cr.
                       </option>
-                      <option slug="20000000" value="19">
+                      <option slug="20000000" value=" 2 Cr">
                         Rs. 2 Cr.
                       </option>
-                      <option slug="50000000" value="21">
+                      <option slug="50000000" value=" 5 Cr">
                         Rs. 5 Cr.
                       </option>
                     </select>

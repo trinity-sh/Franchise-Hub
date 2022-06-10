@@ -288,8 +288,8 @@ const Property = ({ nextStep, handleFormData, prevStep, values }) => {
                         <option value="0" selected="">
                           Select Property type
                         </option>
-                        <option value="1">Domestic</option>
-                        <option value="2">Comercial</option>
+                        <option value="Domestic">Domestic</option>
+                        <option value="Comercial">Comercial</option>
                       </select>
                     </div>
                   </InputGroup>
