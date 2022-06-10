@@ -22,11 +22,11 @@
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 425px) {
+/* @media only screen and (max-width: 425px) {
   .desktop {
     display: none;
   }
   .mobile {
     display: block;
   }
-}
+} */

@@ -42,16 +42,6 @@ console.log(item);
 
                         {/* {data.personal_details.brand_name} */}
                         <Card.Title>{item.title}</Card.Title>
-                        <Card.Text>
-                            <Row>
-                                <Col>
-                                    <span>Channel Name</span>
-                                </Col>
-                                <Col>
-                                    <span>Mr Bean</span>
-                                </Col>
-                            </Row>
-                        </Card.Text>
                         <a href={props.thumbnail_link} target="_blank"
                         >
                             <Button variant="outline-danger" className="button" >
