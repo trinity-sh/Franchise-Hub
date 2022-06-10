@@ -44,7 +44,8 @@ function Home() {
         <h2>All Franchise</h2>
         
           <div className="FeaturedFranchise"><FeaturedFranchise/></div>
-        <Button>View All</Button>
+
+        {/* <Button>View All</Button> */}
         <Testimonial />
        
       </div>
