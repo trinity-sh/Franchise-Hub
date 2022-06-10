@@ -6,7 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 // import paginationFactory from "react-bootstrap-table2-paginator"
 
 const FranchiseSection = styled.div`
-  display: inline-flex;
+  display: flex;
   margin: 30px 0 80px;
   h2 {
     color: #333333;
@@ -28,6 +28,7 @@ const FranchiseSection = styled.div`
   }
   @media only screen and (max-width: 426px) {
     margin-top: 145px;
+    flex-direction:column;
   }
 `;
 

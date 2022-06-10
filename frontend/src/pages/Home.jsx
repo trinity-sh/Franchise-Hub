@@ -20,8 +20,8 @@ function Home() {
       <HeroSection />
       <div className="content">
         <CardSection />
-        <h2>Trending Franchise</h2>
-        <Section/>
+        <h2 id="TrendFran">Trending Franchise</h2>
+        <div id="FrenchFries"><Section/></div>
         <CarouselSection />
         <h2>Top Franchise</h2>
         <Section/>

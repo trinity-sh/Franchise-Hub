@@ -15,4 +15,8 @@
   .FeaturedFranchise{
     display: block;
   }
+  #TrendFran{
+    position: relative;
+    top: 9rem;
+  }
 }
