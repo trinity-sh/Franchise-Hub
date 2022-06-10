@@ -1,4 +1,4 @@
-import { Card, Col, Row } from "react-bootstrap";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import axios from "axios"
@@ -18,7 +18,7 @@ const FranchiseSection = styled.div`
     margin-bottom: 50px;
   }
   @media only screen and (max-width: 426px) {
-    margin-top: 145px;
+    margin: 0
   }
 `;
 
@@ -44,7 +44,7 @@ function FeaturedFranchise(props) {
   //return data.map(item => {
 
     var items = data.map((item) => item);
-    var sliceitem = items.slice(0, 6);
+    var sliceitem = items.slice(0, 5);
     console.log(sliceitem)
   
     return sliceitem.map((item) => {
@@ -72,6 +72,7 @@ function FeaturedFranchise(props) {
       </div>
     </FranchiseSection>
     
+  
   );
   })
 }

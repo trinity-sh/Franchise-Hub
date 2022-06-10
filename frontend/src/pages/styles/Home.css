@@ -1,6 +1,7 @@
 .content {
   margin: 0 100px;
   overflow: hidden;
+  text-align: center;
 }
 
 .FeaturedFranchise{
@@ -10,5 +11,8 @@
 @media (max-width: 425px) {
   .content {
     margin: 0 20px;
+  }
+  .FeaturedFranchise{
+    display: block;
   }
 }

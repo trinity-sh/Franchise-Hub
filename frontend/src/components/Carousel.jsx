@@ -25,15 +25,24 @@ function CarouselSection() {
   }, []);
   console.log(data);
 
-  Array.prototype.chunk = function (size) {
-    const result = [];
 
-    while (this.length) {
-      result.push(this.splice(0, size));
+  const [event, setEvent] = useState([]);
+  const getEvent = async () => {
+    try {
+      const response = await axios.get(
+        "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/trending-videos/all"
+      );
+      console.log(response.data);
+      setEvent(response.data.payload);
+    } catch (e) {
+      console.log(e);
     }
-
-    return result;
   };
+  useEffect(() => {
+    getEvent();
+  }, []);
+  console.log(event);
+
 
   return (
     <>
@@ -59,10 +68,10 @@ function CarouselSection() {
                       <Row>
                         <Col>
                           {" "}
-                          <Videos />
+                          <Videos props={data} />
                         </Col>
                         <Col>
-                          <Videos />
+                          <Videos item={item} />
                         </Col>
                       </Row>
                     </Carousel.Item>
@@ -74,15 +83,13 @@ function CarouselSection() {
 
             <Col>
               <Carousel>
-                <Carousel.Item className="events">
-                  <Events />
-                </Carousel.Item>
-                <Carousel.Item className="events">
-                  <Events />
-                </Carousel.Item>
-                <Carousel.Item className="events">
-                  <Events />
-                </Carousel.Item>
+                {
+                  event.map(item => {
+                    <Carousel.Item className="events">
+                      <Events props={item}/>
+                    </Carousel.Item>
+                  })
+                }
               </Carousel>
             </Col>
           </Row>
@@ -112,7 +119,7 @@ function CarouselSection() {
         <h2>Upcoming Events</h2>
         <Carousel>
           <Carousel.Item className="events">
-            <Events />
+            <Events props={event} />
           </Carousel.Item>
           <Carousel.Item className="events">
             <Events />

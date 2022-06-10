@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "react-bootstrap";
 import CardSection from "../components/CardSection";
 import CarouselSection from "../components/Carousel";
 import Franchise from "../components/Franchise";
@@ -27,7 +28,7 @@ function Home() {
         <h2>All Franchise</h2>
         
           <div className="FeaturedFranchise"><FeaturedFranchise/></div>
-        
+        <Button>View All</Button>
         <Testimonial />
        
       </div>

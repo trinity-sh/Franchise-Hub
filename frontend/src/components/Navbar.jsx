@@ -69,7 +69,7 @@ function NavbarComponent() {
                     <Modal.Body>
                       <FreeAdvice />
                     </Modal.Body>
-                  
+
                   </Modal>
                   <div class="p-2">
                     <InputGroup class="input-group-custom d-flex">
@@ -157,17 +157,19 @@ function NavbarComponent() {
                         </Modal>
                       </div>
                     </span>
-{/* admin pannel link */}
-                    <img
-                      className="login"
-                      src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
-                      alt="Login"
-                    />
+                    {/* admin pannel link */}
+                    
+                      <img
+                        className="login"
+                        src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
+                        alt="Login"
+                      />
 
+                   
                     <div className="login-main-section">
                       <Nav.Link
                         className="links"
-                        href="#"
+                        href="https://franchisehub-admin-panel.netlify.app/"
                         data-toggle="modal"
                         data-target="#login-pnl"
                         id="mobilereg"
@@ -175,6 +177,7 @@ function NavbarComponent() {
                         Login
                       </Nav.Link>
                     </div>
+
                     {/* {click && <Popup setClick={setClick} />} */}
                   </div>
                 </div>
@@ -240,7 +243,7 @@ function NavbarComponent() {
               />
             </div>
           </span>
-{/* Admin pannel link */}
+          {/* Admin pannel link */}
           <Nav.Link
             className="links"
             href="#"
@@ -248,10 +251,13 @@ function NavbarComponent() {
             data-target="#login-pnl"
             id="mobilereg"
           >
-            <img
-              src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
-              alt="Login"
-            />
+            <a href="https://franchisehub-admin-panel.netlify.app/">
+              <img
+                src="https://www.franchiseindia.com/newhomepage/assets/img/Login.svg"
+                alt="Login"
+              />
+            </a>
+
           </Nav.Link>
         </Container>
       </Navbar>
