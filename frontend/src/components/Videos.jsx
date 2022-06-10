@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom'
 
 function Videos(props) {
 
-    // const [data, setData] = useState([]);
-    // const getData = async () => {
-    //     try {
-    //         const response = await axios.get(
-    //             "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/trending-videos/all"
-    //         );
-    //         console.log(response.data);
-    //         setData(response.data.payload);
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // };
-    // useEffect(() => {
-    //     getData();
-    // }, []);
-    // console.log(data);
+    const [data, setData] = useState([]);
+    const getData = async () => {
+        try {
+            const response = await axios.get(
+                "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/trending-videos/all"
+            );
+            console.log(response.data);
+            setData(response.data.payload);
+        } catch (e) {
+            console.log(e);
+        }
+    };
+    useEffect(() => {
+        getData();
+    }, []);
+    console.log(data);
 
 
     // var items = props.map((item) => item);
@@ -30,7 +30,7 @@ function Videos(props) {
 const {item} = props;
 console.log(item);
 
-    // return props.map((item) => {
+    return data.map((item) => {
         return (
             <div>
                 <Card>
@@ -41,7 +41,7 @@ console.log(item);
                         />
 
                         {/* {data.personal_details.brand_name} */}
-                        <Card.Title>{props.title}</Card.Title>
+                        <Card.Title>{item.title}</Card.Title>
                         <Card.Text>
                             <Row>
                                 <Col>
@@ -62,7 +62,7 @@ console.log(item);
                 </Card>
             </div>
         )
-    // });
+    });
 
 }
 
