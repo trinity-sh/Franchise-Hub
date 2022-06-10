@@ -24,7 +24,7 @@ function Home() {
         <div id="FrenchFries"><Section/></div>
         <CarouselSection />
         <h2>Top Franchise</h2>
-        <Section/>
+        <div id="FrenchFries"><Section/></div>
         <h2>All Franchise</h2>
         
           <div className="FeaturedFranchise"><FeaturedFranchise/></div>
