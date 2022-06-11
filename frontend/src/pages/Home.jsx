@@ -21,16 +21,16 @@ function Home() {
       <HeroSection />
       <div className="content">
         <CardSection />
-        <h2 id="TrendFran">Trending Franchise</h2>
-        <div id="FrenchFries"><Section/></div>
-        <div>
+        <h2 className="trend-fran">Trending Franchise</h2>
+        <div id="FrenchFries"><Section heading="Trending Franchise"/></div>
+        <div className="trending-sec">
         <Row>
-          <Col xs lg="8">
+          <Col lg="6">
             <h2>Trending Videos</h2>
             <hr />
             <VideoCarouselSection />
           </Col>
-          <Col>
+          <Col lg="6">
             <h2>Upcoming Events</h2>
             <hr />
             <EventsCarouselSection/>

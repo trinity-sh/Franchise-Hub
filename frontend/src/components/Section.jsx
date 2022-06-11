@@ -9,9 +9,9 @@ const FranchiseSection = styled.div`
   display: flex;
   margin: 30px 0 80px;
   h2 {
+    margin-top: 30px;
+    position: relative;
     color: #333333;
-    font-size: 30px;
-    font-weight: 700;
   }
   hr {
     width: 8%;
@@ -27,7 +27,7 @@ const FranchiseSection = styled.div`
     margin: 10px;
   }
   @media only screen and (max-width: 426px) {
-    margin-top: 145px;
+    margin-top: 15px;
     flex-direction:column;
   }
 `;
