@@ -5,7 +5,7 @@
 }
 
 .FeaturedFranchise{
-  display: flex;
+  display: flex; flex-wrap: nowrap; overflow-x: scroll;
 }
 
 @media (max-width: 425px) {
