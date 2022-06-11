@@ -247,8 +247,8 @@ function NewsLetter() {
       </About>
 
       <Footer>
-        © {date.getFullYear()} All Right Reserved by Franchishub - Design and
-        Develop by Prachar More
+        © {date.getFullYear()} All Right Reserved by Franchishub - <a href="http://www.pracharmore.com/">Design and
+        Develop by Prachar More</a>
       </Footer>
     </>
   );

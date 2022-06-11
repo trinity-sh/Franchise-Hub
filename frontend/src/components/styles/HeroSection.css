@@ -65,7 +65,7 @@ ul.hero-search-main li {
   display: inline-block;
 }
 ul.modal-search li select {
-  width: 336px;
+  width: 260px;
   padding: 10px 20px;
   margin-right: 3px;
   border: none;
@@ -125,9 +125,9 @@ ul.hero-search-main li button {
     background: rgba(255,255,255,0.7);
     padding: 8px;
   }
-  ul.hero-search-main li select {
+  /* ul.hero-search-main li select {
     width: 300px;
-  }
+  } */
   ul.hero-search-main li {
     width: 100%;
     display: block;
