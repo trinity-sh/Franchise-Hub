@@ -71,7 +71,7 @@ function NewsLetter() {
         method: "post",
         url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/newsletter-subscribers/new",
         data: {
-          metadata:{
+          metadata: {
             is_read: false
           },
           content: {
@@ -147,7 +147,7 @@ function NewsLetter() {
                     <ul class="newsletter-social">
                       <li>
                         <a
-                          href="https://www.facebook.com/FranchiseIndiaMedia"
+                          href="https://www.facebook.com/Franchise-Hub-102974559039467/"
                           target="_blank"
                         >
                           <img
@@ -158,7 +158,7 @@ function NewsLetter() {
                       </li>
                       <li>
                         <a
-                          href="https://www.instagram.com/franchiseindia_/"
+                          href="https://instagram.com/franchisehub.00?igshid=YmMyMTA2M2Y="
                           target="_blank"
                         >
                           <img
@@ -167,7 +167,7 @@ function NewsLetter() {
                           />
                         </a>
                       </li>
-                      <li>
+                      {/* <li>
                         <a
                           href="https://twitter.com/FranchiseIndia"
                           target="_blank"
@@ -177,8 +177,8 @@ function NewsLetter() {
                             alt="twitter"
                           />
                         </a>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <a
                           href="https://www.youtube.com/user/FranchiseIndia"
                           target="_blank"
@@ -188,7 +188,7 @@ function NewsLetter() {
                             alt="youtube"
                           />
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </form>
                 </div>
@@ -201,54 +201,50 @@ function NewsLetter() {
         <Container>
           <h4>About Franchise Hub</h4>
           <span>
-            Franchiseindia.com is world’s # 1 franchise website and an
-            Entrepreneur’s daily dose. Under the aegis of Franchise India
-            Holdings Ltd - Asia’s largest integrated franchise solutions
-            company, the website provides every minute detail to entrepreneurs
-            on aspects of franchising, franchise opportunities, business
-            opportunities, partnerships, dealers, manufacturing, distribution,
-            retail and much more. Being the world leaders in franchising,
-            investors and franchisors can always count on Franchiseindia.com for
-            rich, competent and millions of fruitful leads and sales. The
-            website is the favourite destination for franchisors, start-ups,
-            franchisees, dealers, distributors, retailers and franchise prospect
-            seekers.
-            <br /> <br /> Franchiseindia.com has unique business opportunities
-            in Premium, Domestic and International domain. For our readers who
-            seek opportunities, we have segregated various spectrum of sections
-            like What’s New for Industry articles and stories, Interviews
-            section for Company/People profile and the news section which offers
-            a daily dose of what’s happening in franchising across the world.
+            Franchisehub.in is world's # 1 establishment site and an Entrepreneur's everyday portion.
+            Under the aegis of Franchise India Holdings Ltd - Asia's biggest incorporated establishment
+            arrangements organization, the site gives consistently detail to business people on parts of
+            diversifying, establishment open doors, business amazing open doors, associations, sellers,
+            fabricating, circulation, retail and considerably more. Being the world innovators in
+            diversifying, financial backers and franchisors can constantly depend on Franchisehub.in for
+            rich, skillful and a huge number of productive leads and deals. The site is the most loved
+            objective for franchisors, new businesses, franchisees, vendors, merchants, retailers and
+            establishment prospect searchers.
+
+            <br /> <br /> Franchiseihub.in has remarkable business valuable open doors in Premium, Domestic and
+            International area. For our perusers who look for open doors, we have isolated different
+            range of segments like What's New for Industry articles and stories, Interviews segment for
+            Company/People profile and the news area which offers an everyday portion of what's going
+            on in diversifying across the world.
+
             <br />
-            <br /> Our investors and opportunity seekers even get an opportunity
-            to get featured in the weekly Franchiseindia.com newsletter that
-            goes straight into the inbox of thousands of brands & investors.
-            Franchiseindia.com also provides a chance to promote the brand
-            directly on the social network websites like Twitter, Facebook,
-            LinkedIn, and more. Here’s why your brand should be there on
-            franchisebharat.com. <br />
+            <br /> Our investors and opportunity searchers even get a valuable chance to get highlighted in the
+            week after week Franchiseihub.in pamphlet that goes straight into the inbox of thousands of
+            brands and financial backers. Franchiseihub.in likewise gives an opportunity to advance the
+            brand straightforwardly on the interpersonal organization sites like Twitter, Facebook,
+            LinkedIn, and that's just the beginning. Here's the reason your image ought to be there on
+            Franchiseihub.in
             <br />
-            Besides, the abundance of business and franchise opportunities,
-            Franchiseindia.com also has regular updates of the upcoming events
-            in the franchise industry like India’s largest franchise show, FRO
-            (National Franchise Retail and SME show), BOS (Business Opportunity
-            Shows) and also all the franchise and retail award shows by
-            Franchise India. Visitors can start a new business by just
-            registering on the website and that too for FREE. Franchiseindia.com
-            users can browse through thousands of brands and choose the ideal
-            opportunity.
             <br />
-            <br /> Franchiseindia.com also updates you with a stable stream of
-            inward traffic and visitors on the website. Advertisers can also
-            take benefits of the books and reports on Franchise India by
-            clicking on the Bookstore section.
+            Plus, the wealth of business and establishment valuable open doors, Franchisehub.in
+            additionally has customary updates of the impending occasions in the establishment
+            business like India's biggest establishment show, FRO (National Franchise Retail and SME
+            show), BOS (Business Opportunity Shows) and furthermore all the establishment and retail
+            grant shows by Franchise India. Guests can begin another business simply by enrolling on
+            the site and that too for FREE. Franchisehub.in clients can peruse huge number of brands
+            and pick the best an open door.
+
+            <br />
+            <br /> Franchisehub.in likewise refreshes you with a steady stream of internal traffic and guests on
+            the site. Promoters can likewise take advantages of the books and reports on Franchise
+            India by tapping on the Bookstore area.
           </span>
         </Container>
       </About>
 
       <Footer>
         © {date.getFullYear()} All Right Reserved by Franchishub - <a href="http://www.pracharmore.com/">Design and
-        Develop by Prachar More</a>
+          Develop by Prachar More</a>
       </Footer>
     </>
   );

@@ -15,14 +15,15 @@ function HeroSection() {
         <Row className="md-12 hero">
           <div className="md-12">
             <h1 className="title">
-              Search from
-              <span> 10000+ Business </span>
-              options
+              To gain admittance to over
+              <span> 10000+ Franchise Business </span>
+              Opportunities.
             </h1>
-            <h2>World's highest visited franchise website network</h2>
+            <h2>Network with the developing Business Community to get master mediations to allow you to
+              learn to Grow and Expand your Business with Franchising.</h2>
           </div>
           <Col class="md-12" id="heroBar">
-            <Categories/>
+            <Categories />
           </Col>
         </Row>
       </Container>
