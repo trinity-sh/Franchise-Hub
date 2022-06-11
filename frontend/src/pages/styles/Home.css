@@ -22,4 +22,12 @@
   #FrenchFries{
     margin-left: -22px;
   }
+  .trending-sec{
+    flex-direction: column;
+  }
+  .trend-fran{
+    margin-top: 100px;
+    margin-bottom: 0;
+    z-index: 1;
+  }
 }
