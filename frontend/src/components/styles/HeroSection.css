@@ -112,7 +112,7 @@ ul.hero-search-main li button {
 /*media query*/
 
 /*mobiles*/
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   #heroBar {
     width: 100vw;
   }
