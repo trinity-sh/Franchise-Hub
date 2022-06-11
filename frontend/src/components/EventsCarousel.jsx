@@ -57,7 +57,12 @@ function EventsCarouselSection() {
                         <Card.Body>
                           <Card.Img
                             variant="top"
-                            src={item.event_banner}
+                            src={
+                              item.event_banner != ""
+                                ? `${item.event_banner}`
+                                : "https://static-prod.adweek.com/wp-content/uploads/2018/06/Events.jpg"
+                            }
+
                           />
 
                           {/* {data.personal_details.brand_name} */}

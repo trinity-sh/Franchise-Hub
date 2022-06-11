@@ -60,7 +60,11 @@ function VideoCarouselSection() {
                         <Card.Body>
                           <Card.Img
                             variant="top"
-                            src={item.description}
+                            src={
+                              item.description != ""
+                                ? `${item.description}`
+                                : "https://nowtoronto.com/wp-content/uploads/2021/07/youtube-2-1.jpg"
+                            }
                           />
 
                           {/* {data.personal_details.brand_name} */}
