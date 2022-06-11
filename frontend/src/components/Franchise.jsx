@@ -29,7 +29,7 @@ function Franchise(props) {
     return (
       <div className="franchise">
         <Card className="custom-card">
-          <Card.Body>
+          <Card.Body id="franchise-card">
             <Card.Img
               variant="top"
               src={

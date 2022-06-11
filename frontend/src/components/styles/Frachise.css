@@ -25,6 +25,9 @@ a:hover{
   .custom-card{
     width: 24rem;
   }
+  #franchise-card{
+    padding-left: 1.7rem;
+  }
 }
 
 @media only screen and (max-width: 399px){
