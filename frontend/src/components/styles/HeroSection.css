@@ -157,7 +157,7 @@ ul.hero-search-main li button {
     padding-top: 1rem;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 380px) {
   ul.hero-search-main li select {
     width: 250px;
   }
