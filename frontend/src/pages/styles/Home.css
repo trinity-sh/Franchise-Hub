@@ -13,7 +13,7 @@
     margin: 0 20px;
   }
   .FeaturedFranchise{
-    display: block;
+    display: flex; flex-wrap: nowrap; overflow-x: auto;
   }
   #TrendFran{
     position: relative;

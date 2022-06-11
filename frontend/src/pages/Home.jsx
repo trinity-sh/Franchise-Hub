@@ -24,7 +24,7 @@ function Home() {
         <h2 id="TrendFran">Trending Franchise</h2>
         <div id="FrenchFries"><Section/></div>
         <div>
-        <Row>
+        <Row style={{marginTop:"-3rem"}}>
           <Col xs lg="8">
             <h2>Trending Videos</h2>
             <hr />
