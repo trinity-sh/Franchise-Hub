@@ -34,10 +34,10 @@ function BrandPage(props) {
           <Col>
             {/* putting data of the title */}
             <span className="text-muted">
-              {formData.personal_details.industry}
+              {formData.industry}
             </span>
             <br />
-            <h3>{formData.personal_details.brand_name}</h3>
+            <h3>{formData.brand_name}</h3>
             <Card>
               <Card.Body>
                 <Navbar expand="lg">
