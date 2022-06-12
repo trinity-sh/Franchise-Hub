@@ -88,8 +88,9 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
                   {" "}
                   <Form.Control
                     size="sm"
-                    type="file"
+                    type="text"
                     defaultValue={values.logo}
+                    placeholder="Enter image link"
                     onChange={handleFormData("final_rites.company_logo")}
                   />
                   {error ? (
