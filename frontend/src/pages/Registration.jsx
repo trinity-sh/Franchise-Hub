@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import Business from "./pages/Business";
-import Personal from "./pages/Personal";
-import Property from "./pages/Property";
-import Agreements from "./pages/Agreements";
-import Payments from "./pages/Payments";
-import SideBar from "./SideBar"
-import "./styles/RegForm.css"
+import Business from "./Form/Business";
+import Personal from "./Form/Personal";
+import Property from "./Form/Property";
+import Agreements from "./Form/Agreements";
+import Payments from "./Form/Payments";
+
+import "./styles/StepNav.css"
 
 function Registration() {
   const [step, setstep] = useState(1);
@@ -97,24 +97,24 @@ function Registration() {
     case 1:
       return (
         <div className="App">
-        <div className="LeftContainer"><SideBar/></div>
-         <div className="RightContainer">
-         <Container>
+
+
+          <Container>
             <Personal
               nextStep={nextStep}
               handleFormData={handleInputData}
               values={formData}
             />
           </Container>
-          </div>
+
         </div>
       );
     // case 2 to show stepTwo form passing nextStep, prevStep, and handleInputData as handleFormData method as prop and also formData as value to the fprm
     case 2:
       return (
         <div className="App">
-        <div className="LeftContainer"><SideBar/></div>
-        <div className="RightContainer">
+
+
           <Container>
             <Business
               nextStep={nextStep}
@@ -123,15 +123,14 @@ function Registration() {
               values={formData}
             />
           </Container>
-          </div>
+
         </div>
       );
-   
+
     case 3:
       return (
         <div className="App">
-        <div className="LeftContainer"><SideBar/></div>
-        <div className="RightContainer">
+
           <Container>
             <Property
               nextStep={nextStep}
@@ -140,14 +139,13 @@ function Registration() {
               values={formData}
             />
           </Container>
-          </div>
+
         </div>
       );
     case 4:
       return (
         <div className="App">
-        <div className="LeftContainer"><SideBar/></div>
-        <div className="RightContainer">
+
           <Container>
             <Agreements
               nextStep={nextStep}
@@ -156,24 +154,23 @@ function Registration() {
               values={formData}
             />
           </Container>
-          </div>
+
         </div>
       );
     case 5:
       return (
         <div className="App">
-        <div className="LeftContainer"><SideBar/></div>
-        <div className="RightContainer">
+
           <Container>
             <Payments
               nextStep={nextStep}
               prevStep={prevStep}
               handleFormData={handleInputData}
               values={formData}
-              
+
             />
           </Container>
-          </div>
+
         </div>
       );
 
