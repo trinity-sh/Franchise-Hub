@@ -411,28 +411,28 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       <option slug="50000" value="50000">
                         Rs. 50000
                       </option>
-                      <option slug="200000" value="2lac">
+                      <option slug="200000" value="200000">
                         Rs. 2lac
                       </option>
-                      <option slug="500000" value="5lac">
+                      <option slug="500000" value="500000">
                         Rs. 5lac
                       </option>
-                      <option slug="1000000" value="10lac">
+                      <option slug="1000000" value="1000000">
                         Rs. 10lac
                       </option>
-                      <option slug="2000000" value="20lac">
+                      <option slug="2000000" value="2000000">
                         Rs. 20lac
                       </option>
-                      <option slug="3000000" value="30lac">
+                      <option slug="3000000" value="3000000">
                         Rs. 30lac
                       </option>
-                      <option slug="5000000" value="50lac">
+                      <option slug="5000000" value="5000000">
                         Rs. 50lac
                       </option>
-                      <option slug="10000000" value="1 Cr">
+                      <option slug="10000000" value="10000000">
                         Rs. 1 Cr.
                       </option>
-                      <option slug="20000000" value=" 2 Cr">
+                      <option slug="20000000" value="20000000">
                         Rs. 2 Cr.
                       </option>
                       <option slug="50000000" value=" 5 Cr">

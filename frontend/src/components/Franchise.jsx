@@ -31,6 +31,7 @@ function Franchise(props) {
         <Card className="custom-card">
           <Card.Body id="franchise-card">
             <Card.Img
+              id="franchise-img"
               variant="top"
               src={
                   item.content.final_rites.company_logo != ""
@@ -59,8 +60,8 @@ function Franchise(props) {
                 </Col>
                 <Col>
                   <span>
-                    {item.content.property_details.min} -{" "}
-                    {item.content.property_details.max}
+                    {item.content.property_details.floor_area_req.min} - {" "}
+                    {item.content.property_details.floor_area_req.max}
                   </span>
                 </Col>
               </Row>

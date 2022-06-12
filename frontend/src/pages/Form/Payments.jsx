@@ -57,7 +57,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
       <span>Payment Terms: 100% Advance Payment with 18% GST</span>
       <br />
       <br />
-      <span>
+      {/* <span>
         Layout: <strong>Basic</strong>{" "}
       </span>
       <Button size="sm" variant="outline-danger" onClick={handleShow}>
@@ -75,7 +75,7 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
             Close
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
       <Card style={{ margin: "30px 0 80px" }}>
         <Card.Body>
           <Form onSubmit={submitFormData}>

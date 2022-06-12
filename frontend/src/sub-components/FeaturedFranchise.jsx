@@ -6,6 +6,9 @@ import axios from "axios";
 const FranchiseSection = styled.div`
   margin: 30px 0 80px;
   display: flex;
+  #all-fran-img{
+    height: 100px;
+  }
   h2 {
     color: #333333;
     font-size: 30px;
@@ -55,6 +58,7 @@ function FeaturedFranchise(props) {
           <Card className="custom-card" style={{ width: "12rem" }}>
             <Card.Body>
               <Card.Img
+              id="all-fran-img"
                 variant="top"
                 src={
                   item.content.final_rites.company_logo != ""

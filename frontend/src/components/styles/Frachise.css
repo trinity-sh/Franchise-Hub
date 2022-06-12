@@ -1,3 +1,4 @@
+
 .franchise {
   margin: 20px 10px;
 }
@@ -6,6 +7,10 @@
 }
 .franchise span {
   font-size: 13px;
+}
+#franchise-img{
+  width: 280px;
+  height: 180px;
 }
 .franchise .industry {
   color: #828282;
