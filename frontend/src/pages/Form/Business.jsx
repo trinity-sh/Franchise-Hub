@@ -451,7 +451,7 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Control
-                onChange={handleFormData("business_desc")}
+                onChange={handleFormData("personal_details.business_desc")}
                 as="textarea"
                 rows="3"
               />
