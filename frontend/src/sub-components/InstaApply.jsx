@@ -1,7 +1,54 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 
 function InstaApply() {
+    const [formData, setFormData] = useState({
+        inv: "",
+        name: "",
+        email: "",
+        mobile: "",
+        state: "",
+        city: "",
+        pincode: ""
+
+
+    })
+
+    const handleFormData = (input) => (e) => {
+        // input value from the form
+        const { value } = e.target;
+
+        //updating for data state taking previous state and then adding new value to create new object
+        setFormData((prevState) => ({
+            ...prevState,
+            [input]: value,
+        }));
+        console.log(value);
+    };
+
+    async function postData() {
+        try {
+            const response = await axios({
+                method: "post",
+                url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/franchisee-application/new",
+                data: {
+                    metadata: {
+                        is_read: false
+                    },
+                    content: formData
+                },
+            });
+
+            console.log(response.data);
+            // return  response;
+        } catch (error) {
+            console.log("error");
+            return [];
+        }
+    }
+
+
     return (
         <Card className="mt-4">
             <Card.Header>
@@ -9,7 +56,7 @@ function InstaApply() {
                     <strong> Insta Apply</strong>
                 </Card.Title>
             </Card.Header>
-            <Card.Body id="show-m" style={{ padding: "30px 50px" , textAlign: "center"}}>
+            <Card.Body id="show-m" style={{ padding: "30px 50px", textAlign: "center" }}>
                 <Form>
                     <Row>
                         <Col lg="6">
@@ -19,6 +66,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter Name"
+                                    onChange={handleFormData("name")}
                                 />
                             </Form.Group>
                         </Col>
@@ -29,6 +77,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter State"
+                                    onChange={handleFormData("state")}
                                 />
                             </Form.Group>
                         </Col>
@@ -42,6 +91,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter Email"
+                                    onChange={handleFormData("email")}
                                 />
                             </Form.Group>
                         </Col>
@@ -52,6 +102,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter City"
+                                    onChange={handleFormData("city")}
                                 />
                             </Form.Group>
                         </Col>
@@ -66,6 +117,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter Mobile"
+                                    onChange={handleFormData("mobile")}
                                 />
                             </Form.Group>
                         </Col>
@@ -89,6 +141,7 @@ function InstaApply() {
                                     class="form-control blur"
                                     name="infoname"
                                     placeholder="Enter Pincode"
+                                    onChange={handleFormData("pincode")}
                                 />
                             </Form.Group>
                         </Col>
@@ -98,29 +151,30 @@ function InstaApply() {
                                     class="form-control blur"
                                     id="investment_range_gallery"
                                     name="investment_range"
+                                    onChange={handleFormData("inv")}
                                 >
                                     <option value="">Select Investment Range</option>l
-                                    <option value="1">Rs. 10000 - 50000</option>l
-                                    <option value="3">Rs. 50000 - 2lac</option>l
-                                    <option value="5">Rs. 2lac - 5lac</option>l
-                                    <option value="7">Rs. 5lac - 10lac</option>l
-                                    <option value="9">Rs. 10lac - 20lac</option>l
-                                    <option value="11">Rs. 20lac - 30lac</option>l
-                                    <option value="13">Rs. 30lac - 50lac</option>l
-                                    <option value="15">Rs. 50lac - 1 Cr.</option>l
-                                    <option value="17">Rs. 1 Cr. - 2 Cr</option>l
-                                    <option value="19">Rs. 2 Cr. - 5 Cr</option>l
-                                    <option value="21">Rs. 5 Cr. above</option>
+                                    <option value=" 10000 - 50000">Rs. 10000 - 50000</option>l
+                                    <option value="50000 - 2lac">Rs. 50000 - 2lac</option>l
+                                    <option value=" 2lac - 5lac">Rs. 2lac - 5lac</option>l
+                                    <option value="5lac - 10lac">Rs. 5lac - 10lac</option>l
+                                    <option value="10lac - 20lac">Rs. 10lac - 20lac</option>l
+                                    <option value="20lac - 30lac">Rs. 20lac - 30lac</option>l
+                                    <option value="30lac - 50lac">Rs. 30lac - 50lac</option>l
+                                    <option value="50lac - 1 Cr">Rs. 50lac - 1 Cr.</option>l
+                                    <option value="1 Cr. - 2 Cr">Rs. 1 Cr. - 2 Cr</option>l
+                                    <option value="2 Cr. - 5 Cr">Rs. 2 Cr. - 5 Cr</option>l
+                                    <option value="5 Cr. above">Rs. 5 Cr. above</option>
                                 </select>
                             </Form.Group>
                         </Col>
                     </Row>
 
-                    <Button variant="outline-danger" className="mt-4">Submit</Button>
+                    <Button variant="outline-danger" className="mt-4" onClick={postData}>Submit</Button>
                 </Form>
 
 
-                
+
             </Card.Body>
         </Card>
     );

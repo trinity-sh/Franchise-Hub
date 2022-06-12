@@ -34,10 +34,10 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.email_id}
+                    defaultValue={values.personal_details.email_id}
                     type="email"
                     placeholder="Enter your UserId"
-                    onChange={handleFormData("email_id")}
+                    onChange={handleFormData("personal_details.email_id")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
@@ -59,10 +59,10 @@ const Personal = ({ nextStep, handleFormData, values }) => {
                   {" "}
                   <Form.Control
                     style={{ border: error ? "2px solid red" : "" }}
-                    defaultValue={values.mobile}
+                    defaultValue={values.personal_details.mobile}
                     type="text"
                     placeholder="Enter your mobile number"
-                    onChange={handleFormData("mobile")}
+                    onChange={handleFormData("personal_details.mobile")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>

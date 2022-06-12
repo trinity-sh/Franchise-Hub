@@ -84,7 +84,7 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                     defaultValue={values.brand_name}
                     type="text"
                     placeholder="Enter brand name"
-                    onChange={handleFormData("brand_name")}
+                    onChange={handleFormData("personal_details.brand_name")}
                   />
                   {error ? (
                     <Form.Text style={{ color: "red" }}>
@@ -328,7 +328,7 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       name="ind_main_cat"
                       id="ind_main_cat"
                       class="form-control myselectclass blur valid"
-                      onChange={handleFormData("industry")}
+                      onChange={handleFormData("personal_details.industry")}
                     >
                       <option value="">---- Select Industry ----</option>
                       <option value="Beauty&Health">Beauty &amp; Health</option>
