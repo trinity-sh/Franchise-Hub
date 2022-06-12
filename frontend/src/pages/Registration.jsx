@@ -11,10 +11,11 @@ function Registration() {
 
   //state for form data
   const [formData, setFormData] = useState({
+    email_id: "",
+    mobile: "",
+    brand_name: "",
+    industry: "",
     personal_details: {
-      email_id: "",
-      mobile: "",
-      brand_name: "",
       company_name: "",
       owner_name: "",
       owner_email: "",
@@ -24,7 +25,6 @@ function Registration() {
       state: "",
       city: "",
       pincode: "",
-      industry: "",
       no_of_franch_outlets: "",
       inv: "",
       business_desc: "",
