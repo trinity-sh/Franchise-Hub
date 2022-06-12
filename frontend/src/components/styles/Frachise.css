@@ -43,11 +43,7 @@ a:hover{
   }
 }
 @media only screen and (max-width: 329px){ 
-  /* #franchise-img{
-  width: 240px;
-} */
-
-  .custom-card{
+   .custom-card{
     width: 18rem;
   }
 }
