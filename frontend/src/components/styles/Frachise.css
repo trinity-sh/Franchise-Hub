@@ -9,7 +9,7 @@
   font-size: 13px;
 }
 #franchise-img{
-  width: 280px;
+  /* width: 280px; */
   height: 180px;
 }
 .franchise .industry {
@@ -33,12 +33,20 @@ a:hover{
   #franchise-card{
     padding-left: 1.7rem;
   }
-  #franchise-img{
-    width: 300px;
+  /* #franchise-img{
+    width: 340px;
+  } */
+}
+@media only screen and (max-width: 399px){ 
+  .custom-card{
+    width: 22rem;
   }
 }
+@media only screen and (max-width: 329px){ 
+  /* #franchise-img{
+  width: 240px;
+} */
 
-@media only screen and (max-width: 399px){
   .custom-card{
     width: 18rem;
   }
