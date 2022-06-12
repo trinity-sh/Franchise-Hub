@@ -64,12 +64,11 @@ function CardSection() {
                     <Row class="justify-content-center">
                       <div class="col-md-12 pt-30 about">
                         <h4> Why Should I Register ?</h4>
-                        To get access to over 10000+ Franchise Business
-                        Opportunities.
+                        To gain admittance to over 10000+ Franchise Business  Opportunities.
                         <br />
-                        Network with the growing Business Community to get
-                        expert interventions to let you learn <br /> to Grow
-                        &amp; Expand your Business with Franchising.
+                        Network with the developing Business Community to get master mediations to allow you to
+                        learn <br /> to Grow
+                        &amp;  Expand your Business with Franchising.
                       </div>
                     </Row>
                   </Col>
@@ -90,7 +89,7 @@ function CardSection() {
                               />
                             </li>
                             <li>
-                            <Form.Check
+                              <Form.Check
                                 type="radio"
                                 label=" Buy a Franchise"
                                 checked={radio === "buy franchise"}
