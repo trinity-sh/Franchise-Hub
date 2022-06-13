@@ -4,6 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Form } from "react-bootstrap";
 import axios from "axios";
 import "../components/styles/HeroSection.css";
+import { Link } from "react-router-dom";
 
 function Categories(props) {
   const [data, setData] = useState([]);
@@ -270,11 +271,13 @@ function Categories(props) {
               )}
 
               <li class="p-0 m-0">
-                <button type="submit" class="search-btn">
-                  {" "}
-                  <span id="searchbtn">SEARCH</span>
-                  <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                </button>
+                <Link to="/business-opportunities/id">
+                  <button type="submit" class="search-btn">
+                    {" "}
+                    <span id="searchbtn">SEARCH</span>
+                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                  </button>
+                </Link>
               </li>
             </ul>
           </Form>

@@ -1,0 +1,15 @@
+.business {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.business-card {
+  margin-top: 150px;
+  width: 28rem;
+}
+.business-img{
+    width: 80%;
+}
+.column-2{
+    text-align: center;
+}
