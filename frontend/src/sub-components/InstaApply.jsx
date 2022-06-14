@@ -11,8 +11,6 @@ function InstaApply() {
         state: "",
         city: "",
         pincode: ""
-
-
     })
 
     const handleFormData = (input) => (e) => {
@@ -31,7 +29,7 @@ function InstaApply() {
         try {
             const response = await axios({
                 method: "post",
-                url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/franchisee-application/new",
+                url: "https://franchise-hub-server.herokuapp.com/api/v1/admin/dashboard/forms/franchisee-application/all/1",
                 data: {
                     metadata: {
                         is_read: false
