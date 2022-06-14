@@ -331,8 +331,8 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       onChange={handleFormData("personal_details.industry")}
                     >
                       <option value="">---- Select Industry ----</option>
-                      <option value="Beauty&Health">Beauty &amp; Health</option>
-                      <option value="Food And Beverage">Food And Beverage</option>
+                      <option value="Beauty and Health">Beauty &amp; Health</option>
+                      <option value="Food and Beverage">Food and Beverage</option>
                       <option value="Education">Education</option>
                       <option value="Dealers and Distributors">Dealers &amp; Distributors</option>
                       <option value="Business Services">Business Services</option>
@@ -340,10 +340,10 @@ const Business = ({ nextStep, handleFormData, prevStep, values }) => {
                       <option value="Automotive">Automotive</option>
                       <option value="Retail">Retail</option>
                       <option value="Fashion">Fashion</option>
-                      <option value="Sports,Fitness and Entertainment">
+                      <option value="Sports, Fitness and Entertainment">
                         Sports, Fitness &amp; Entertainment
                       </option>
-                      <option value="Hotel,Travel and Tourism">Hotel, Travel &amp; Tourism</option>
+                      <option value="Hotel, Travel and Tourism">Hotel, Travel &amp; Tourism</option>
                     </select>
                   </InputGroup>
                 </Col>
