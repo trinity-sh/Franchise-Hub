@@ -93,47 +93,47 @@ function Categories(props) {
                     Select Industry
                   </option>
 
-                  <option value="8" slug="automotive">
+                  <option value="Automotive" slug="automotive">
                     Automotive
                   </option>
 
-                  <option value="1" slug="beauty-and-health">
+                  <option value="Beauty and Health" slug="beauty-and-health">
                     Beauty &amp; Health
                   </option>
 
-                  <option value="6" slug="business-services">
+                  <option value="Business Services" slug="business-services">
                     Business Services
                   </option>
 
-                  <option value="5" slug="dealers-and-distributors">
+                  <option value="Dealers and Distributors" slug="dealers-and-distributors">
                     Dealers &amp; Distributors
                   </option>
 
-                  <option value="3" slug="education">
+                  <option value="Education" slug="education">
                     Education
                   </option>
 
-                  <option value="10" slug="fashion">
+                  <option value="Fashion" slug="fashion">
                     Fashion
                   </option>
 
-                  <option value="2" slug="food-and-beverage">
-                    Food And Beverage
+                  <option value="Food and Beverage" slug="food-and-beverage">
+                    Food and Beverage
                   </option>
 
-                  <option value="7" slug="home-based-business">
+                  <option value="Home Based Business" slug="home-based-business">
                     Home Based Business
                   </option>
 
-                  <option value="263" slug="hotels-and-resorts">
+                  <option value="Hotel, Travel and Tourism" slug="hotels-and-resorts">
                     Hotel, Travel &amp; Tourism
                   </option>
 
-                  <option value="9" slug="retail">
+                  <option value="Retail" slug="retail">
                     Retail
                   </option>
 
-                  <option value="11" slug="sports-fitness-and-entertainment">
+                  <option value="Sports, Fitness and Entertainment" slug="sports-fitness-and-entertainment">
                     Sports, Fitness &amp; Entertainment
                   </option>
                 </select>
@@ -187,37 +187,37 @@ function Categories(props) {
                         {" "}
                         Select Min Investment{" "}
                       </option>
-                      <option slug="10000" value="1">
+                      <option slug="10000" value="10000">
                         Rs. 10000
                       </option>
-                      <option slug="50000" value="3">
+                      <option slug="50000" value="50000">
                         Rs. 50000
                       </option>
-                      <option slug="200000" value="5">
+                      <option slug="200000" value="200000">
                         Rs. 2lac
                       </option>
-                      <option slug="500000" value="7">
+                      <option slug="500000" value="500000">
                         Rs. 5lac
                       </option>
-                      <option slug="1000000" value="9">
+                      <option slug="1000000" value="1000000">
                         Rs. 10lac
                       </option>
-                      <option slug="2000000" value="11">
+                      <option slug="2000000" value="2000000">
                         Rs. 20lac
                       </option>
-                      <option slug="3000000" value="13">
+                      <option slug="3000000" value="3000000">
                         Rs. 30lac
                       </option>
-                      <option slug="5000000" value="15">
+                      <option slug="5000000" value="5000000">
                         Rs. 50lac
                       </option>
-                      <option slug="10000000" value="17">
+                      <option slug="10000000" value="10000000">
                         Rs. 1 Cr.
                       </option>
-                      <option slug="20000000" value="19">
+                      <option slug="20000000" value="20000000">
                         Rs. 2 Cr.
                       </option>
-                      <option slug="50000000" value="21">
+                      <option slug="50000000" value="50000000">
                         Rs. 5 Cr.
                       </option>
                     </select>
@@ -232,37 +232,37 @@ function Categories(props) {
                         {" "}
                         Select Max Investment{" "}
                       </option>
-                      <option slug="10000" value="1">
+                      <option slug="10000" value="10000">
                         Rs. 10000
                       </option>
-                      <option slug="50000" value="3">
+                      <option slug="50000" value="50000">
                         Rs. 50000
                       </option>
-                      <option slug="200000" value="5">
+                      <option slug="200000" value="200000">
                         Rs. 2lac
                       </option>
-                      <option slug="500000" value="7">
+                      <option slug="500000" value="500000">
                         Rs. 5lac
                       </option>
-                      <option slug="1000000" value="9">
+                      <option slug="1000000" value="1000000">
                         Rs. 10lac
                       </option>
-                      <option slug="2000000" value="11">
+                      <option slug="2000000" value="2000000">
                         Rs. 20lac
                       </option>
-                      <option slug="3000000" value="13">
+                      <option slug="3000000" value="3000000">
                         Rs. 30lac
                       </option>
-                      <option slug="5000000" value="15">
+                      <option slug="5000000" value="5000000">
                         Rs. 50lac
                       </option>
-                      <option slug="10000000" value="17">
+                      <option slug="10000000" value="10000000">
                         Rs. 1 Cr.
                       </option>
-                      <option slug="20000000" value="19">
+                      <option slug="20000000" value="20000000">
                         Rs. 2 Cr.
                       </option>
-                      <option slug="50000000" value="21">
+                      <option slug="50000000" value="50000000">
                         Rs. 5 Cr.
                       </option>
                     </select>
