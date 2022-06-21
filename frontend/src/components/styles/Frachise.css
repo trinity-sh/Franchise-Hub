@@ -42,7 +42,7 @@ a:hover{
     width: 22rem;
   }
 }
-@media only screen and (max-width: 329px){ 
+@media only screen and (max-width: 369px){ 
    .custom-card{
     width: 18rem;
   }

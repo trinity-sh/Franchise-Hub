@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles/Carousel.css";
 import { Card, Button, Container, Row, Col, Carousel } from "react-bootstrap";
-import Videos from "./Videos";
-import Events from "./Events";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -56,21 +54,20 @@ function EventsCarouselSection() {
                       <Card>
                         <Card.Body>
                           <Card.Img
+                            className="vidimg"
                             variant="top"
                             src={
                               item.event_banner != ""
                                 ? `${item.event_banner}`
                                 : "https://static-prod.adweek.com/wp-content/uploads/2018/06/Events.jpg"
                             }
-
                           />
 
                           {/* {data.personal_details.brand_name} */}
                           <Card.Title>{item.event_title}</Card.Title>
 
-                          <a href={item.event_link} target="_blank"
-                          >
-                            <Button variant="outline-danger" className="button" >
+                          <a href={item.event_link} target="_blank">
+                            <Button variant="outline-danger" className="button">
                               Register
                             </Button>
                           </a>

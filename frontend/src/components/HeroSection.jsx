@@ -9,9 +9,9 @@ function HeroSection() {
   return (
     <section class="hero-section" id="hero-section">
       <Container>
-        <div className="lnkblk">
+        {/* <div className="lnkblk">
           <img src="https://www.franchiseindia.com/newhomepage/assets/img/remax-logo.png" />
-        </div>
+        </div> */}
         <Row className="md-12 hero">
           <div className="md-12">
             <h1 className="title">

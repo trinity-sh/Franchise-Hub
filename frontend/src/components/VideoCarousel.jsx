@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles/Carousel.css";
 import { Card, Button, Container, Row, Col, Carousel } from "react-bootstrap";
-import Videos from "./Videos";
-import Events from "./Events";
 import axios from "axios";
 
 function VideoCarouselSection() {
@@ -59,6 +57,7 @@ function VideoCarouselSection() {
                       <Card>
                         <Card.Body>
                           <Card.Img
+                          className="vidimg"
                             variant="top"
                             src={
                               item.description != ""
@@ -82,7 +81,7 @@ function VideoCarouselSection() {
                           <a href={item.thumbnail_link} target="_blank"
                           >
                             <Button variant="outline-danger" className="button" >
-                              View
+                              Watch Now
                             </Button>
                           </a>
                         </Card.Body>
