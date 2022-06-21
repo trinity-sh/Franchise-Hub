@@ -41,11 +41,12 @@ function CardSection() {
           content: formData,
         },
       });
-
+      alert("Form submitted sucessfully!");
       console.log(response.data);
 
       // return  response;
     } catch (error) {
+      alert("Oops! Some error occured")
       console.log("error");
       return [];
     }

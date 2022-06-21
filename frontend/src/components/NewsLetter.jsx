@@ -55,6 +55,9 @@ const Footer = styled.footer`
   padding: 10px 80px;
   background-color: #fff;
   box-shadow: 0.5px 0 5px #999;
+  .footer-link:hover{
+    color: #f04;
+  }
 `;
 
 function NewsLetter() {
@@ -81,11 +84,14 @@ function NewsLetter() {
       });
 
       console.log(response.data);
+      alert("Form submitted sucessfully!")
       // return  response;
     } catch (error) {
+      alert("Oopss!! Some Error occurred!")
       console.log("error");
       return [];
     }
+    
   }
 
   return (
@@ -243,7 +249,7 @@ function NewsLetter() {
       </About>
 
       <Footer>
-        © {date.getFullYear()} All Right Reserved by Franchishub - <a href="http://www.pracharmore.com/">Design and
+        © {date.getFullYear()} All Right Reserved by Franchishub - <a className="footer-link" href="http://www.pracharmore.com/">Design and
           Develop by Prachar More</a>
       </Footer>
     </>

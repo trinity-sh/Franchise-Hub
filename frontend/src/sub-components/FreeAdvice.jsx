@@ -9,7 +9,7 @@ function FreeAdvice(props) {
     phone_no: "",
   });
   const [radio, setRadio] = useState("");
-  const [handleSubmit, setSubmit] = useState(false);
+
 
   function handleRadios(e) {
     let val = e.target.value;
@@ -42,13 +42,15 @@ function FreeAdvice(props) {
       });
 
       console.log(response.data);
+      alert("Form submitted sucessfully!");
 
       // return  response;
     } catch (error) {
       console.log("error");
+      alert("Opps! Some error occurred");
       return [];
     }
-    setSubmit(true);
+
   }
   return (
     <>
@@ -117,9 +119,7 @@ function FreeAdvice(props) {
         <Button variant="danger" className="mt-4" onClick={freeAdviceData}>
           Submit
         </Button>
-        {handleSubmit ? (
-          <p className="mt-3">Woahh!! Your form have been submitted" </p>
-        ) : null}
+
       </Form>
     </>
   );

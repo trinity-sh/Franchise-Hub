@@ -27,30 +27,28 @@ function Payments({ nextStep, handleFormData, prevStep, values }) {
       nextStep();
     }
   };
- 
+
   async function postData() {
     try {
       const response = await axios({
         method: "post",
         url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/franchisor-registration/new",
         data: {
-          metadata:{
-            is_read: false
+          metadata: {
+            is_read: false,
           },
-          content: values
+          content: values,
         },
       });
-
+      alert("Form submitted sucessfully!");
       console.log(response.data);
       // return  response;
     } catch (error) {
+      alert("Oops! Some error occurred");
       console.log("error");
       return [];
     }
   }
- 
-
-  
 
   return (
     <div>
