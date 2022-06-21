@@ -37,10 +37,11 @@ function InstaApply() {
                     content: formData
                 },
             });
-
+            alert("Form submitted successfully!");
             console.log(response.data);
             // return  response;
         } catch (error) {
+            alert("Opps! Something went wrong");
             console.log("error");
             return [];
         }
