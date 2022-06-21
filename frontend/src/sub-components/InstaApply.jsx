@@ -153,17 +153,17 @@ function InstaApply() {
                                     onChange={handleFormData("inv")}
                                 >
                                     <option value="">Select Investment Range</option>l
-                                    <option value=" 10000 - 50000">Rs. 10000 - 50000</option>l
-                                    <option value="50000 - 2lac">Rs. 50000 - 2lac</option>l
-                                    <option value=" 2lac - 5lac">Rs. 2lac - 5lac</option>l
-                                    <option value="5lac - 10lac">Rs. 5lac - 10lac</option>l
-                                    <option value="10lac - 20lac">Rs. 10lac - 20lac</option>l
-                                    <option value="20lac - 30lac">Rs. 20lac - 30lac</option>l
-                                    <option value="30lac - 50lac">Rs. 30lac - 50lac</option>l
-                                    <option value="50lac - 1 Cr">Rs. 50lac - 1 Cr.</option>l
-                                    <option value="1 Cr. - 2 Cr">Rs. 1 Cr. - 2 Cr</option>l
-                                    <option value="2 Cr. - 5 Cr">Rs. 2 Cr. - 5 Cr</option>l
-                                    <option value="5 Cr. above">Rs. 5 Cr. above</option>
+                                    <option value=" 10000">Rs. 10000 - 50000</option>l
+                                    <option value="50000">Rs. 50000 - 2lac</option>l
+                                    <option value="200000">Rs. 2lac - 5lac</option>l
+                                    <option value="500000">Rs. 5lac - 10lac</option>l
+                                    <option value="1000000">Rs. 10lac - 20lac</option>l
+                                    <option value="2000000">Rs. 20lac - 30lac</option>l
+                                    <option value="3000000">Rs. 30lac - 50lac</option>l
+                                    <option value="5000000">Rs. 50lac - 1 Cr.</option>l
+                                    <option value="10000000">Rs. 1 Cr. - 2 Cr</option>l
+                                    <option value="20000000">Rs. 2 Cr. - 5 Cr</option>l
+                                    <option value="50000000">Rs. 5 Cr. above</option>
                                 </select>
                             </Form.Group>
                         </Col>
