@@ -29,7 +29,7 @@ function InstaApply() {
         try {
             const response = await axios({
                 method: "post",
-                url: "https://franchise-hub-server.herokuapp.com/api/v1/admin/dashboard/forms/franchisee-application/all/1",
+                url: "https://franchise-hub-server.herokuapp.com/api/v1/webview/forms/franchisee-application/new",
                 data: {
                     metadata: {
                         is_read: false
