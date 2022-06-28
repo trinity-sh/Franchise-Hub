@@ -122,8 +122,7 @@ function NavbarComponent() {
                     {" "}
                     <a href="/">
                       <img
-                        className="logo"
-                        src="https://franchise-hub.in/static/media/logo.741bf5052859e422a0a3.png"
+                        src={Logo}
                         alt="FranchiseHub Logo"
                       />
                     </a>
@@ -225,7 +224,7 @@ function NavbarComponent() {
             <Nav.Link href="/" className="mobile-logo">
               <img
                 className="mobile-logo-img"
-                src="https://franchise-hub.in/static/media/logo.741bf5052859e422a0a3.png"
+                src={Logo}
                 alt="FranchiseHub Logo"
               />
             </Nav.Link>
