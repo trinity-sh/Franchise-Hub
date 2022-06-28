@@ -94,19 +94,25 @@ function Categories(props) {
         selectstate;
       console.log(x);
       setSearchItem(x);
+      navigate(
+        {
+          pathname: "/business-opportunities",
+          search: x,
+        }
+      );
+    } else if (tab === "investment") {
+      const x =
+        "?search_by=investment&?industry=" +
+        industry +
+        "&?min=" +
+        min +
+        "&?max=" +
+        max;
+      setSearchItem(x);
       navigate({
         pathname: "/business-opportunities",
         search: x,
       });
-    } else if (tab === "investment") {
-      setSearchItem(
-        "?search_by=investment&?industry=" +
-          industry +
-          "&?min=" +
-          min +
-          "&?max=" +
-          max
-      );
     }
   }
   console.log(searchItem);

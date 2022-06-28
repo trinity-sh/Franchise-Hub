@@ -1,22 +1,22 @@
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import NavbarComponent from "../components/Navbar";
 import "./styles/BusinessSearch.css";
 
 function BusinessSearch() {
+    const location = useLocation();
     const [data, setData] = useState([]);
     const getData = async () => {
       try {
-        const response = await axios.get(
-          "https://franchise-hub-server.herokuapp.com/api/v1/webview/section/listed-franchises/all"
-        );
-        console.log(response.data.payload);
+        const response = await axios.get('https://franchise-hub-server.herokuapp.com/api/v1/webview/section/filter/all' + location.search);
+        console.log(response.data.ping);
         setData(response.data.payload);
       } catch (e) {
         console.log(e);
       }
-    };
+    };  
     useEffect(() => {
       getData();
     }, []);
