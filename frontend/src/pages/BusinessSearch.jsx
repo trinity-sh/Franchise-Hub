@@ -2,7 +2,6 @@ import axios from "axios";
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
-import NavbarComponent from "../components/Navbar";
 import "./styles/BusinessSearch.css";
 
 function BusinessSearch() {
@@ -25,7 +24,9 @@ function BusinessSearch() {
   }, []);
   console.log(data);
 
- 
+  if (data.length == 0)
+    return (<h3 className="search-result">No results found!</h3>);
+
   return data.map((item) => {
     return (
       <>

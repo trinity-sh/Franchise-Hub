@@ -104,7 +104,7 @@ function Categories(props) {
         industry +
         "&min=" +
         min +
-        "&?max=" +
+        "&max=" +
         max;
       setSearchItem(x);
       navigate({
