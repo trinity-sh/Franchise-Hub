@@ -86,25 +86,23 @@ function Categories(props) {
   function handlesearch() {
     if (tab === "location") {
       const x =
-        "?search_by=location&?industry=" +
+        "?search_by=location&industry=" +
         industry +
-        "&?country=" +
+        "&country=" +
         selectcountry +
-        "&?state=" +
+        "&state=" +
         selectstate;
       console.log(x);
       setSearchItem(x);
-      navigate(
-        {
-          pathname: "/business-opportunities",
-          search: x,
-        }
-      );
+      navigate({
+        pathname: "/business-opportunities",
+        search: x,
+      });
     } else if (tab === "investment") {
       const x =
-        "?search_by=investment&?industry=" +
+        "?search_by=investment&industry=" +
         industry +
-        "&?min=" +
+        "&min=" +
         min +
         "&?max=" +
         max;

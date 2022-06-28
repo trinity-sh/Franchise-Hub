@@ -1,15 +1,18 @@
 .business {
   display: grid;
   grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.business-card {
+.business .business-card {
   margin-top: 150px;
-  width: 28rem;
+  width: 60rem;
 }
-.business-img{
-    width: 80%;
+.business-img {
+  width: 100%;
 }
-.column-2{
-    text-align: center;
+.column-2 {
+  text-align: center;
 }

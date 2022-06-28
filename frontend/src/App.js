@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
+import NavbarComponent from './components/Navbar';
 import Advertise from './pages/Advertise';
 import BrandPage from './pages/BrandPage';
 import BusinessSearch from './pages/BusinessSearch';
@@ -9,6 +10,7 @@ import StepNav from './pages/StepNav';
 function App() {
   return (
     <>
+    <NavbarComponent />
      <Routes>
        <Route path='/' element={<Home/>} />
        <Route path='/advertise-with-us-payment' element={<Advertise/>} />
