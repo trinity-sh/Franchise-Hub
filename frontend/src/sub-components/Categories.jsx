@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Nav, Form } from "react-bootstrap";
@@ -7,6 +8,7 @@ import "../components/styles/HeroSection.css";
 import { Link } from "react-router-dom";
 
 function Categories(props) {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [getCountry, setCountry] = useState([]);
   const [getState, setState] = useState([]);
@@ -33,7 +35,6 @@ function Categories(props) {
     states.sort();
     setState(states);
   }
- 
 
   function handleState(e) {
     let cities = data.filter((city) => city.subcountry === e.target.value);
@@ -46,22 +47,22 @@ function Categories(props) {
     const name = e.target.name;
     setTab(name);
   }
-  
+
   const [industry, setIndustry] = useState("");
 
   function handleIndustry(e) {
     let val = e.target.value;
     setIndustry(val);
   }
-  
+
   // country values
-  const [selectcountry , setSelectcountry] = useState("");
+  const [selectcountry, setSelectcountry] = useState("");
   function selectCountry(e) {
     let val = e.target.value;
     setSelectcountry(val);
   }
-// set states for select tag
-  const [selectstate , setSelectstate] = useState("");
+  // set states for select tag
+  const [selectstate, setSelectstate] = useState("");
   function selectState(e) {
     let val = e.target.value;
     console.log(val);
@@ -69,27 +70,46 @@ function Categories(props) {
   }
 
   // set min investment and max investment
-  const [min ,setMin] = useState("");
-  const [max , setMax] = useState("");
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
 
-  function setMinInvest(e){
+  function setMinInvest(e) {
     const val = e.target.value;
     setMin(val);
   }
-  function setMaxInvest(e){
+  function setMaxInvest(e) {
     const val = e.target.value;
     setMax(val);
   }
   // search state
   const [searchItem, setSearchItem] = useState("");
-  function handlesearch(e) {
-    if (tab === 'location') {
-      setSearchItem('?search_by=location&?industry=' + industry + '&?country=' + selectcountry + '&?state=' + selectstate);
-    } else if (tab === 'investment') {
-      setSearchItem('?search_by=investment&?industry=' + industry + '&?min=' + min + '&?max=' + max);
+  function handlesearch() {
+    if (tab === "location") {
+      const x =
+        "?search_by=location&?industry=" +
+        industry +
+        "&?country=" +
+        selectcountry +
+        "&?state=" +
+        selectstate;
+      console.log(x);
+      setSearchItem(x);
+      navigate({
+        pathname: "/business-opportunities",
+        search: x,
+      });
+    } else if (tab === "investment") {
+      setSearchItem(
+        "?search_by=investment&?industry=" +
+          industry +
+          "&?min=" +
+          min +
+          "&?max=" +
+          max
+      );
     }
   }
-console.log(searchItem);
+  console.log(searchItem);
   return (
     <div class="hero-search" id="hero-search">
       <Nav className="nav-tabs">
@@ -329,17 +349,11 @@ console.log(searchItem);
               )}
 
               <li class="p-0 m-0">
-                <Link to="">
-                  <button
-                    type="submit"
-                    class="search-btn"
-                    onClick={handlesearch}
-                  >
-                    {" "}
-                    <span id="searchbtn">SEARCH</span>
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                  </button>
-                </Link>
+                <button type="submit" class="search-btn" onClick={handlesearch}>
+                  {" "}
+                  <span id="searchbtn">SEARCH</span>
+                  <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                </button>
               </li>
             </ul>
           </Form>
