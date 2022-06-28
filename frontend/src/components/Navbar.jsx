@@ -225,7 +225,7 @@ function NavbarComponent() {
             <Nav.Link href="/" className="mobile-logo">
               <img
                 className="mobile-logo-img"
-                src={Logo}
+                src="https://franchise-hub.in/static/media/logo.741bf5052859e422a0a3.png"
                 alt="FranchiseHub Logo"
               />
             </Nav.Link>
