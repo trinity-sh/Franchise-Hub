@@ -33,7 +33,7 @@ function Categories(props) {
     states.sort();
     setState(states);
   }
-  console.log(getState);
+ 
 
   function handleState(e) {
     let cities = data.filter((city) => city.subcountry === e.target.value);
@@ -46,6 +46,50 @@ function Categories(props) {
     const name = e.target.name;
     setTab(name);
   }
+  
+  const [industry, setIndustry] = useState("");
+
+  function handleIndustry(e) {
+    let val = e.target.value;
+    setIndustry(val);
+  }
+  
+  // country values
+  const [selectcountry , setSelectcountry] = useState("");
+  function selectCountry(e) {
+    let val = e.target.value;
+    setSelectcountry(val);
+  }
+// set states for select tag
+  const [selectstate , setSelectstate] = useState("");
+  function selectState(e) {
+    let val = e.target.value;
+    console.log(val);
+    setSelectstate(val);
+  }
+
+  // set min investment and max investment
+  const [min ,setMin] = useState("");
+  const [max , setMax] = useState("");
+
+  function setMinInvest(e){
+    const val = e.target.value;
+    setMin(val);
+  }
+  function setMaxInvest(e){
+    const val = e.target.value;
+    setMax(val);
+  }
+  // search state
+  const [searchItem, setSearchItem] = useState("");
+  function handlesearch(e) {
+    if (tab === 'location') {
+      setSearchItem('?search_by=location&?industry=' + industry + '&?country=' + selectcountry + '&?state=' + selectstate);
+    } else if (tab === 'investment') {
+      setSearchItem('?search_by=investment&?industry=' + industry + '&?min=' + min + '&?max=' + max);
+    }
+  }
+console.log(searchItem);
   return (
     <div class="hero-search" id="hero-search">
       <Nav className="nav-tabs">
@@ -86,8 +130,7 @@ function Categories(props) {
                 <select
                   name="mc"
                   className="form-control-custom dropdown-toogle-icon"
-                  id="getMainCategoryDataHeader1"
-                  onchange="getSubCategoryHeader1(this.value)"
+                  onChange={handleIndustry}
                 >
                   <option value="" hidden="">
                     Select Industry
@@ -105,7 +148,10 @@ function Categories(props) {
                     Business Services
                   </option>
 
-                  <option value="Dealers and Distributors" slug="dealers-and-distributors">
+                  <option
+                    value="Dealers and Distributors"
+                    slug="dealers-and-distributors"
+                  >
                     Dealers &amp; Distributors
                   </option>
 
@@ -121,11 +167,17 @@ function Categories(props) {
                     Food and Beverage
                   </option>
 
-                  <option value="Home Based Business" slug="home-based-business">
+                  <option
+                    value="Home Based Business"
+                    slug="home-based-business"
+                  >
                     Home Based Business
                   </option>
 
-                  <option value="Hotel, Travel and Tourism" slug="hotels-and-resorts">
+                  <option
+                    value="Hotel, Travel and Tourism"
+                    slug="hotels-and-resorts"
+                  >
                     Hotel, Travel &amp; Tourism
                   </option>
 
@@ -133,7 +185,10 @@ function Categories(props) {
                     Retail
                   </option>
 
-                  <option value="Sports, Fitness and Entertainment" slug="sports-fitness-and-entertainment">
+                  <option
+                    value="Sports, Fitness and Entertainment"
+                    slug="sports-fitness-and-entertainment"
+                  >
                     Sports, Fitness &amp; Entertainment
                   </option>
                 </select>
@@ -145,6 +200,7 @@ function Categories(props) {
                       name="sc"
                       id="getSubCategoryDataHeader1"
                       onChange={(e) => handleCountry(e)}
+                      onClick={selectCountry}
                       class="form-control-custom dropdown-toogle-icon"
                     >
                       <option value="" hidden="">
@@ -160,15 +216,15 @@ function Categories(props) {
                   <li class="p-0">
                     <select
                       name="sc"
-                      id="getSubCategoryDataHeader1"
                       onChange={handleState}
                       class="form-control-custom dropdown-toogle-icon"
+                      onClick={selectState}
                     >
                       <option value="" hidden="">
                         Select State
                       </option>
                       {getState.map((items) => (
-                        <option key={items} value={selectedState}>
+                        <option key={items} value={items}>
                           {items}
                         </option>
                       ))}
@@ -182,6 +238,7 @@ function Categories(props) {
                       name="min_cost"
                       class="dropdown-toogle-icon"
                       id="minAmount1"
+                      onClick={setMinInvest}
                     >
                       <option value="" hidden="">
                         {" "}
@@ -227,6 +284,7 @@ function Categories(props) {
                       name="min_cost"
                       class="dropdown-toogle-icon"
                       id="minAmount1"
+                      onClick={setMaxInvest}
                     >
                       <option value="" hidden="">
                         {" "}
@@ -271,8 +329,12 @@ function Categories(props) {
               )}
 
               <li class="p-0 m-0">
-                <Link to="/business-opportunities/id">
-                  <button type="submit" class="search-btn">
+                <Link to="">
+                  <button
+                    type="submit"
+                    class="search-btn"
+                    onClick={handlesearch}
+                  >
                     {" "}
                     <span id="searchbtn">SEARCH</span>
                     <FontAwesomeIcon icon={faSearch} className="search-icon" />
